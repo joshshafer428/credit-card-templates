@@ -491,7 +491,8 @@
         "benefitType": "credit",
         "dollarValue": 300,
         "resetPeriod": "annual",
-        "resetAnchor": "calendar_year"
+        "resetAnchor": "calendar_year",
+        "uncapped": true
       },
       {
         "name": "Uber One membership credit (up to 6 months x $9.99)",
@@ -539,7 +540,8 @@
         "benefitType": "credit",
         "dollarValue": 200,
         "resetPeriod": "annual",
-        "resetAnchor": "anniversary"
+        "resetAnchor": "anniversary",
+        "uncapped": true
       },
       {
         "name": "Uber One membership credit (up to 12 months x $9.99)",
@@ -555,7 +557,8 @@
         "benefitType": "credit",
         "dollarValue": 200,
         "resetPeriod": "annual",
-        "resetAnchor": "calendar_year"
+        "resetAnchor": "calendar_year",
+        "uncapped": true
       },
       {
         "name": "Global Entry or TSA PreCheck credit",
@@ -603,7 +606,8 @@
         "benefitType": "credit",
         "dollarValue": 350,
         "resetPeriod": "annual",
-        "resetAnchor": "anniversary"
+        "resetAnchor": "anniversary",
+        "uncapped": true
       },
       {
         "name": "Uber One membership credit (up to 12 months x $9.99)",
@@ -635,7 +639,8 @@
         "benefitType": "credit",
         "dollarValue": 200,
         "resetPeriod": "annual",
-        "resetAnchor": "calendar_year"
+        "resetAnchor": "calendar_year",
+        "uncapped": true
       },
       {
         "name": "Global Entry or TSA PreCheck credit",
