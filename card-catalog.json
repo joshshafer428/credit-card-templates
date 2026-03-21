@@ -1,0 +1,353 @@
+[
+  {
+    "id": "american-express-gold-card",
+    "pointsCurrency": "amex_mr",
+    "affiliateUrl": "https://capital.one/3WsmqtZ",
+    "cppOverride": 2,
+    "earnRates": {
+      "travel": 3,
+      "hotels": 2,
+      "dining": 4,
+      "gas": 1,
+      "groceries": 4,
+      "streaming": 1,
+      "rent": 0,
+      "other": 1
+    },
+    "nameAliases": [
+      "Amex Gold",
+      "American Express Gold"
+    ],
+    "welcomeBonus": {
+      "points": 100000,
+      "spendRequirement": 6000,
+      "timeframeMonths": 6
+    }
+  },
+  {
+    "id": "american-express-platinum",
+    "pointsCurrency": "amex_mr",
+    "affiliateUrl": "https://capital.one/3WsmqtZ",
+    "cppOverride": 2,
+    "earnRates": {
+      "travel": 5,
+      "hotels": 5,
+      "dining": 1,
+      "gas": 1,
+      "groceries": 1,
+      "streaming": 1,
+      "rent": 0,
+      "other": 1
+    },
+    "nameAliases": [
+      "Amex Platinum",
+      "American Express Platinum"
+    ],
+    "welcomeBonus": {
+      "points": 175000,
+      "spendRequirement": 12000,
+      "timeframeMonths": 6
+    }
+  },
+  {
+    "id": "bank-of-america-travel-rewards",
+    "pointsCurrency": "cash",
+    "affiliateUrl": "https://capital.one/3WsmqtZ",
+    "cppOverride": 1,
+    "earnRates": {
+      "travel": 3,
+      "hotels": 3,
+      "dining": 1.5,
+      "gas": 1.5,
+      "groceries": 1.5,
+      "streaming": 1.5,
+      "rent": 0,
+      "other": 1.5
+    },
+    "nameAliases": [
+      "BofA Travel Rewards"
+    ],
+    "welcomeBonus": {
+      "points": 25000,
+      "spendRequirement": 1000,
+      "timeframeMonths": 3
+    }
+  },
+  {
+    "id": "bilt-palladium",
+    "pointsCurrency": "bilt_points",
+    "affiliateUrl": "https://capital.one/3WsmqtZ",
+    "cppOverride": 2.2,
+    "earnRates": {
+      "travel": 3,
+      "hotels": 4,
+      "dining": 2,
+      "gas": 2,
+      "groceries": 2,
+      "streaming": 2,
+      "rent": 1.25,
+      "other": 2
+    },
+    "nameAliases": [
+      "Bilt",
+      "Bilt Rewards"
+    ],
+    "welcomeBonus": {
+      "points": 50000,
+      "spendRequirement": 4000,
+      "timeframeMonths": 3
+    }
+  },
+  {
+    "id": "capital-one-venture",
+    "pointsCurrency": "capital_one_miles",
+    "affiliateUrl": "https://capital.one/3WsmqtZ",
+    "cppOverride": 1.85,
+    "earnRates": {
+      "travel": 5,
+      "hotels": 5,
+      "dining": 2,
+      "gas": 2,
+      "groceries": 2,
+      "streaming": 2,
+      "rent": 0,
+      "other": 2
+    },
+    "nameAliases": [
+      "Venture",
+      "Capital One Venture"
+    ],
+    "welcomeBonus": {
+      "points": 75000,
+      "spendRequirement": 4000,
+      "timeframeMonths": 3
+    }
+  },
+  {
+    "id": "capital-one-venture-x",
+    "pointsCurrency": "capital_one_miles",
+    "affiliateUrl": "https://capital.one/3WsmqtZ",
+    "cppOverride": 1.85,
+    "earnRates": {
+      "travel": 10,
+      "hotels": 10,
+      "dining": 2,
+      "gas": 2,
+      "groceries": 2,
+      "streaming": 2,
+      "rent": 0,
+      "other": 2
+    },
+    "nameAliases": [
+      "Venture X",
+      "Capital One Venture X"
+    ],
+    "welcomeBonus": {
+      "points": 75000,
+      "spendRequirement": 4000,
+      "timeframeMonths": 3
+    }
+  },
+  {
+    "id": "chase-sapphire-preferred",
+    "pointsCurrency": "chase_ur",
+    "affiliateUrl": "https://capital.one/3WsmqtZ",
+    "cppOverride": 2.05,
+    "earnRates": {
+      "travel": 5,
+      "hotels": 5,
+      "dining": 3,
+      "gas": 1,
+      "groceries": 3,
+      "streaming": 3,
+      "rent": 0,
+      "other": 1
+    },
+    "nameAliases": [
+      "CSP",
+      "Chase Sapphire Preferred"
+    ],
+    "welcomeBonus": {
+      "points": 75000,
+      "spendRequirement": 5000,
+      "timeframeMonths": 3
+    }
+  },
+  {
+    "id": "chase-sapphire-reserve",
+    "pointsCurrency": "chase_ur",
+    "affiliateUrl": "https://capital.one/3WsmqtZ",
+    "cppOverride": 2.05,
+    "earnRates": {
+      "travel": 8,
+      "hotels": 8,
+      "dining": 3,
+      "gas": 1,
+      "groceries": 1,
+      "streaming": 1,
+      "rent": 0,
+      "other": 1
+    },
+    "nameAliases": [
+      "CSR",
+      "Chase Sapphire Reserve®"
+    ],
+    "welcomeBonus": {
+      "points": 125000,
+      "spendRequirement": 6000,
+      "timeframeMonths": 3
+    }
+  },
+  {
+    "id": "delta-skymiles-gold-amex",
+    "pointsCurrency": "delta_miles",
+    "affiliateUrl": "https://capital.one/3WsmqtZ",
+    "cppOverride": 1.2,
+    "earnRates": {
+      "travel": 2,
+      "hotels": 1,
+      "dining": 2,
+      "gas": 1,
+      "groceries": 2,
+      "streaming": 1,
+      "rent": 0,
+      "other": 1
+    },
+    "nameAliases": [
+      "Delta Gold",
+      "Amex Delta Gold"
+    ],
+    "welcomeBonus": {
+      "points": 90000,
+      "spendRequirement": 5000,
+      "timeframeMonths": 6,
+      "expires": "2026-04-01"
+    }
+  },
+  {
+    "id": "delta-skymiles-platinum-amex",
+    "pointsCurrency": "delta_miles",
+    "affiliateUrl": "https://capital.one/3WsmqtZ",
+    "cppOverride": 1.2,
+    "earnRates": {
+      "travel": 3,
+      "hotels": 3,
+      "dining": 2,
+      "gas": 1,
+      "groceries": 2,
+      "streaming": 1,
+      "rent": 0,
+      "other": 1
+    },
+    "nameAliases": [
+      "Delta Platinum",
+      "Amex Delta Platinum"
+    ],
+    "welcomeBonus": {
+      "points": 100000,
+      "spendRequirement": 6000,
+      "timeframeMonths": 6,
+      "expires": "2026-04-01"
+    }
+  },
+  {
+    "id": "delta-skymiles-reserve-amex",
+    "pointsCurrency": "delta_miles",
+    "affiliateUrl": "https://capital.one/3WsmqtZ",
+    "cppOverride": 1.2,
+    "earnRates": {
+      "travel": 3,
+      "hotels": 1,
+      "dining": 1,
+      "gas": 1,
+      "groceries": 1,
+      "streaming": 1,
+      "rent": 0,
+      "other": 1
+    },
+    "nameAliases": [
+      "Delta Reserve",
+      "Amex Delta Reserve"
+    ],
+    "welcomeBonus": {
+      "points": 125000,
+      "spendRequirement": 15000,
+      "timeframeMonths": 6,
+      "expires": "2026-04-01"
+    }
+  },
+  {
+    "id": "ihg-one-rewards-premier",
+    "pointsCurrency": "ihg_points",
+    "affiliateUrl": "https://capital.one/3WsmqtZ",
+    "cppOverride": 0.5,
+    "earnRates": {
+      "travel": 5,
+      "hotels": 10,
+      "dining": 5,
+      "gas": 5,
+      "groceries": 3,
+      "streaming": 3,
+      "rent": 0,
+      "other": 3
+    },
+    "nameAliases": [
+      "IHG Premier",
+      "IHG One Rewards Premier"
+    ],
+    "welcomeBonus": {
+      "points": 140000,
+      "spendRequirement": 3000,
+      "timeframeMonths": 3
+    }
+  },
+  {
+    "id": "marriott-bonvoy-brilliant-amex",
+    "pointsCurrency": "marriott_points",
+    "affiliateUrl": "https://capital.one/3WsmqtZ",
+    "cppOverride": 0.7,
+    "earnRates": {
+      "travel": 3,
+      "hotels": 6,
+      "dining": 3,
+      "gas": 2,
+      "groceries": 2,
+      "streaming": 2,
+      "rent": 0,
+      "other": 2
+    },
+    "nameAliases": [
+      "Bonvoy Brilliant",
+      "Marriott Brilliant"
+    ],
+    "welcomeBonus": {
+      "points": 185000,
+      "spendRequirement": 6000,
+      "timeframeMonths": 6
+    }
+  },
+  {
+    "id": "united-quest-card",
+    "pointsCurrency": "united_miles",
+    "affiliateUrl": "https://capital.one/3WsmqtZ",
+    "cppOverride": 1.5,
+    "earnRates": {
+      "travel": 3,
+      "hotels": 2,
+      "dining": 2,
+      "gas": 1,
+      "groceries": 1,
+      "streaming": 2,
+      "rent": 0,
+      "other": 1
+    },
+    "nameAliases": [
+      "United Quest"
+    ],
+    "welcomeBonus": {
+      "points": 80000,
+      "spendRequirement": 4000,
+      "timeframeMonths": 3
+    }
+  }
+]

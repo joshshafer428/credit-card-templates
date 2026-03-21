@@ -1,0 +1,14 @@
+{
+  "version": "2026-03",
+  "currencies": {
+    "chase_ur":           { "label": "Chase Ultimate Rewards", "cpp": 2.0 },
+    "amex_mr":            { "label": "Amex Membership Rewards", "cpp": 2.0 },
+    "capital_one_miles":  { "label": "Capital One Miles", "cpp": 1.7 },
+    "bilt_points":        { "label": "Bilt Rewards Points", "cpp": 1.7 },
+    "delta_miles":        { "label": "Delta SkyMiles", "cpp": 1.2 },
+    "united_miles":       { "label": "United MileagePlus Miles", "cpp": 1.35 },
+    "marriott_points":    { "label": "Marriott Bonvoy Points", "cpp": 0.7 },
+    "ihg_points":         { "label": "IHG One Rewards Points", "cpp": 0.5 },
+    "cash":               { "label": "Cash Back", "cpp": 1.0 }
+  }
+}
