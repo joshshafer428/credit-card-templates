@@ -1,0 +1,1336 @@
+[
+  {
+    "id": "american-express-blue-cash-preferred",
+    "name": "American Express Blue Cash Preferred",
+    "network": "Amex",
+    "annualFee": 95,
+    "benefits": [
+      {
+        "name": "Disney Bundle monthly streaming credit (Disney+ / Hulu / ESPN+)",
+        "category": "Entertainment",
+        "benefitType": "credit",
+        "dollarValue": 7,
+        "resetPeriod": "monthly",
+        "resetAnchor": "calendar_month",
+        "quizTag": "streaming"
+      }
+    ]
+  },
+  {
+    "id": "american-express-gold-card",
+    "name": "American Express Gold Card",
+    "network": "Amex",
+    "annualFee": 325,
+    "benefits": [
+      {
+        "name": "Resy dining credit",
+        "category": "Dining",
+        "benefitType": "credit",
+        "dollarValue": 50,
+        "resetPeriod": "semi-annual",
+        "resetAnchor": "calendar_semi_annual",
+        "quizTag": "dining"
+      },
+      {
+        "name": "Dining credit (Grubhub / Cheesecake Factory / Goldbelly / Wine.com / Five Guys)",
+        "category": "Dining",
+        "benefitType": "credit",
+        "dollarValue": 10,
+        "resetPeriod": "monthly",
+        "resetAnchor": "calendar_month",
+        "quizTag": "food_delivery"
+      },
+      {
+        "name": "Dunkin' credit",
+        "category": "Dining",
+        "benefitType": "credit",
+        "dollarValue": 7,
+        "resetPeriod": "monthly",
+        "resetAnchor": "calendar_month",
+        "quizTag": "dining"
+      },
+      {
+        "name": "Uber Cash",
+        "category": "Transportation",
+        "benefitType": "credit",
+        "dollarValue": 10,
+        "resetPeriod": "monthly",
+        "resetAnchor": "calendar_month",
+        "quizTag": "rideshare"
+      }
+    ]
+  },
+  {
+    "id": "american-express-green-card",
+    "name": "American Express Green Card",
+    "network": "Amex",
+    "annualFee": 150,
+    "benefits": [
+      {
+        "name": "The Hotel Collection credit ($100 on qualifying charges per 2-night stay via Amex Travel)",
+        "category": "Hotel",
+        "benefitType": "credit",
+        "dollarValue": 100,
+        "resetPeriod": "ongoing",
+        "resetAnchor": "ongoing",
+        "quizTag": "hotel_frequent"
+      }
+    ]
+  },
+  {
+    "id": "american-express-platinum",
+    "name": "American Express Platinum",
+    "network": "Amex",
+    "annualFee": 895,
+    "benefits": [
+      {
+        "name": "Fine Hotels + Resorts or The Hotel Collection credit",
+        "category": "Hotel",
+        "benefitType": "credit",
+        "dollarValue": 300,
+        "resetPeriod": "semi-annual",
+        "resetAnchor": "calendar_semi_annual",
+        "quizTag": "hotel_frequent"
+      },
+      {
+        "name": "Uber Cash",
+        "category": "Transportation",
+        "benefitType": "credit",
+        "dollarValue": 15,
+        "resetPeriod": "monthly",
+        "resetAnchor": "calendar_month",
+        "quizTag": "rideshare"
+      },
+      {
+        "name": "Uber Cash December bonus",
+        "category": "Transportation",
+        "benefitType": "credit",
+        "dollarValue": 20,
+        "resetPeriod": "annual",
+        "resetAnchor": "calendar_year",
+        "quizTag": "rideshare"
+      },
+      {
+        "name": "Uber One membership credit",
+        "category": "Transportation",
+        "benefitType": "credit",
+        "dollarValue": 120,
+        "resetPeriod": "annual",
+        "resetAnchor": "calendar_year",
+        "quizTag": "rideshare"
+      },
+      {
+        "name": "Resy dining credit",
+        "category": "Dining",
+        "benefitType": "credit",
+        "dollarValue": 100,
+        "resetPeriod": "quarterly",
+        "resetAnchor": "calendar_semi_annual",
+        "quizTag": "dining"
+      },
+      {
+        "name": "Digital entertainment credit (Disney+ / Hulu / Peacock / NYT / WSJ / YouTube Premium etc.)",
+        "category": "Entertainment",
+        "benefitType": "credit",
+        "dollarValue": 25,
+        "resetPeriod": "monthly",
+        "resetAnchor": "calendar_month",
+        "quizTag": "streaming"
+      },
+      {
+        "name": "Saks Fifth Avenue credit",
+        "category": "Shopping",
+        "benefitType": "credit",
+        "dollarValue": 50,
+        "resetPeriod": "semi-annual",
+        "resetAnchor": "calendar_semi_annual",
+        "quizTag": "shopping"
+      },
+      {
+        "name": "Equinox credit",
+        "category": "Fitness",
+        "benefitType": "credit",
+        "dollarValue": 300,
+        "resetPeriod": "annual",
+        "resetAnchor": "calendar_year",
+        "quizTag": "gym_membership"
+      },
+      {
+        "name": "lululemon credit",
+        "category": "Shopping",
+        "benefitType": "credit",
+        "dollarValue": 75,
+        "resetPeriod": "quarterly",
+        "resetAnchor": "calendar_quarter",
+        "quizTag": "gym_membership"
+      },
+      {
+        "name": "CLEAR Plus credit",
+        "category": "Travel",
+        "benefitType": "credit",
+        "dollarValue": 209,
+        "resetPeriod": "annual",
+        "resetAnchor": "calendar_year",
+        "quizTag": "global_entry"
+      },
+      {
+        "name": "Walmart+ membership credit",
+        "category": "Shopping",
+        "benefitType": "credit",
+        "dollarValue": 13,
+        "resetPeriod": "monthly",
+        "resetAnchor": "calendar_month",
+        "quizTag": "walmart_plus"
+      },
+      {
+        "name": "Airline fee credit",
+        "category": "Travel",
+        "benefitType": "credit",
+        "dollarValue": 200,
+        "resetPeriod": "annual",
+        "resetAnchor": "calendar_year",
+        "quizTag": "travel_credit_user"
+      },
+      {
+        "name": "OURA Ring credit",
+        "category": "Wellness",
+        "benefitType": "credit",
+        "dollarValue": 200,
+        "resetPeriod": "annual",
+        "resetAnchor": "calendar_year",
+        "quizTag": "gym_membership"
+      },
+      {
+        "name": "Global Entry or TSA PreCheck credit",
+        "category": "Travel",
+        "benefitType": "credit",
+        "dollarValue": 120,
+        "resetPeriod": "every-4-years",
+        "resetAnchor": "every_4_years",
+        "quizTag": "global_entry"
+      },
+      {
+        "name": "Centurion Lounge access (40+ locations worldwide)",
+        "category": "Lounge Access",
+        "benefitType": "access",
+        "dollarValue": 0,
+        "resetPeriod": "ongoing",
+        "resetAnchor": "ongoing",
+        "quizTag": "lounge_access"
+      },
+      {
+        "name": "Priority Pass Select lounge access (1300+ lounges)",
+        "category": "Lounge Access",
+        "benefitType": "access",
+        "dollarValue": 0,
+        "resetPeriod": "ongoing",
+        "resetAnchor": "ongoing",
+        "quizTag": "lounge_access"
+      },
+      {
+        "name": "Delta Sky Club access (up to 10 visits per year)",
+        "category": "Lounge Access",
+        "benefitType": "access",
+        "dollarValue": 0,
+        "resetPeriod": "annual",
+        "resetAnchor": "calendar_year",
+        "quizTag": "lounge_access"
+      },
+      {
+        "name": "Hilton Honors Gold elite status",
+        "category": "Hotel Status",
+        "benefitType": "access",
+        "dollarValue": 0,
+        "resetPeriod": "ongoing",
+        "resetAnchor": "ongoing",
+        "quizTag": "hotel_frequent"
+      },
+      {
+        "name": "Marriott Bonvoy Gold Elite status",
+        "category": "Hotel Status",
+        "benefitType": "access",
+        "dollarValue": 0,
+        "resetPeriod": "ongoing",
+        "resetAnchor": "ongoing",
+        "quizTag": "hotel_frequent"
+      },
+      {
+        "name": "Hertz President's Circle status",
+        "category": "Car Rental Status",
+        "benefitType": "access",
+        "dollarValue": 0,
+        "resetPeriod": "ongoing",
+        "resetAnchor": "ongoing",
+        "quizTag": "primary_rental_car"
+      },
+      {
+        "name": "National Emerald Club Executive status",
+        "category": "Car Rental Status",
+        "benefitType": "access",
+        "dollarValue": 0,
+        "resetPeriod": "ongoing",
+        "resetAnchor": "ongoing",
+        "quizTag": "primary_rental_car"
+      },
+      {
+        "name": "Avis Preferred Plus status",
+        "category": "Car Rental Status",
+        "benefitType": "access",
+        "dollarValue": 0,
+        "resetPeriod": "ongoing",
+        "resetAnchor": "ongoing",
+        "quizTag": "primary_rental_car"
+      }
+    ]
+  },
+  {
+    "id": "atmos-rewards-ascent",
+    "name": "Atmos Rewards Ascent",
+    "network": "Other",
+    "annualFee": 95,
+    "benefits": [
+      {
+        "name": "Companion Fare ($99 + taxes on Alaska/Hawaiian flights within North America)",
+        "category": "Travel",
+        "benefitType": "credit",
+        "dollarValue": 99,
+        "resetPeriod": "annual",
+        "resetAnchor": "anniversary",
+        "quizTag": "travel_credit_user"
+      },
+      {
+        "name": "First checked bag free (primary cardholder + 1 companion)",
+        "category": "Travel",
+        "benefitType": "access",
+        "dollarValue": 0,
+        "resetPeriod": "per-flight",
+        "resetAnchor": "per_flight",
+        "quizTag": "travel_credit_user"
+      },
+      {
+        "name": "Priority boarding on Alaska and Hawaiian Airlines",
+        "category": "Travel",
+        "benefitType": "access",
+        "dollarValue": 0,
+        "resetPeriod": "per-flight",
+        "resetAnchor": "per_flight",
+        "quizTag": "travel_credit_user"
+      },
+      {
+        "name": "20% back on Alaska Airlines inflight purchases",
+        "category": "Travel",
+        "benefitType": "credit",
+        "dollarValue": 20,
+        "resetPeriod": "annual",
+        "resetAnchor": "calendar_year",
+        "uncapped": true,
+        "quizTag": "travel_credit_user"
+      }
+    ]
+  },
+  {
+    "id": "atmos-rewards-summit",
+    "name": "Atmos Rewards Summit",
+    "network": "Other",
+    "annualFee": 395,
+    "benefits": [
+      {
+        "name": "Annual 25000-point Global Companion Award",
+        "category": "Travel",
+        "benefitType": "credit",
+        "dollarValue": 375,
+        "resetPeriod": "annual",
+        "resetAnchor": "anniversary",
+        "quizTag": "travel_credit_user"
+      },
+      {
+        "name": "8 Alaska Lounge one-time passes per year (2 per quarter)",
+        "category": "Lounge Access",
+        "benefitType": "access",
+        "dollarValue": 0,
+        "resetPeriod": "annual",
+        "resetAnchor": "calendar_year",
+        "quizTag": "lounge_access"
+      },
+      {
+        "name": "Global Entry or TSA PreCheck credit",
+        "category": "Travel",
+        "benefitType": "credit",
+        "dollarValue": 120,
+        "resetPeriod": "every-4-years",
+        "resetAnchor": "every_4_years",
+        "quizTag": "global_entry"
+      },
+      {
+        "name": "First checked bag free (primary + up to 8 companions)",
+        "category": "Travel",
+        "benefitType": "access",
+        "dollarValue": 0,
+        "resetPeriod": "per-flight",
+        "resetAnchor": "per_flight",
+        "quizTag": "travel_credit_user"
+      },
+      {
+        "name": "Priority boarding on Alaska and Hawaiian Airlines",
+        "category": "Travel",
+        "benefitType": "access",
+        "dollarValue": 0,
+        "resetPeriod": "per-flight",
+        "resetAnchor": "per_flight",
+        "quizTag": "travel_credit_user"
+      },
+      {
+        "name": "20% back on Alaska Airlines inflight purchases",
+        "category": "Travel",
+        "benefitType": "credit",
+        "dollarValue": 0,
+        "resetPeriod": "annual",
+        "resetAnchor": "calendar_year",
+        "uncapped": true,
+        "quizTag": "travel_credit_user"
+      }
+    ]
+  },
+  {
+    "id": "bilt-obsidian",
+    "name": "Bilt Obsidian",
+    "network": "Mastercard",
+    "annualFee": 95,
+    "benefits": [
+      {
+        "name": "Annual Bilt Cash credit",
+        "category": "Travel",
+        "benefitType": "credit",
+        "dollarValue": 200,
+        "resetPeriod": "annual",
+        "resetAnchor": "calendar_year"
+      },
+      {
+        "name": "Bilt Travel hotel credit (2-night minimum via Bilt portal)",
+        "category": "Hotel",
+        "benefitType": "credit",
+        "dollarValue": 50,
+        "resetPeriod": "semi-annual",
+        "resetAnchor": "calendar_semi_annual",
+        "quizTag": "hotel_frequent"
+      }
+    ]
+  },
+  {
+    "id": "bilt-palladium",
+    "name": "Bilt Palladium",
+    "network": "Mastercard",
+    "annualFee": 495,
+    "benefits": [
+      {
+        "name": "Annual Bilt Cash credit",
+        "category": "Travel",
+        "benefitType": "credit",
+        "dollarValue": 200,
+        "resetPeriod": "annual",
+        "resetAnchor": "calendar_year"
+      },
+      {
+        "name": "Bilt Travel hotel credit (2-night min stays)",
+        "category": "Hotel",
+        "benefitType": "credit",
+        "dollarValue": 200,
+        "resetPeriod": "semi-annual",
+        "resetAnchor": "calendar_semi_annual",
+        "quizTag": "hotel_frequent"
+      },
+      {
+        "name": "Priority Pass lounge access (1400+ lounges with 2 guests)",
+        "category": "Lounge Access",
+        "benefitType": "access",
+        "dollarValue": 0,
+        "resetPeriod": "ongoing",
+        "resetAnchor": "ongoing",
+        "quizTag": "lounge_access"
+      }
+    ]
+  },
+  {
+    "id": "capital-one-venture",
+    "name": "Capital One Venture",
+    "network": "Mastercard",
+    "annualFee": 95,
+    "benefits": [
+      {
+        "name": "Global Entry or TSA PreCheck credit",
+        "category": "Travel",
+        "benefitType": "credit",
+        "dollarValue": 120,
+        "resetPeriod": "every-4-years",
+        "resetAnchor": "every_4_years",
+        "quizTag": "global_entry"
+      }
+    ]
+  },
+  {
+    "id": "capital-one-venture-x",
+    "name": "Capital One Venture X",
+    "network": "Mastercard",
+    "annualFee": 395,
+    "benefits": [
+      {
+        "name": "Capital One Travel credit",
+        "category": "Travel",
+        "benefitType": "credit",
+        "dollarValue": 300,
+        "resetPeriod": "annual",
+        "resetAnchor": "anniversary",
+        "quizTag": "travel_credit_user"
+      },
+      {
+        "name": "Anniversary bonus miles (10000 miles)",
+        "category": "Points",
+        "benefitType": "credit",
+        "dollarValue": 100,
+        "resetPeriod": "annual",
+        "resetAnchor": "anniversary",
+        "quizTag": "travel_credit_user"
+      },
+      {
+        "name": "Global Entry or TSA PreCheck credit",
+        "category": "Travel",
+        "benefitType": "credit",
+        "dollarValue": 120,
+        "resetPeriod": "every-4-years",
+        "resetAnchor": "every_4_years",
+        "quizTag": "global_entry"
+      },
+      {
+        "name": "Priority Pass lounge access (1300+ lounges)",
+        "category": "Lounge Access",
+        "benefitType": "access",
+        "dollarValue": 0,
+        "resetPeriod": "ongoing",
+        "resetAnchor": "ongoing",
+        "quizTag": "lounge_access"
+      },
+      {
+        "name": "Capital One Lounge access",
+        "category": "Lounge Access",
+        "benefitType": "access",
+        "dollarValue": 0,
+        "resetPeriod": "ongoing",
+        "resetAnchor": "ongoing",
+        "quizTag": "lounge_access"
+      },
+      {
+        "name": "Hertz President's Circle status",
+        "category": "Car Rental Status",
+        "benefitType": "access",
+        "dollarValue": 0,
+        "resetPeriod": "ongoing",
+        "resetAnchor": "ongoing",
+        "quizTag": "primary_rental_car"
+      },
+      {
+        "name": "National Emerald Club Executive status",
+        "category": "Car Rental Status",
+        "benefitType": "access",
+        "dollarValue": 0,
+        "resetPeriod": "ongoing",
+        "resetAnchor": "ongoing",
+        "quizTag": "primary_rental_car"
+      },
+      {
+        "name": "Avis Preferred Plus status",
+        "category": "Car Rental Status",
+        "benefitType": "access",
+        "dollarValue": 0,
+        "resetPeriod": "ongoing",
+        "resetAnchor": "ongoing",
+        "quizTag": "primary_rental_car"
+      }
+    ]
+  },
+  {
+    "id": "chase-sapphire-preferred",
+    "name": "Chase Sapphire Preferred",
+    "network": "Visa",
+    "annualFee": 95,
+    "benefits": [
+      {
+        "name": "Hotel credit via Chase Travel",
+        "category": "Hotel",
+        "benefitType": "credit",
+        "dollarValue": 50,
+        "resetPeriod": "annual",
+        "resetAnchor": "anniversary",
+        "quizTag": "hotel_frequent"
+      },
+      {
+        "name": "DoorDash promo credit (groceries & retail)",
+        "category": "Dining",
+        "benefitType": "credit",
+        "dollarValue": 10,
+        "resetPeriod": "monthly",
+        "resetAnchor": "calendar_month",
+        "quizTag": "food_delivery"
+      },
+      {
+        "name": "DashPass",
+        "category": "Dining",
+        "benefitType": "credit",
+        "dollarValue": 120,
+        "resetPeriod": "annual",
+        "resetAnchor": "calendar_year",
+        "quizTag": "dining"
+      }
+    ]
+  },
+  {
+    "id": "chase-sapphire-reserve",
+    "name": "Chase Sapphire Reserve",
+    "network": "Visa",
+    "annualFee": 795,
+    "benefits": [
+      {
+        "name": "Annual travel credit",
+        "category": "Travel",
+        "benefitType": "credit",
+        "dollarValue": 300,
+        "resetPeriod": "annual",
+        "resetAnchor": "anniversary",
+        "quizTag": "travel_credit_user"
+      },
+      {
+        "name": "The Edit hotel credit (2-night min via Chase Travel)",
+        "category": "Hotel",
+        "benefitType": "credit",
+        "dollarValue": 250,
+        "resetPeriod": "semi-annual",
+        "resetAnchor": "calendar_semi_annual",
+        "quizTag": "hotel_frequent"
+      },
+      {
+        "name": "Select partner hotel credit (IHG / Omni / Montage / Virgin etc.)",
+        "category": "Hotel",
+        "benefitType": "credit",
+        "dollarValue": 250,
+        "resetPeriod": "annual",
+        "resetAnchor": "calendar_year",
+        "quizTag": "hotel_frequent"
+      },
+      {
+        "name": "Exclusive Tables dining credit",
+        "category": "Dining",
+        "benefitType": "credit",
+        "dollarValue": 150,
+        "resetPeriod": "semi-annual",
+        "resetAnchor": "calendar_semi_annual",
+        "quizTag": "dining"
+      },
+      {
+        "name": "StubHub / Viagogo entertainment credit",
+        "category": "Entertainment",
+        "benefitType": "credit",
+        "dollarValue": 150,
+        "resetPeriod": "semi-annual",
+        "resetAnchor": "calendar_semi_annual",
+        "quizTag": "entertainment"
+      },
+      {
+        "name": "Peloton membership credit",
+        "category": "Fitness",
+        "benefitType": "credit",
+        "dollarValue": 10,
+        "resetPeriod": "monthly",
+        "resetAnchor": "calendar_month",
+        "quizTag": "gym_membership"
+      },
+      {
+        "name": "Lyft Credit",
+        "category": "Transportation",
+        "benefitType": "credit",
+        "dollarValue": 10,
+        "resetPeriod": "monthly",
+        "resetAnchor": "calendar_month",
+        "quizTag": "rideshare"
+      },
+      {
+        "name": "Apple TV and Music",
+        "category": "Entertainment",
+        "benefitType": "credit",
+        "dollarValue": 288,
+        "resetPeriod": "annual",
+        "resetAnchor": "calendar_year",
+        "quizTag": "streaming"
+      },
+      {
+        "name": "DoorDash promo credit",
+        "category": "Dining",
+        "benefitType": "credit",
+        "dollarValue": 25,
+        "resetPeriod": "monthly",
+        "resetAnchor": "calendar_month",
+        "quizTag": "dining"
+      },
+      {
+        "name": "DashPass",
+        "category": "Dining",
+        "benefitType": "credit",
+        "dollarValue": 120,
+        "resetPeriod": "annual",
+        "resetAnchor": "calendar_year",
+        "quizTag": "dining"
+      },
+      {
+        "name": "Global Entry or TSA PreCheck credit",
+        "category": "Travel",
+        "benefitType": "credit",
+        "dollarValue": 120,
+        "resetPeriod": "every-4-years",
+        "resetAnchor": "every_4_years",
+        "quizTag": "global_entry"
+      },
+      {
+        "name": "Priority Pass Select lounge access (1300+ lounges)",
+        "category": "Lounge Access",
+        "benefitType": "access",
+        "dollarValue": 0,
+        "resetPeriod": "ongoing",
+        "resetAnchor": "ongoing",
+        "quizTag": "lounge_access"
+      },
+      {
+        "name": "Chase Sapphire Lounge access (7 U.S. locations)",
+        "category": "Lounge Access",
+        "benefitType": "access",
+        "dollarValue": 0,
+        "resetPeriod": "ongoing",
+        "resetAnchor": "ongoing",
+        "quizTag": "lounge_access"
+      }
+    ]
+  },
+  {
+    "id": "citi-strata-elite",
+    "name": "Citi Strata Elite",
+    "network": "Mastercard",
+    "annualFee": 595,
+    "benefits": [
+      {
+        "name": "Hotel credit for 2+ night stays via Citi Travel",
+        "category": "Hotel",
+        "benefitType": "credit",
+        "dollarValue": 300,
+        "resetPeriod": "annual",
+        "resetAnchor": "calendar_year",
+        "quizTag": "hotel_frequent"
+      },
+      {
+        "name": "Select brand statement credit (American Airlines / Best Buy / Live Nation / 1stDibs / Future PT)",
+        "category": "Shopping",
+        "benefitType": "credit",
+        "dollarValue": 200,
+        "resetPeriod": "annual",
+        "resetAnchor": "calendar_year",
+        "quizTag": "entertainment"
+      },
+      {
+        "name": "Blacklane premium chauffeur service credit",
+        "category": "Transportation",
+        "benefitType": "credit",
+        "dollarValue": 100,
+        "resetPeriod": "semi-annual",
+        "resetAnchor": "calendar_semi_annual",
+        "quizTag": "rideshare"
+      },
+      {
+        "name": "Priority Pass lounge access (1500+ lounges worldwide)",
+        "category": "Lounge Access",
+        "benefitType": "access",
+        "dollarValue": 0,
+        "resetPeriod": "ongoing",
+        "resetAnchor": "ongoing",
+        "quizTag": "lounge_access"
+      },
+      {
+        "name": "4 Admirals Club one-time lounge passes per year",
+        "category": "Lounge Access",
+        "benefitType": "access",
+        "dollarValue": 0,
+        "resetPeriod": "ongoing",
+        "resetAnchor": "calendar_year",
+        "quizTag": "lounge_access"
+      },
+      {
+        "name": "Global Entry or TSA PreCheck credit",
+        "category": "Travel",
+        "benefitType": "credit",
+        "dollarValue": 120,
+        "resetPeriod": "every-4-years",
+        "resetAnchor": "every_4_years",
+        "quizTag": "global_entry"
+      }
+    ]
+  },
+  {
+    "id": "citi-strata-premier",
+    "name": "Citi Strata Premier",
+    "network": "Mastercard",
+    "annualFee": 95,
+    "benefits": [
+      {
+        "name": "Hotel savings credit ($100 off $500+ hotel stay via Citi Travel)",
+        "category": "Hotel",
+        "benefitType": "credit",
+        "dollarValue": 100,
+        "resetPeriod": "annual",
+        "resetAnchor": "calendar_year",
+        "quizTag": "hotel_frequent"
+      }
+    ]
+  },
+  {
+    "id": "delta-skymiles-gold-amex",
+    "name": "Delta SkyMiles Gold Amex",
+    "network": "Amex",
+    "annualFee": 150,
+    "benefits": [
+      {
+        "name": "Delta Stays hotel credit",
+        "category": "Hotel",
+        "benefitType": "credit",
+        "dollarValue": 100,
+        "resetPeriod": "annual",
+        "resetAnchor": "calendar_year",
+        "quizTag": "hotel_frequent"
+      },
+      {
+        "name": "Delta Flight Credit (after $10K calendar year spend)",
+        "category": "Travel",
+        "benefitType": "credit",
+        "dollarValue": 200,
+        "resetPeriod": "annual",
+        "resetAnchor": "calendar_year",
+        "quizTag": "travel_credit_user"
+      },
+      {
+        "name": "20% back on Delta in-flight purchases (up to $300)",
+        "category": "Travel",
+        "benefitType": "credit",
+        "dollarValue": 20,
+        "resetPeriod": "annual",
+        "resetAnchor": "calendar_year",
+        "uncapped": true,
+        "quizTag": "travel_credit_user"
+      },
+      {
+        "name": "Uber One membership credit (up to 6 months x $9.99)",
+        "category": "Transportation",
+        "benefitType": "credit",
+        "dollarValue": 60,
+        "resetPeriod": "annual",
+        "resetAnchor": "calendar_year",
+        "quizTag": "rideshare"
+      },
+      {
+        "name": "First checked bag free (primary + up to 8 companions)",
+        "category": "Travel",
+        "benefitType": "access",
+        "dollarValue": 0,
+        "resetPeriod": "per-flight",
+        "resetAnchor": "per_flight",
+        "quizTag": "travel_credit_user"
+      },
+      {
+        "name": "Priority boarding (Zone 5)",
+        "category": "Travel",
+        "benefitType": "access",
+        "dollarValue": 0,
+        "resetPeriod": "per-flight",
+        "resetAnchor": "per_flight",
+        "quizTag": "travel_credit_user"
+      }
+    ]
+  },
+  {
+    "id": "delta-skymiles-platinum-amex",
+    "name": "Delta SkyMiles Platinum Amex",
+    "network": "Amex",
+    "annualFee": 350,
+    "benefits": [
+      {
+        "name": "Delta Stays hotel credit",
+        "category": "Hotel",
+        "benefitType": "credit",
+        "dollarValue": 150,
+        "resetPeriod": "annual",
+        "resetAnchor": "calendar_year",
+        "quizTag": "hotel_frequent"
+      },
+      {
+        "name": "Companion certificate (Main cabin domestic / Caribbean / Central America)",
+        "category": "Travel",
+        "benefitType": "credit",
+        "dollarValue": 200,
+        "resetPeriod": "annual",
+        "resetAnchor": "anniversary",
+        "uncapped": true,
+        "quizTag": "travel_credit_user"
+      },
+      {
+        "name": "Uber One membership credit (up to 12 months x $9.99)",
+        "category": "Transportation",
+        "benefitType": "credit",
+        "dollarValue": 120,
+        "resetPeriod": "annual",
+        "resetAnchor": "calendar_year",
+        "quizTag": "rideshare"
+      },
+      {
+        "name": "20% back on Delta in-flight purchases",
+        "category": "Travel",
+        "benefitType": "credit",
+        "dollarValue": 20,
+        "resetPeriod": "annual",
+        "resetAnchor": "calendar_year",
+        "uncapped": true,
+        "quizTag": "travel_credit_user"
+      },
+      {
+        "name": "Global Entry or TSA PreCheck credit",
+        "category": "Travel",
+        "benefitType": "credit",
+        "dollarValue": 120,
+        "resetPeriod": "every-4-years",
+        "resetAnchor": "every_4_years",
+        "quizTag": "global_entry"
+      },
+      {
+        "name": "First checked bag free (primary + up to 8 companions)",
+        "category": "Travel",
+        "benefitType": "access",
+        "dollarValue": 0,
+        "resetPeriod": "per-flight",
+        "resetAnchor": "per_flight",
+        "quizTag": "travel_credit_user"
+      },
+      {
+        "name": "Priority boarding (Zone 5)",
+        "category": "Travel",
+        "benefitType": "access",
+        "dollarValue": 0,
+        "resetPeriod": "per-flight",
+        "resetAnchor": "per_flight",
+        "quizTag": "travel_credit_user"
+      }
+    ]
+  },
+  {
+    "id": "delta-skymiles-reserve-amex",
+    "name": "Delta SkyMiles Reserve Amex",
+    "network": "Amex",
+    "annualFee": 650,
+    "benefits": [
+      {
+        "name": "Delta Stays hotel credit",
+        "category": "Hotel",
+        "benefitType": "credit",
+        "dollarValue": 200,
+        "resetPeriod": "annual",
+        "resetAnchor": "calendar_year",
+        "quizTag": "hotel_frequent"
+      },
+      {
+        "name": "Companion certificate (First / Comfort+ / Main domestic / Caribbean / Central America)",
+        "category": "Travel",
+        "benefitType": "credit",
+        "dollarValue": 350,
+        "resetPeriod": "annual",
+        "resetAnchor": "anniversary",
+        "uncapped": true,
+        "quizTag": "travel_credit_user"
+      },
+      {
+        "name": "Uber One membership credit (up to 12 months x $9.99)",
+        "category": "Transportation",
+        "benefitType": "credit",
+        "dollarValue": 120,
+        "resetPeriod": "annual",
+        "resetAnchor": "calendar_year",
+        "quizTag": "rideshare"
+      },
+      {
+        "name": "Resy dining credit",
+        "category": "Dining",
+        "benefitType": "credit",
+        "dollarValue": 20,
+        "resetPeriod": "monthly",
+        "resetAnchor": "calendar_month",
+        "quizTag": "dining"
+      },
+      {
+        "name": "Rideshare credit",
+        "category": "Transportation",
+        "benefitType": "credit",
+        "dollarValue": 10,
+        "resetPeriod": "monthly",
+        "resetAnchor": "calendar_month",
+        "quizTag": "rideshare"
+      },
+      {
+        "name": "20% back on Delta in-flight purchases",
+        "category": "Travel",
+        "benefitType": "credit",
+        "dollarValue": 200,
+        "resetPeriod": "annual",
+        "resetAnchor": "calendar_year",
+        "uncapped": true,
+        "quizTag": "travel_credit_user"
+      },
+      {
+        "name": "Global Entry or TSA PreCheck credit",
+        "category": "Travel",
+        "benefitType": "credit",
+        "dollarValue": 120,
+        "resetPeriod": "every-4-years",
+        "resetAnchor": "every_4_years",
+        "quizTag": "global_entry"
+      },
+      {
+        "name": "Delta Sky Club access (15 visits per Medallion Year)",
+        "category": "Lounge Access",
+        "benefitType": "access",
+        "dollarValue": 0,
+        "resetPeriod": "annual",
+        "resetAnchor": "calendar_year",
+        "quizTag": "lounge_access"
+      },
+      {
+        "name": "First checked bag free (primary + up to 8 companions)",
+        "category": "Travel",
+        "benefitType": "access",
+        "dollarValue": 0,
+        "resetPeriod": "per-flight",
+        "resetAnchor": "per_flight",
+        "quizTag": "travel_credit_user"
+      },
+      {
+        "name": "Priority boarding (Zone 5)",
+        "category": "Travel",
+        "benefitType": "access",
+        "dollarValue": 0,
+        "resetPeriod": "per-flight",
+        "resetAnchor": "per_flight",
+        "quizTag": "travel_credit_user"
+      }
+    ]
+  },
+  {
+    "id": "hilton-honors-amex",
+    "name": "Hilton Honors Amex",
+    "network": "Amex",
+    "annualFee": 0,
+    "benefits": [
+      {
+        "name": "Hilton Honors Silver Elite status",
+        "category": "Hotel Status",
+        "benefitType": "access",
+        "dollarValue": 0,
+        "resetPeriod": "ongoing",
+        "resetAnchor": "ongoing",
+        "quizTag": "hotel_frequent"
+      }
+    ]
+  },
+  {
+    "id": "hilton-honors-aspire",
+    "name": "Hilton Honors Aspire",
+    "network": "Other",
+    "annualFee": 550,
+    "benefits": [
+      {
+        "name": "Hilton Resort Credit ($200 per semi-annual period)",
+        "category": "Hotel",
+        "benefitType": "credit",
+        "dollarValue": 200,
+        "resetPeriod": "semi-annual",
+        "resetAnchor": "calendar_semi_annual",
+        "quizTag": "hotel_frequent"
+      },
+      {
+        "name": "$100 on-property credit at Waldorf Astoria / Conrad Hotels (2-night minimum stay)",
+        "category": "Hotel",
+        "benefitType": "credit",
+        "dollarValue": 100,
+        "resetPeriod": "ongoing",
+        "resetAnchor": "ongoing",
+        "quizTag": "hotel_frequent"
+      },
+      {
+        "name": "Annual Free Night Award (valid at any Hilton portfolio property worldwide)",
+        "category": "Hotel",
+        "benefitType": "credit",
+        "dollarValue": 350,
+        "resetPeriod": "annual",
+        "resetAnchor": "anniversary",
+        "uncapped": true,
+        "quizTag": "hotel_frequent"
+      },
+      {
+        "name": "Hilton Honors Diamond Elite status",
+        "category": "Hotel Status",
+        "benefitType": "access",
+        "dollarValue": 0,
+        "resetPeriod": "ongoing",
+        "resetAnchor": "ongoing",
+        "quizTag": "hotel_frequent"
+      },
+      {
+        "name": "Priority Pass Select lounge access (1300+ lounges)",
+        "category": "Lounge Access",
+        "benefitType": "access",
+        "dollarValue": 0,
+        "resetPeriod": "ongoing",
+        "resetAnchor": "ongoing",
+        "quizTag": "lounge_access"
+      }
+    ]
+  },
+  {
+    "id": "hilton-honors-surpass",
+    "name": "Hilton Honors Surpass",
+    "network": "Other",
+    "annualFee": 150,
+    "benefits": [
+      {
+        "name": "Hilton Honors Gold Elite status",
+        "category": "Hotel Status",
+        "benefitType": "access",
+        "dollarValue": 0,
+        "resetPeriod": "ongoing",
+        "resetAnchor": "ongoing",
+        "quizTag": "hotel_frequent"
+      },
+      {
+        "name": "Free Night Reward after $15000 calendar year spend",
+        "category": "Hotel",
+        "benefitType": "credit",
+        "dollarValue": 150,
+        "resetPeriod": "annual",
+        "resetAnchor": "calendar_year",
+        "uncapped": true,
+        "quizTag": "hotel_frequent"
+      }
+    ]
+  },
+  {
+    "id": "ihg-one-rewards-premier",
+    "name": "IHG One Rewards Premier",
+    "network": "Visa",
+    "annualFee": 99,
+    "benefits": [
+      {
+        "name": "Anniversary Free Night Award (up to 40000 IHG points)",
+        "category": "Hotel",
+        "benefitType": "credit",
+        "dollarValue": 100,
+        "resetPeriod": "annual",
+        "resetAnchor": "anniversary",
+        "quizTag": "hotel_frequent"
+      },
+      {
+        "name": "United TravelBank Cash credit",
+        "category": "Travel",
+        "benefitType": "credit",
+        "dollarValue": 25,
+        "resetPeriod": "semi-annual",
+        "resetAnchor": "calendar_semi_annual",
+        "quizTag": "travel_credit_user"
+      },
+      {
+        "name": "Global Entry or TSA PreCheck credit",
+        "category": "Travel",
+        "benefitType": "credit",
+        "dollarValue": 120,
+        "resetPeriod": "every-4-years",
+        "resetAnchor": "every_4_years",
+        "quizTag": "global_entry"
+      },
+      {
+        "name": "IHG One Rewards Platinum Elite status",
+        "category": "Hotel Status",
+        "benefitType": "access",
+        "dollarValue": 0,
+        "resetPeriod": "ongoing",
+        "resetAnchor": "ongoing",
+        "quizTag": "hotel_frequent"
+      }
+    ]
+  },
+  {
+    "id": "marriott-bonvoy-brilliant-amex",
+    "name": "Marriott Bonvoy Brilliant Amex",
+    "network": "Amex",
+    "annualFee": 650,
+    "benefits": [
+      {
+        "name": "Dining credit (restaurants worldwide)",
+        "category": "Dining",
+        "benefitType": "credit",
+        "dollarValue": 25,
+        "resetPeriod": "monthly",
+        "resetAnchor": "calendar_month",
+        "quizTag": "dining"
+      },
+      {
+        "name": "Free Night Award (up to 85000 Bonvoy points)",
+        "category": "Hotel",
+        "benefitType": "credit",
+        "dollarValue": 200,
+        "resetPeriod": "annual",
+        "resetAnchor": "anniversary",
+        "quizTag": "hotel_frequent"
+      },
+      {
+        "name": "Global Entry or TSA PreCheck credit",
+        "category": "Travel",
+        "benefitType": "credit",
+        "dollarValue": 120,
+        "resetPeriod": "every-4-years",
+        "resetAnchor": "every_4_years",
+        "quizTag": "global_entry"
+      },
+      {
+        "name": "Priority Pass Select lounge access (1200+ lounges)",
+        "category": "Lounge Access",
+        "benefitType": "access",
+        "dollarValue": 0,
+        "resetPeriod": "ongoing",
+        "resetAnchor": "ongoing",
+        "quizTag": "lounge_access"
+      },
+      {
+        "name": "Marriott Bonvoy Platinum Elite status",
+        "category": "Hotel Status",
+        "benefitType": "access",
+        "dollarValue": 0,
+        "resetPeriod": "ongoing",
+        "resetAnchor": "ongoing",
+        "quizTag": "hotel_frequent"
+      }
+    ]
+  },
+  {
+    "id": "southwest-rapid-rewards-priority",
+    "name": "Southwest Rapid Rewards Priority",
+    "network": "Other",
+    "annualFee": 149,
+    "benefits": [
+      {
+        "name": "Southwest annual travel credit",
+        "category": "Travel",
+        "benefitType": "credit",
+        "dollarValue": 75,
+        "resetPeriod": "annual",
+        "resetAnchor": "calendar_year",
+        "quizTag": "travel_credit_user"
+      },
+      {
+        "name": "Anniversary bonus points (7500 points)",
+        "category": "Points",
+        "benefitType": "credit",
+        "dollarValue": 97,
+        "resetPeriod": "annual",
+        "resetAnchor": "anniversary",
+        "quizTag": "travel_credit_user"
+      },
+      {
+        "name": "4 Upgraded Boardings per year (when available at departure gate)",
+        "category": "Travel",
+        "benefitType": "access",
+        "dollarValue": 0,
+        "resetPeriod": "annual",
+        "resetAnchor": "calendar_year",
+        "quizTag": "travel_credit_user"
+      },
+      {
+        "name": "25% back on inflight WiFi and purchases",
+        "category": "Travel",
+        "benefitType": "credit",
+        "dollarValue": 25,
+        "resetPeriod": "annual",
+        "resetAnchor": "calendar_year",
+        "uncapped": true,
+        "quizTag": "travel_credit_user"
+      }
+    ]
+  },
+  {
+    "id": "united-quest-card",
+    "name": "United Quest Card",
+    "network": "Visa",
+    "annualFee": 250,
+    "benefits": [
+      {
+        "name": "United travel credit",
+        "category": "Travel",
+        "benefitType": "credit",
+        "dollarValue": 200,
+        "resetPeriod": "annual",
+        "resetAnchor": "anniversary",
+        "quizTag": "travel_credit_user"
+      },
+      {
+        "name": "Instacart credit",
+        "category": "Dining",
+        "benefitType": "credit",
+        "dollarValue": 15,
+        "resetPeriod": "monthly",
+        "resetAnchor": "calendar_month",
+        "quizTag": "food_delivery"
+      },
+      {
+        "name": "2 United Club one-time passes",
+        "category": "Lounge Access",
+        "benefitType": "credit",
+        "dollarValue": 100,
+        "resetPeriod": "annual",
+        "resetAnchor": "anniversary",
+        "quizTag": "lounge_access"
+      }
+    ]
+  },
+  {
+    "id": "world-of-hyatt",
+    "name": "World of Hyatt",
+    "network": "Visa",
+    "annualFee": 95,
+    "benefits": [
+      {
+        "name": "Free Night Award at Category 1-4 Hyatt (each card anniversary)",
+        "category": "Hotel",
+        "benefitType": "credit",
+        "dollarValue": 150,
+        "resetPeriod": "annual",
+        "resetAnchor": "anniversary",
+        "uncapped": true,
+        "quizTag": "hotel_frequent"
+      },
+      {
+        "name": "World of Hyatt Discoverist elite status",
+        "category": "Hotel Status",
+        "benefitType": "access",
+        "dollarValue": 0,
+        "resetPeriod": "ongoing",
+        "resetAnchor": "ongoing",
+        "quizTag": "hotel_frequent"
+      },
+      {
+        "name": "5 qualifying night credits per calendar year toward status",
+        "category": "Hotel Status",
+        "benefitType": "access",
+        "dollarValue": 0,
+        "resetPeriod": "ongoing",
+        "resetAnchor": "calendar_year",
+        "quizTag": "hotel_frequent"
+      }
+    ]
+  }
+]

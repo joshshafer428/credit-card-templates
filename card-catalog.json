@@ -1,0 +1,841 @@
+[
+  {
+    "id": "american-express-gold-card",
+    "pointsCurrency": "amex_mr",
+    "affiliateUrl": "https://www.americanexpress.com",
+    "cppOverride": 2,
+    "earnRates": {
+      "travel": 3,
+      "hotels": 2,
+      "dining": 4,
+      "gas": 1,
+      "groceries": 4,
+      "streaming": 1,
+      "rent": 0,
+      "other": 1
+    },
+    "nameAliases": [
+      "Amex Gold",
+      "American Express Gold"
+    ],
+    "welcomeBonus": {
+      "points": 100000,
+      "spendRequirement": 6000,
+      "timeframeMonths": 6
+    }
+  },
+  {
+    "id": "american-express-platinum",
+    "pointsCurrency": "amex_mr",
+    "affiliateUrl": "https://www.americanexpress.com",
+    "cppOverride": 2,
+    "earnRates": {
+      "travel": 5,
+      "hotels": 5,
+      "dining": 1,
+      "gas": 1,
+      "groceries": 1,
+      "streaming": 1,
+      "rent": 0,
+      "other": 1
+    },
+    "nameAliases": [
+      "Amex Platinum",
+      "American Express Platinum"
+    ],
+    "welcomeBonus": {
+      "points": 175000,
+      "spendRequirement": 12000,
+      "timeframeMonths": 6
+    }
+  },
+  {
+    "id": "atmos-ascent",
+    "pointsCurrency": "atmos_miles",
+    "affiliateUrl": "https://www.bankofamerica.com",
+    "cppOverride": 1.5,
+    "earnRates": {
+      "travel": 3,
+      "hotels": 1,
+      "dining": 1,
+      "gas": 2,
+      "groceries": 1,
+      "streaming": 2,
+      "rent": 0,
+      "other": 1
+    },
+    "nameAliases": [
+      "Atmos Ascent",
+      "Alaska Airlines Visa",
+      "Alaska Ascent"
+    ],
+    "welcomeBonus": {
+      "points": 70000,
+      "spendRequirement": 3000,
+      "timeframeMonths": 3
+    }
+  },
+  {
+    "id": "atmos-summit",
+    "pointsCurrency": "atmos_miles",
+    "affiliateUrl": "https://www.bankofamerica.com",
+    "cppOverride": 1.5,
+    "earnRates": {
+      "travel": 3,
+      "hotels": 1,
+      "dining": 3,
+      "gas": 1,
+      "groceries": 1,
+      "streaming": 1,
+      "rent": 0,
+      "other": 1
+    },
+    "nameAliases": [
+      "Atmos Summit",
+      "Alaska Airlines Infinite",
+      "Alaska Summit"
+    ],
+    "welcomeBonus": {
+      "points": 80000,
+      "spendRequirement": 4000,
+      "timeframeMonths": 3
+    }
+  },
+  {
+    "id": "bank-of-america-travel-rewards",
+    "pointsCurrency": "cash",
+    "cppOverride": 1,
+    "earnRates": {
+      "travel": 3,
+      "hotels": 3,
+      "dining": 1.5,
+      "gas": 1.5,
+      "groceries": 1.5,
+      "streaming": 1.5,
+      "rent": 0,
+      "other": 1.5
+    },
+    "nameAliases": [
+      "BofA Travel Rewards"
+    ],
+    "welcomeBonus": {
+      "points": 25000,
+      "spendRequirement": 1000,
+      "timeframeMonths": 3
+    }
+  },
+  {
+    "id": "bilt-blue",
+    "pointsCurrency": "bilt_points",
+    "affiliateUrl": "https://www.biltrewards.com",
+    "cppOverride": 2.2,
+    "earnRates": {
+      "travel": 1,
+      "hotels": 1,
+      "dining": 1,
+      "gas": 1,
+      "groceries": 1,
+      "streaming": 1,
+      "rent": 1.25,
+      "other": 1
+    },
+    "nameAliases": [
+      "Bilt Blue"
+    ]
+  },
+  {
+    "id": "bilt-obsidian",
+    "pointsCurrency": "bilt_points",
+    "affiliateUrl": "https://www.biltrewards.com",
+    "cppOverride": 2.2,
+    "earnRates": {
+      "travel": 2,
+      "hotels": 2,
+      "dining": 3,
+      "gas": 1,
+      "groceries": 3,
+      "streaming": 1,
+      "rent": 1.25,
+      "other": 1
+    },
+    "nameAliases": [
+      "Bilt Obsidian"
+    ]
+  },
+  {
+    "id": "bilt-palladium",
+    "pointsCurrency": "bilt_points",
+    "affiliateUrl": "https://www.biltrewards.com",
+    "cppOverride": 2.2,
+    "earnRates": {
+      "travel": 3,
+      "hotels": 4,
+      "dining": 2,
+      "gas": 2,
+      "groceries": 2,
+      "streaming": 2,
+      "rent": 1.25,
+      "other": 2
+    },
+    "nameAliases": [
+      "Bilt",
+      "Bilt Rewards"
+    ],
+    "welcomeBonus": {
+      "points": 50000,
+      "spendRequirement": 4000,
+      "timeframeMonths": 3
+    }
+  },
+  {
+    "id": "capital-one-venture",
+    "pointsCurrency": "capital_one_miles",
+    "affiliateUrl": "https://www.capitalone.com",
+    "cppOverride": 1.85,
+    "earnRates": {
+      "travel": 5,
+      "hotels": 5,
+      "dining": 2,
+      "gas": 2,
+      "groceries": 2,
+      "streaming": 2,
+      "rent": 0,
+      "other": 2
+    },
+    "nameAliases": [
+      "Venture",
+      "Capital One Venture"
+    ],
+    "welcomeBonus": {
+      "points": 75000,
+      "spendRequirement": 4000,
+      "timeframeMonths": 3
+    }
+  },
+  {
+    "id": "capital-one-venture-x",
+    "pointsCurrency": "capital_one_miles",
+    "affiliateUrl": "https://capital.one/3WsmqtZ",
+    "cppOverride": 1.85,
+    "earnRates": {
+      "travel": 10,
+      "hotels": 10,
+      "dining": 2,
+      "gas": 2,
+      "groceries": 2,
+      "streaming": 2,
+      "rent": 0,
+      "other": 2
+    },
+    "nameAliases": [
+      "Venture X",
+      "Capital One Venture X"
+    ],
+    "welcomeBonus": {
+      "points": 75000,
+      "spendRequirement": 4000,
+      "timeframeMonths": 3
+    }
+  },
+  {
+    "id": "capital-one-ventureone",
+    "pointsCurrency": "capital_one_miles",
+    "affiliateUrl": "https://www.capitalone.com",
+    "cppOverride": 1.85,
+    "earnRates": {
+      "travel": 5,
+      "hotels": 5,
+      "dining": 1.25,
+      "gas": 1.25,
+      "groceries": 1.25,
+      "streaming": 1.25,
+      "rent": 0,
+      "other": 1.25
+    },
+    "nameAliases": [
+      "VentureOne",
+      "Capital One VentureOne"
+    ],
+    "welcomeBonus": {
+      "points": 20000,
+      "spendRequirement": 500,
+      "timeframeMonths": 3
+    }
+  },
+  {
+    "id": "chase-sapphire-preferred",
+    "pointsCurrency": "chase_ur",
+    "affiliateUrl": "https://www.chase.com",
+    "cppOverride": 2.05,
+    "earnRates": {
+      "travel": 5,
+      "hotels": 5,
+      "dining": 3,
+      "gas": 1,
+      "groceries": 3,
+      "streaming": 3,
+      "rent": 0,
+      "other": 1
+    },
+    "nameAliases": [
+      "CSP",
+      "Chase Sapphire Preferred"
+    ],
+    "welcomeBonus": {
+      "points": 75000,
+      "spendRequirement": 5000,
+      "timeframeMonths": 3
+    }
+  },
+  {
+    "id": "chase-sapphire-reserve",
+    "pointsCurrency": "chase_ur",
+    "affiliateUrl": "https://www.chase.com",
+    "cppOverride": 2.05,
+    "earnRates": {
+      "travel": 8,
+      "hotels": 8,
+      "dining": 3,
+      "gas": 1,
+      "groceries": 1,
+      "streaming": 1,
+      "rent": 0,
+      "other": 1
+    },
+    "nameAliases": [
+      "CSR",
+      "Chase Sapphire Reserve®"
+    ],
+    "welcomeBonus": {
+      "points": 125000,
+      "spendRequirement": 6000,
+      "timeframeMonths": 3
+    }
+  },
+  {
+    "id": "citi-strata",
+    "pointsCurrency": "citi_ty",
+    "affiliateUrl": "https://www.citi.com",
+    "cppOverride": 1.9,
+    "earnRates": {
+      "travel": 5,
+      "hotels": 5,
+      "dining": 1,
+      "gas": 3,
+      "groceries": 3,
+      "streaming": 3,
+      "rent": 0,
+      "other": 1
+    },
+    "nameAliases": [
+      "Citi Strata",
+      "Citi Strata Card"
+    ],
+    "welcomeBonus": {
+      "points": 20000,
+      "spendRequirement": 1000,
+      "timeframeMonths": 3
+    }
+  },
+  {
+    "id": "citi-strata-elite",
+    "pointsCurrency": "citi_ty",
+    "affiliateUrl": "https://www.citi.com",
+    "cppOverride": 1.9,
+    "earnRates": {
+      "travel": 12,
+      "hotels": 12,
+      "dining": 3,
+      "gas": 1.5,
+      "groceries": 1.5,
+      "streaming": 1.5,
+      "rent": 0,
+      "other": 1.5
+    },
+    "nameAliases": [
+      "Citi Strata Elite"
+    ],
+    "welcomeBonus": {
+      "points": 80000,
+      "spendRequirement": 4000,
+      "timeframeMonths": 3
+    }
+  },
+  {
+    "id": "citi-strata-premier",
+    "pointsCurrency": "citi_ty",
+    "affiliateUrl": "https://www.citi.com",
+    "cppOverride": 1.9,
+    "earnRates": {
+      "travel": 10,
+      "hotels": 10,
+      "dining": 3,
+      "gas": 3,
+      "groceries": 3,
+      "streaming": 1,
+      "rent": 0,
+      "other": 1
+    },
+    "nameAliases": [
+      "Citi Strata Premier",
+      "Citi Premier"
+    ],
+    "welcomeBonus": {
+      "points": 60000,
+      "spendRequirement": 4000,
+      "timeframeMonths": 3
+    }
+  },
+  {
+    "id": "delta-skymiles-gold-amex",
+    "pointsCurrency": "delta_miles",
+    "cppOverride": 1.2,
+    "earnRates": {
+      "travel": 2,
+      "hotels": 1,
+      "dining": 2,
+      "gas": 1,
+      "groceries": 2,
+      "streaming": 1,
+      "rent": 0,
+      "other": 1
+    },
+    "nameAliases": [
+      "Delta Gold",
+      "Amex Delta Gold"
+    ],
+    "welcomeBonus": {
+      "points": 90000,
+      "spendRequirement": 5000,
+      "timeframeMonths": 6,
+      "expires": "4/1/26"
+    }
+  },
+  {
+    "id": "delta-skymiles-platinum-amex",
+    "pointsCurrency": "delta_miles",
+    "cppOverride": 1.2,
+    "earnRates": {
+      "travel": 3,
+      "hotels": 3,
+      "dining": 2,
+      "gas": 1,
+      "groceries": 2,
+      "streaming": 1,
+      "rent": 0,
+      "other": 1
+    },
+    "nameAliases": [
+      "Delta Platinum",
+      "Amex Delta Platinum"
+    ],
+    "welcomeBonus": {
+      "points": 100000,
+      "spendRequirement": 6000,
+      "timeframeMonths": 6,
+      "expires": "4/1/26"
+    }
+  },
+  {
+    "id": "delta-skymiles-reserve-amex",
+    "pointsCurrency": "delta_miles",
+    "cppOverride": 1.2,
+    "earnRates": {
+      "travel": 3,
+      "hotels": 1,
+      "dining": 1,
+      "gas": 1,
+      "groceries": 1,
+      "streaming": 1,
+      "rent": 0,
+      "other": 1
+    },
+    "nameAliases": [
+      "Delta Reserve",
+      "Amex Delta Reserve"
+    ],
+    "welcomeBonus": {
+      "points": 125000,
+      "spendRequirement": 15000,
+      "timeframeMonths": 6,
+      "expires": "4/1/26"
+    }
+  },
+  {
+    "id": "hilton-honors-amex",
+    "pointsCurrency": "hilton_points",
+    "affiliateUrl": "https://www.americanexpress.com",
+    "cppOverride": 0.5,
+    "earnRates": {
+      "travel": 3,
+      "hotels": 7,
+      "dining": 5,
+      "gas": 5,
+      "groceries": 5,
+      "streaming": 3,
+      "rent": 0,
+      "other": 3
+    },
+    "nameAliases": [
+      "Hilton Honors Amex",
+      "Hilton Honors Card"
+    ],
+    "welcomeBonus": {
+      "points": 70000,
+      "spendRequirement": 2000,
+      "timeframeMonths": 6,
+      "expires": "4/15/26"
+    }
+  },
+  {
+    "id": "hilton-honors-aspire-amex",
+    "pointsCurrency": "hilton_points",
+    "affiliateUrl": "https://www.americanexpress.com",
+    "cppOverride": 0.5,
+    "earnRates": {
+      "travel": 7,
+      "hotels": 14,
+      "dining": 7,
+      "gas": 3,
+      "groceries": 3,
+      "streaming": 3,
+      "rent": 0,
+      "other": 3
+    },
+    "nameAliases": [
+      "Hilton Aspire",
+      "Amex Hilton Aspire"
+    ],
+    "welcomeBonus": {
+      "points": 175000,
+      "spendRequirement": 6000,
+      "timeframeMonths": 6,
+      "expires": "4/15/26"
+    }
+  },
+  {
+    "id": "hilton-honors-surpass-amex",
+    "pointsCurrency": "hilton_points",
+    "affiliateUrl": "https://www.americanexpress.com",
+    "cppOverride": 0.5,
+    "earnRates": {
+      "travel": 3,
+      "hotels": 12,
+      "dining": 6,
+      "gas": 6,
+      "groceries": 6,
+      "streaming": 3,
+      "rent": 0,
+      "other": 3
+    },
+    "nameAliases": [
+      "Hilton Surpass",
+      "Amex Hilton Surpass"
+    ],
+    "welcomeBonus": {
+      "points": 130000,
+      "spendRequirement": 3000,
+      "timeframeMonths": 6,
+      "expires": "4/15/26"
+    }
+  },
+  {
+    "id": "ihg-one-rewards-premier",
+    "pointsCurrency": "ihg_points",
+    "cppOverride": 0.5,
+    "earnRates": {
+      "travel": 5,
+      "hotels": 10,
+      "dining": 5,
+      "gas": 5,
+      "groceries": 3,
+      "streaming": 3,
+      "rent": 0,
+      "other": 3
+    },
+    "nameAliases": [
+      "IHG Premier",
+      "IHG One Rewards Premier"
+    ],
+    "welcomeBonus": {
+      "points": 140000,
+      "spendRequirement": 3000,
+      "timeframeMonths": 3
+    }
+  },
+  {
+    "id": "marriott-bonvoy-brilliant-amex",
+    "pointsCurrency": "marriott_points",
+    "cppOverride": 0.7,
+    "earnRates": {
+      "travel": 3,
+      "hotels": 6,
+      "dining": 3,
+      "gas": 2,
+      "groceries": 2,
+      "streaming": 2,
+      "rent": 0,
+      "other": 2
+    },
+    "nameAliases": [
+      "Bonvoy Brilliant",
+      "Marriott Brilliant"
+    ],
+    "welcomeBonus": {
+      "points": 185000,
+      "spendRequirement": 6000,
+      "timeframeMonths": 6
+    }
+  },
+  {
+    "id": "united-quest-card",
+    "pointsCurrency": "united_miles",
+    "cppOverride": 1.5,
+    "earnRates": {
+      "travel": 3,
+      "hotels": 2,
+      "dining": 2,
+      "gas": 1,
+      "groceries": 1,
+      "streaming": 2,
+      "rent": 0,
+      "other": 1
+    },
+    "nameAliases": [
+      "United Quest"
+    ],
+    "welcomeBonus": {
+      "points": 80000,
+      "spendRequirement": 4000,
+      "timeframeMonths": 3
+    }
+  },
+  {
+    "id": "wells-fargo-autograph",
+    "pointsCurrency": "wf_points",
+    "affiliateUrl": "https://www.wellsfargo.com",
+    "cppOverride": 1,
+    "earnRates": {
+      "travel": 3,
+      "hotels": 3,
+      "dining": 3,
+      "gas": 3,
+      "groceries": 1,
+      "streaming": 3,
+      "rent": 0,
+      "other": 1
+    },
+    "nameAliases": [
+      "Wells Fargo Autograph",
+      "WF Autograph"
+    ],
+    "welcomeBonus": {
+      "points": 30000,
+      "spendRequirement": 1500,
+      "timeframeMonths": 3
+    }
+  },
+  {
+    "id": "amex-blue-cash-preferred",
+    "pointsCurrency": "cash",
+    "affiliateUrl": "https://www.americanexpress.com",
+    "cppOverride": 1,
+    "earnRates": {
+      "travel": 1,
+      "hotels": 1,
+      "dining": 1,
+      "gas": 3,
+      "groceries": 6,
+      "streaming": 6,
+      "rent": 0,
+      "other": 1
+    },
+    "nameAliases": [
+      "Amex BCP",
+      "Blue Cash Preferred",
+      "American Express Blue Cash Preferred"
+    ],
+    "welcomeBonus": {
+      "points": 25000,
+      "spendRequirement": 3000,
+      "timeframeMonths": 6
+    }
+  },
+  {
+    "id": "amex-green-card",
+    "pointsCurrency": "amex_mr",
+    "affiliateUrl": "https://www.americanexpress.com",
+    "cppOverride": 2,
+    "earnRates": {
+      "travel": 3,
+      "hotels": 3,
+      "dining": 3,
+      "gas": 1,
+      "groceries": 1,
+      "streaming": 1,
+      "rent": 0,
+      "other": 1
+    },
+    "nameAliases": [
+      "Amex Green",
+      "American Express Green Card"
+    ],
+    "welcomeBonus": {
+      "points": 40000,
+      "spendRequirement": 3000,
+      "timeframeMonths": 6
+    }
+  },
+  {
+    "id": "capital-one-savorone",
+    "pointsCurrency": "capital_one_miles",
+    "affiliateUrl": "https://www.capitalone.com",
+    "cppOverride": 1.85,
+    "earnRates": {
+      "travel": 5,
+      "hotels": 5,
+      "dining": 3,
+      "gas": 1,
+      "groceries": 3,
+      "streaming": 3,
+      "rent": 0,
+      "other": 1
+    },
+    "nameAliases": [
+      "SavorOne",
+      "Capital One SavorOne"
+    ],
+    "welcomeBonus": {
+      "points": 20000,
+      "spendRequirement": 500,
+      "timeframeMonths": 3
+    }
+  },
+  {
+    "id": "chase-freedom-flex",
+    "pointsCurrency": "chase_ur",
+    "affiliateUrl": "https://www.chase.com",
+    "cppOverride": 2.05,
+    "earnRates": {
+      "travel": 5,
+      "hotels": 5,
+      "dining": 3,
+      "gas": 1,
+      "groceries": 1,
+      "streaming": 1,
+      "rent": 0,
+      "other": 1
+    },
+    "nameAliases": [
+      "Freedom Flex",
+      "Chase Freedom Flex"
+    ],
+    "welcomeBonus": {
+      "points": 25000,
+      "spendRequirement": 500,
+      "timeframeMonths": 3
+    }
+  },
+  {
+    "id": "chase-freedom-unlimited",
+    "pointsCurrency": "chase_ur",
+    "affiliateUrl": "https://www.chase.com",
+    "cppOverride": 2.05,
+    "earnRates": {
+      "travel": 5,
+      "hotels": 5,
+      "dining": 3,
+      "gas": 1,
+      "groceries": 1,
+      "streaming": 1,
+      "rent": 0,
+      "other": 1.5
+    },
+    "nameAliases": [
+      "Freedom Unlimited",
+      "CFU",
+      "Chase Freedom Unlimited"
+    ],
+    "welcomeBonus": {
+      "points": 25000,
+      "spendRequirement": 500,
+      "timeframeMonths": 3
+    }
+  },
+  {
+    "id": "citi-double-cash",
+    "pointsCurrency": "citi_ty",
+    "affiliateUrl": "https://www.citi.com",
+    "cppOverride": 1.9,
+    "earnRates": {
+      "travel": 3,
+      "hotels": 3,
+      "dining": 2,
+      "gas": 2,
+      "groceries": 2,
+      "streaming": 2,
+      "rent": 0,
+      "other": 2
+    },
+    "nameAliases": [
+      "Citi Double Cash",
+      "Double Cash"
+    ],
+    "welcomeBonus": {
+      "points": 20000,
+      "spendRequirement": 1500,
+      "timeframeMonths": 6
+    }
+  },
+  {
+    "id": "southwest-rapid-rewards-priority",
+    "pointsCurrency": "sw_points",
+    "affiliateUrl": "https://www.chase.com",
+    "cppOverride": 1.3,
+    "earnRates": {
+      "travel": 4,
+      "hotels": 2,
+      "dining": 2,
+      "gas": 2,
+      "groceries": 1,
+      "streaming": 2,
+      "rent": 0,
+      "other": 1
+    },
+    "nameAliases": [
+      "Southwest Priority",
+      "SW Priority",
+      "Rapid Rewards Priority"
+    ],
+    "welcomeBonus": {
+      "points": 40000,
+      "spendRequirement": 5000,
+      "timeframeMonths": 3
+    }
+  },
+  {
+    "id": "world-of-hyatt",
+    "pointsCurrency": "hyatt_points",
+    "affiliateUrl": "https://www.chase.com",
+    "cppOverride": 1.7,
+    "earnRates": {
+      "travel": 2,
+      "hotels": 4,
+      "dining": 2,
+      "gas": 1,
+      "groceries": 1,
+      "streaming": 1,
+      "rent": 0,
+      "other": 1
+    },
+    "nameAliases": [
+      "World of Hyatt",
+      "Hyatt Card"
+    ],
+    "welcomeBonus": {
+      "points": 30000,
+      "spendRequirement": 3000,
+      "timeframeMonths": 3
+    }
+  }
+]
