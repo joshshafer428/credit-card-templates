@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service — PerkBook</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg:          #0B1929;
+      --bg-alt:      #0D1F33;
+      --card:        #0F2236;
+      --border:      #1C3350;
+      --border-soft: rgba(255,255,255,0.07);
+      --text-1:      #F2EBE0;
+      --text-2:      #A89C8F;
+      --text-3:      #7A6E64;
+      --accent:      #E8C47A;
+      --accent-deep: #C4893A;
+      --gold-mid:    #D4A057;
+      --navy-light:  #1E4272;
+      --navy-mid:    #173358;
+      --font-display: 'DM Serif Display', Georgia, serif;
+      --font-sans:    'DM Sans', system-ui, sans-serif;
+      --font-word:    'Cormorant Garamond', Georgia, serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--bg);
+      color: var(--text-1);
+      font-size: 16px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
+    a:hover { color: var(--text-1); }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      padding: 0 24px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(11,25,41,0.9);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-soft);
+    }
+
+    .nav-wordmark {
+      font-family: var(--font-word);
+      font-weight: 700;
+      font-size: 20px;
+      color: var(--text-1);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav-back {
+      font-size: 13px;
+      color: var(--text-3);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      transition: color 0.2s;
+    }
+
+    .nav-back:hover { color: var(--text-2); text-decoration: none; }
+
+    .page {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 56px 24px 96px;
+    }
+
+    .doc-header {
+      margin-bottom: 48px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid var(--border-soft);
+    }
+
+    .doc-eyebrow {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+
+    .doc-title {
+      font-family: var(--font-display);
+      font-size: clamp(32px, 5vw, 48px);
+      line-height: 1.1;
+      color: var(--text-1);
+      margin-bottom: 16px;
+    }
+
+    .doc-meta {
+      font-size: 13px;
+      color: var(--text-3);
+    }
+
+    .doc-meta span { color: var(--text-2); font-weight: 500; }
+
+    .summary-box {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin-bottom: 48px;
+    }
+
+    .summary-box p { font-size: 14px; color: var(--text-2); line-height: 1.7; }
+    .summary-box strong { color: var(--text-1); }
+
+    .toc {
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin-bottom: 56px;
+    }
+
+    .toc-title {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--text-3);
+      margin-bottom: 12px;
+    }
+
+    .toc ol {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      counter-reset: toc;
+      padding: 0;
+    }
+
+    .toc li { counter-increment: toc; }
+
+    .toc a {
+      font-size: 14px;
+      color: var(--text-2);
+      text-decoration: none;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      transition: color 0.2s;
+    }
+
+    .toc a::before {
+      content: counter(toc, decimal-leading-zero);
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--accent);
+      letter-spacing: 0.5px;
+      flex-shrink: 0;
+    }
+
+    .toc a:hover { color: var(--text-1); text-decoration: none; }
+
+    .section {
+      margin-bottom: 52px;
+      scroll-margin-top: 80px;
+    }
+
+    .section-heading {
+      font-family: var(--font-display);
+      font-size: 22px;
+      color: var(--text-1);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+    }
+
+    .section-heading .num {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--accent);
+      letter-spacing: 0.5px;
+      flex-shrink: 0;
+      font-family: var(--font-sans);
+    }
+
+    p { margin-bottom: 14px; color: var(--text-2); font-size: 15px; }
+    p:last-child { margin-bottom: 0; }
+
+    ul, ol { margin: 0 0 14px 0; padding-left: 0; list-style: none; }
+
+    li {
+      font-size: 15px;
+      color: var(--text-2);
+      padding: 5px 0 5px 20px;
+      position: relative;
+      line-height: 1.65;
+    }
+
+    ul li::before {
+      content: '–';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    ol { counter-reset: ol-counter; }
+    ol li { counter-increment: ol-counter; }
+    ol li::before {
+      content: counter(ol-counter) '.';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    strong { color: var(--text-1); font-weight: 600; }
+
+    .callout {
+      background: rgba(232,196,122,0.06);
+      border: 1px solid rgba(232,196,122,0.2);
+      border-radius: 10px;
+      padding: 14px 18px;
+      margin: 16px 0;
+      font-size: 14px;
+      color: var(--text-2);
+      line-height: 1.65;
+    }
+
+    .callout strong { color: var(--accent); }
+
+    .warning-callout {
+      background: rgba(224,85,85,0.06);
+      border: 1px solid rgba(224,85,85,0.2);
+      border-radius: 10px;
+      padding: 14px 18px;
+      margin: 16px 0;
+      font-size: 14px;
+      color: var(--text-2);
+      line-height: 1.65;
+    }
+
+    .warning-callout strong { color: #E09090; }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--border-soft);
+      margin: 48px 0;
+    }
+
+    .contact-block {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+    }
+
+    .contact-block .contact-title {
+      font-family: var(--font-display);
+      font-size: 20px;
+      color: var(--text-1);
+      margin-bottom: 8px;
+    }
+
+    .contact-detail {
+      margin-top: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .contact-detail .row {
+      display: flex;
+      gap: 10px;
+      font-size: 14px;
+    }
+
+    .contact-detail .row .key {
+      color: var(--text-3);
+      font-weight: 500;
+      min-width: 80px;
+      flex-shrink: 0;
+    }
+
+    .contact-detail .row .val { color: var(--text-1); }
+
+    .doc-footer {
+      margin-top: 72px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border-soft);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .doc-footer-copy { font-size: 12px; color: var(--text-3); }
+
+    .doc-footer-links { display: flex; gap: 20px; list-style: none; flex-wrap: wrap; }
+
+    .doc-footer-links a {
+      font-size: 12px;
+      color: var(--text-3);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .doc-footer-links a:hover { color: var(--accent); text-decoration: none; }
+
+    @media (max-width: 480px) {
+      .page { padding: 40px 16px 72px; }
+      .doc-footer { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="./Perkbook-landing.html" class="nav-wordmark">✦ PerkBook</a>
+    <a href="./Perkbook-landing.html" class="nav-back">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+        <path d="M9 2L4 7l5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Back to home
+    </a>
+  </nav>
+
+  <main class="page">
+
+    <header class="doc-header">
+      <p class="doc-eyebrow">Legal</p>
+      <h1 class="doc-title">Terms of Service</h1>
+      <p class="doc-meta">
+        Effective date: <span>March 30, 2026</span> &nbsp;·&nbsp; Last updated: <span>March 30, 2026</span>
+      </p>
+    </header>
+
+    <div class="summary-box">
+      <p>
+        <strong>Plain-language summary:</strong> PerkBook is a free tool to help you track your credit card benefits. You enter your own card data — we never connect to your bank. Don't use PerkBook for anything illegal or harmful. We provide the app as-is and aren't liable for financial decisions you make based on it. We're not a financial advisor.
+      </p>
+    </div>
+
+    <nav class="toc" aria-label="Table of contents">
+      <p class="toc-title">Contents</p>
+      <ol>
+        <li><a href="#acceptance">Acceptance of Terms</a></li>
+        <li><a href="#description">Description of Service</a></li>
+        <li><a href="#eligibility">Eligibility</a></li>
+        <li><a href="#account">Your Account &amp; Data</a></li>
+        <li><a href="#acceptable-use">Acceptable Use</a></li>
+        <li><a href="#not-financial-advice">Not Financial Advice</a></li>
+        <li><a href="#affiliate-links">Affiliate Links</a></li>
+        <li><a href="#intellectual-property">Intellectual Property</a></li>
+        <li><a href="#third-party">Third-Party Services</a></li>
+        <li><a href="#disclaimer">Disclaimer of Warranties</a></li>
+        <li><a href="#liability">Limitation of Liability</a></li>
+        <li><a href="#indemnification">Indemnification</a></li>
+        <li><a href="#termination">Termination</a></li>
+        <li><a href="#governing-law">Governing Law</a></li>
+        <li><a href="#changes">Changes to These Terms</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ol>
+    </nav>
+
+    <!-- 1 -->
+    <section class="section" id="acceptance">
+      <h2 class="section-heading"><span class="num">01</span> Acceptance of Terms</h2>
+      <p>
+        By accessing or using PerkBook — including the website at perkbook.app, the mobile application, or any related service (collectively, the "Service") — you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, do not use the Service.
+      </p>
+      <p>
+        These Terms form a binding agreement between you and <strong>Josh Shafer</strong>, a sole proprietor doing business as PerkBook, located in Minnesota, United States.
+      </p>
+    </section>
+
+    <!-- 2 -->
+    <section class="section" id="description">
+      <h2 class="section-heading"><span class="num">02</span> Description of Service</h2>
+      <p>
+        PerkBook is a personal finance tool that helps users track, understand, and maximize the benefits associated with their credit cards. The Service allows you to:
+      </p>
+      <ul>
+        <li>Manually add credit cards from a library of supported cards</li>
+        <li>View and track benefits, credits, and perks associated with each card</li>
+        <li>Log benefit usage and receive reminders before benefits expire</li>
+        <li>Compare cards side by side</li>
+      </ul>
+      <p>
+        PerkBook does <strong>not</strong> connect to your bank or financial institution, does not access your account numbers or transactions, and does not make payments on your behalf. All card data is entered manually by you.
+      </p>
+      <p>
+        The Service is currently in development. Features may change, and the Service may be interrupted or discontinued at any time.
+      </p>
+    </section>
+
+    <!-- 3 -->
+    <section class="section" id="eligibility">
+      <h2 class="section-heading"><span class="num">03</span> Eligibility</h2>
+      <p>
+        You may use PerkBook if you are 13 years of age or older. By using the Service, you represent that you meet this requirement. If you are under 18, you represent that your parent or legal guardian has reviewed and agrees to these Terms on your behalf.
+      </p>
+      <p>
+        PerkBook is intended for personal, non-commercial use. Use of the Service for commercial purposes without prior written consent is prohibited.
+      </p>
+    </section>
+
+    <!-- 4 -->
+    <section class="section" id="account">
+      <h2 class="section-heading"><span class="num">04</span> Your Account &amp; Data</h2>
+      <p>
+        You are responsible for the accuracy of the information you enter into PerkBook. We are not responsible for decisions made based on incorrect or incomplete data you have entered.
+      </p>
+      <p>
+        Card benefit information in the PerkBook library is maintained by us on a best-effort basis. Card issuers may change their benefit terms at any time without notice to us. Always verify current benefit details directly with your card issuer.
+      </p>
+      <p>
+        You retain ownership of the data you enter into the app. We do not claim any rights over your personal card data. See our <a href="./privacy-policy.html">Privacy Policy</a> for full details on how we handle your data.
+      </p>
+    </section>
+
+    <!-- 5 -->
+    <section class="section" id="acceptable-use">
+      <h2 class="section-heading"><span class="num">05</span> Acceptable Use</h2>
+      <p>You agree not to use PerkBook to:</p>
+      <ul>
+        <li>Violate any applicable law or regulation</li>
+        <li>Attempt to gain unauthorized access to any part of the Service or its infrastructure</li>
+        <li>Scrape, copy, or redistribute the card benefit data in our library without permission</li>
+        <li>Reverse engineer, decompile, or disassemble the app</li>
+        <li>Interfere with or disrupt the Service or servers connected to the Service</li>
+        <li>Transmit malicious code, viruses, or any other harmful software</li>
+        <li>Use the Service in any way that could harm PerkBook, its users, or third parties</li>
+      </ul>
+    </section>
+
+    <!-- 6 -->
+    <section class="section" id="not-financial-advice">
+      <h2 class="section-heading"><span class="num">06</span> Not Financial Advice</h2>
+      <div class="warning-callout">
+        <strong>Important:</strong> PerkBook is an informational tool, not a financial advisor. Nothing in the Service constitutes financial, legal, tax, or investment advice.
+      </div>
+      <p>
+        The benefit values, card comparisons, and usage suggestions provided by PerkBook are for informational purposes only. They are based on publicly available card terms and your manual inputs, and may not reflect your actual financial situation, spending habits, or the most current card terms.
+      </p>
+      <p>
+        Always consult a qualified financial professional before making decisions about credit cards, debt, or personal finance. PerkBook is not responsible for any financial outcomes resulting from your use of or reliance on the Service.
+      </p>
+    </section>
+
+    <!-- 7 -->
+    <section class="section" id="affiliate-links">
+      <h2 class="section-heading"><span class="num">07</span> Affiliate Links</h2>
+      <p>
+        PerkBook may display links to credit card applications. Some of these links are affiliate links — if you apply for a card through such a link, PerkBook may receive a commission from the card issuer or an affiliate network at no additional cost to you.
+      </p>
+      <p>
+        Affiliate compensation does not influence which cards we include in our library or how we present benefit information. See our <a href="./affiliate-disclosure.html">Affiliate Disclosure</a> for full details.
+      </p>
+    </section>
+
+    <!-- 8 -->
+    <section class="section" id="intellectual-property">
+      <h2 class="section-heading"><span class="num">08</span> Intellectual Property</h2>
+      <p>
+        The PerkBook name, logo, website design, app interface, and benefit library content are the property of Josh Shafer / PerkBook and are protected by applicable intellectual property laws. You may not copy, reproduce, distribute, or create derivative works from any part of the Service without our prior written consent.
+      </p>
+      <p>
+        Credit card names, issuer names, and network logos (Visa, Mastercard, American Express, etc.) are the trademarks of their respective owners. PerkBook is not affiliated with or endorsed by any card issuer or payment network.
+      </p>
+    </section>
+
+    <!-- 9 -->
+    <section class="section" id="third-party">
+      <h2 class="section-heading"><span class="num">09</span> Third-Party Services</h2>
+      <p>
+        PerkBook uses third-party services including Firebase (Google) for analytics and crash reporting. Your use of the Service is also subject to those third parties' terms and policies.
+      </p>
+      <p>
+        Links to external sites (including card issuer sites and affiliate links) are provided for convenience. We are not responsible for the content, accuracy, or privacy practices of any third-party website.
+      </p>
+    </section>
+
+    <!-- 10 -->
+    <section class="section" id="disclaimer">
+      <h2 class="section-heading"><span class="num">10</span> Disclaimer of Warranties</h2>
+      <p>
+        THE SERVICE IS PROVIDED <strong>"AS IS"</strong> AND <strong>"AS AVAILABLE"</strong> WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, ACCURACY, OR NON-INFRINGEMENT.
+      </p>
+      <p>
+        We do not warrant that: (a) the Service will be uninterrupted or error-free; (b) card benefit information will be accurate, complete, or current; or (c) the Service will meet your specific requirements.
+      </p>
+      <p>
+        Card benefits, terms, and values are subject to change by card issuers at any time. PerkBook makes no guarantee that the benefit information in the app reflects current issuer terms.
+      </p>
+    </section>
+
+    <!-- 11 -->
+    <section class="section" id="liability">
+      <h2 class="section-heading"><span class="num">11</span> Limitation of Liability</h2>
+      <p>
+        TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, JOSH SHAFER / PERKBOOK SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES — INCLUDING LOST PROFITS, LOST DATA, OR FINANCIAL LOSSES — ARISING FROM YOUR USE OF OR INABILITY TO USE THE SERVICE, EVEN IF WE HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+      </p>
+      <p>
+        OUR TOTAL LIABILITY TO YOU FOR ANY CLAIMS ARISING FROM THESE TERMS OR YOUR USE OF THE SERVICE SHALL NOT EXCEED <strong>$100 USD</strong> OR THE AMOUNT YOU PAID US IN THE PAST 12 MONTHS, WHICHEVER IS GREATER. BECAUSE PERKBOOK IS CURRENTLY FREE, THIS LIMIT IS $100.
+      </p>
+      <p>
+        Some jurisdictions do not allow limitations on implied warranties or liability for certain types of damages, so some of the above limitations may not apply to you.
+      </p>
+    </section>
+
+    <!-- 12 -->
+    <section class="section" id="indemnification">
+      <h2 class="section-heading"><span class="num">12</span> Indemnification</h2>
+      <p>
+        You agree to indemnify, defend, and hold harmless Josh Shafer / PerkBook from any claims, damages, losses, liabilities, and expenses (including reasonable legal fees) arising out of: (a) your use of the Service; (b) your violation of these Terms; or (c) your violation of any third-party rights.
+      </p>
+    </section>
+
+    <!-- 13 -->
+    <section class="section" id="termination">
+      <h2 class="section-heading"><span class="num">13</span> Termination</h2>
+      <p>
+        We reserve the right to suspend or terminate your access to the Service at any time, for any reason, with or without notice — including if we believe you have violated these Terms.
+      </p>
+      <p>
+        You may stop using the Service at any time. If you are on the waitlist, you can request removal by emailing <a href="mailto:privacy@perkbook.app">privacy@perkbook.app</a>.
+      </p>
+      <p>
+        Sections 6, 10, 11, 12, and 14 survive termination of these Terms.
+      </p>
+    </section>
+
+    <!-- 14 -->
+    <section class="section" id="governing-law">
+      <h2 class="section-heading"><span class="num">14</span> Governing Law</h2>
+      <p>
+        These Terms are governed by and construed in accordance with the laws of the <strong>State of Minnesota, United States</strong>, without regard to its conflict of law provisions.
+      </p>
+      <p>
+        Any disputes arising from these Terms or your use of the Service shall be resolved in the state or federal courts located in Minnesota, and you consent to the personal jurisdiction of such courts.
+      </p>
+    </section>
+
+    <!-- 15 -->
+    <section class="section" id="changes">
+      <h2 class="section-heading"><span class="num">15</span> Changes to These Terms</h2>
+      <p>
+        We may update these Terms from time to time. When we do, we will update the "Last updated" date at the top of this page. If the changes are material, we will notify waitlist subscribers by email before they take effect.
+      </p>
+      <p>
+        Your continued use of the Service after any changes constitutes your acceptance of the updated Terms.
+      </p>
+    </section>
+
+    <!-- 16 -->
+    <section class="section" id="contact">
+      <h2 class="section-heading"><span class="num">16</span> Contact</h2>
+      <p>Questions about these Terms? Reach out:</p>
+      <div class="contact-block">
+        <p class="contact-title">PerkBook Legal</p>
+        <div class="contact-detail">
+          <div class="row">
+            <span class="key">Operator</span>
+            <span class="val">Josh Shafer (PerkBook)</span>
+          </div>
+          <div class="row">
+            <span class="key">Location</span>
+            <span class="val">Minnesota, United States</span>
+          </div>
+          <div class="row">
+            <span class="key">Email</span>
+            <span class="val"><a href="mailto:privacy@perkbook.app">privacy@perkbook.app</a></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr />
+
+    <div class="callout" style="font-size:13px;">
+      <strong>Note:</strong> These Terms were drafted in good faith to reflect current practices, but they do not constitute legal advice. As PerkBook grows — particularly if you introduce paid features, cloud sync, or expand internationally — consider having a licensed attorney review this document.
+    </div>
+
+    <footer class="doc-footer">
+      <p class="doc-footer-copy">© 2026 Josh Shafer / PerkBook</p>
+      <ul class="doc-footer-links">
+        <li><a href="./privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="./affiliate-disclosure.html">Affiliate Disclosure</a></li>
+        <li><a href="./Perkbook-landing.html">Home</a></li>
+      </ul>
+    </footer>
+
+  </main>
+</body>
+</html>

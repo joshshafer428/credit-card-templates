@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Affiliate Disclosure — PerkBook</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg:          #0B1929;
+      --bg-alt:      #0D1F33;
+      --card:        #0F2236;
+      --border:      #1C3350;
+      --border-soft: rgba(255,255,255,0.07);
+      --text-1:      #F2EBE0;
+      --text-2:      #A89C8F;
+      --text-3:      #7A6E64;
+      --accent:      #E8C47A;
+      --accent-deep: #C4893A;
+      --navy-light:  #1E4272;
+      --navy-mid:    #173358;
+      --font-display: 'DM Serif Display', Georgia, serif;
+      --font-sans:    'DM Sans', system-ui, sans-serif;
+      --font-word:    'Cormorant Garamond', Georgia, serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--bg);
+      color: var(--text-1);
+      font-size: 16px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
+    a:hover { color: var(--text-1); }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      padding: 0 24px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(11,25,41,0.9);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-soft);
+    }
+
+    .nav-wordmark {
+      font-family: var(--font-word);
+      font-weight: 700;
+      font-size: 20px;
+      color: var(--text-1);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav-back {
+      font-size: 13px;
+      color: var(--text-3);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      transition: color 0.2s;
+    }
+
+    .nav-back:hover { color: var(--text-2); text-decoration: none; }
+
+    .page {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 56px 24px 96px;
+    }
+
+    .doc-header {
+      margin-bottom: 48px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid var(--border-soft);
+    }
+
+    .doc-eyebrow {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+
+    .doc-title {
+      font-family: var(--font-display);
+      font-size: clamp(32px, 5vw, 48px);
+      line-height: 1.1;
+      color: var(--text-1);
+      margin-bottom: 16px;
+    }
+
+    .doc-meta {
+      font-size: 13px;
+      color: var(--text-3);
+    }
+
+    .doc-meta span { color: var(--text-2); font-weight: 500; }
+
+    /* FTC summary — prominent, required */
+    .ftc-box {
+      background: rgba(232,196,122,0.07);
+      border: 1.5px solid rgba(232,196,122,0.3);
+      border-radius: 14px;
+      padding: 24px 28px;
+      margin-bottom: 48px;
+    }
+
+    .ftc-box .ftc-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    .ftc-box p {
+      font-size: 15px;
+      color: var(--text-1);
+      line-height: 1.7;
+      margin-bottom: 0;
+    }
+
+    .section {
+      margin-bottom: 48px;
+      scroll-margin-top: 80px;
+    }
+
+    .section-heading {
+      font-family: var(--font-display);
+      font-size: 22px;
+      color: var(--text-1);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+    }
+
+    .section-heading .num {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--accent);
+      letter-spacing: 0.5px;
+      flex-shrink: 0;
+      font-family: var(--font-sans);
+    }
+
+    p { margin-bottom: 14px; color: var(--text-2); font-size: 15px; }
+    p:last-child { margin-bottom: 0; }
+
+    ul { margin: 0 0 14px 0; padding-left: 0; list-style: none; }
+
+    li {
+      font-size: 15px;
+      color: var(--text-2);
+      padding: 5px 0 5px 20px;
+      position: relative;
+      line-height: 1.65;
+    }
+
+    ul li::before {
+      content: '–';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    strong { color: var(--text-1); font-weight: 600; }
+
+    .callout {
+      background: rgba(232,196,122,0.06);
+      border: 1px solid rgba(232,196,122,0.2);
+      border-radius: 10px;
+      padding: 14px 18px;
+      margin: 16px 0;
+      font-size: 14px;
+      color: var(--text-2);
+      line-height: 1.65;
+    }
+
+    .callout strong { color: var(--accent); }
+
+    /* Q&A style blocks */
+    .qa-block {
+      border-top: 1px solid var(--border-soft);
+      padding-top: 24px;
+      margin-top: 24px;
+    }
+
+    .qa-block:first-of-type { border-top: none; padding-top: 0; margin-top: 0; }
+
+    .qa-q {
+      font-family: var(--font-display);
+      font-size: 17px;
+      color: var(--text-1);
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--border-soft);
+      margin: 48px 0;
+    }
+
+    .contact-block {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+    }
+
+    .contact-block .contact-title {
+      font-family: var(--font-display);
+      font-size: 20px;
+      color: var(--text-1);
+      margin-bottom: 8px;
+    }
+
+    .contact-detail {
+      margin-top: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .contact-detail .row {
+      display: flex;
+      gap: 10px;
+      font-size: 14px;
+    }
+
+    .contact-detail .row .key {
+      color: var(--text-3);
+      font-weight: 500;
+      min-width: 80px;
+      flex-shrink: 0;
+    }
+
+    .contact-detail .row .val { color: var(--text-1); }
+
+    .doc-footer {
+      margin-top: 72px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border-soft);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .doc-footer-copy { font-size: 12px; color: var(--text-3); }
+
+    .doc-footer-links { display: flex; gap: 20px; list-style: none; flex-wrap: wrap; }
+
+    .doc-footer-links a {
+      font-size: 12px;
+      color: var(--text-3);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .doc-footer-links a:hover { color: var(--accent); text-decoration: none; }
+
+    @media (max-width: 480px) {
+      .page { padding: 40px 16px 72px; }
+      .ftc-box { padding: 18px 20px; }
+      .doc-footer { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="./Perkbook-landing.html" class="nav-wordmark">✦ PerkBook</a>
+    <a href="./Perkbook-landing.html" class="nav-back">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+        <path d="M9 2L4 7l5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Back to home
+    </a>
+  </nav>
+
+  <main class="page">
+
+    <header class="doc-header">
+      <p class="doc-eyebrow">Legal</p>
+      <h1 class="doc-title">Affiliate Disclosure</h1>
+      <p class="doc-meta">
+        Effective date: <span>March 30, 2026</span> &nbsp;·&nbsp; Last updated: <span>March 30, 2026</span>
+      </p>
+    </header>
+
+    <!-- FTC-required prominent disclosure -->
+    <div class="ftc-box" role="note" aria-label="Affiliate relationship disclosure">
+      <p class="ftc-label">Required Disclosure — FTC 16 CFR Part 255</p>
+      <p>
+        PerkBook may earn a commission if you apply for or are approved for a credit card through links on this website or app. This means we have a financial relationship with some card issuers and affiliate networks. This compensation does not affect which cards we include in our library, how we present benefit information, or how we rank or compare cards. We are committed to providing accurate, unbiased benefit data regardless of affiliate relationships.
+      </p>
+    </div>
+
+    <!-- Section 1 -->
+    <section class="section" id="how-it-works">
+      <h2 class="section-heading"><span class="num">01</span> How Affiliate Links Work</h2>
+      <p>
+        When you click a "Apply Now" or similar link on PerkBook, you may be directed to a card issuer's website or an affiliate network's landing page. If you submit an application through that link and are approved, PerkBook may receive a referral commission.
+      </p>
+      <p>
+        The commission comes from the card issuer or affiliate network — <strong>not from you</strong>. You pay nothing extra. The card's terms, fees, interest rates, and welcome offers are the same whether you apply through PerkBook or directly through the issuer's website.
+      </p>
+      <div class="callout">
+        <strong>Not all links are affiliate links.</strong> PerkBook links to card issuers and other resources for informational purposes. A link being present does not mean we earn a commission from it.
+      </div>
+    </section>
+
+    <!-- Section 2: Q&A -->
+    <section class="section" id="our-commitment">
+      <h2 class="section-heading"><span class="num">02</span> Our Commitment to You</h2>
+
+      <div class="qa-block">
+        <p class="qa-q">Does affiliate compensation affect what cards appear in PerkBook?</p>
+        <p>No. Cards are included in our library based on their relevance to users tracking credit card benefits — not on whether we have an affiliate relationship with the issuer. Many cards in our library have no affiliate arrangement at all.</p>
+      </div>
+
+      <div class="qa-block">
+        <p class="qa-q">Does it affect how benefit information is presented?</p>
+        <p>No. Benefit data — credits, perks, annual fees, reward rates — is sourced from publicly available issuer documentation and is presented as accurately as possible regardless of affiliate status. We do not inflate or downplay any card's benefits based on compensation.</p>
+      </div>
+
+      <div class="qa-block">
+        <p class="qa-q">Does it affect card comparisons or recommendations?</p>
+        <p>No. Our comparison tools present the data you enter and the card's documented benefits. PerkBook does not algorithmically rank or promote cards based on commission rates.</p>
+      </div>
+
+      <div class="qa-block">
+        <p class="qa-q">Is PerkBook affiliated with or endorsed by any card issuer?</p>
+        <p>No. PerkBook is an independent product operated by Josh Shafer. We are not affiliated with, sponsored by, or endorsed by Chase, American Express, Capital One, Citi, or any other card issuer or payment network. Card names, issuer names, and network logos are trademarks of their respective owners.</p>
+      </div>
+    </section>
+
+    <!-- Section 3 -->
+    <section class="section" id="accuracy">
+      <h2 class="section-heading"><span class="num">03</span> Benefit Accuracy &amp; Card Terms</h2>
+      <p>
+        Credit card benefits, annual fees, reward rates, and promotional offers are subject to change by card issuers at any time without notice to PerkBook. While we make every effort to keep our card library up to date, we cannot guarantee that all information is current.
+      </p>
+      <p><strong>Always verify the current terms directly with the card issuer before applying.</strong></p>
+      <ul>
+        <li>Benefit values listed in PerkBook reflect documented issuer terms, not guaranteed outcomes</li>
+        <li>Welcome offer eligibility varies — issuers set their own rules for who qualifies</li>
+        <li>Annual fee amounts, credit limits, and APRs are subject to change and individual creditworthiness</li>
+      </ul>
+    </section>
+
+    <!-- Section 4 -->
+    <section class="section" id="not-financial-advice">
+      <h2 class="section-heading"><span class="num">04</span> Not Financial Advice</h2>
+      <p>
+        Nothing on PerkBook — including card comparisons, benefit valuations, usage suggestions, or affiliate links — constitutes financial, legal, tax, or credit advice. PerkBook is an informational tool.
+      </p>
+      <p>
+        The decision to apply for a credit card involves factors including your credit score, income, existing debt, and personal financial goals. These are individual decisions and PerkBook encourages you to consult a qualified financial professional if you are uncertain.
+      </p>
+    </section>
+
+    <!-- Section 5 -->
+    <section class="section" id="ftc-compliance">
+      <h2 class="section-heading"><span class="num">05</span> FTC Compliance</h2>
+      <p>
+        This disclosure is provided in accordance with the Federal Trade Commission's guidelines on endorsements and testimonials in advertising (16 CFR Part 255), which require clear and conspicuous disclosure of material connections between publishers and advertisers.
+      </p>
+      <p>
+        If you have questions about our affiliate relationships or believe a disclosure is missing or unclear anywhere on the site, please contact us at the address below.
+      </p>
+    </section>
+
+    <!-- Section 6 -->
+    <section class="section" id="contact">
+      <h2 class="section-heading"><span class="num">06</span> Questions &amp; Contact</h2>
+      <p>If you have questions about this disclosure or our affiliate relationships:</p>
+      <div class="contact-block">
+        <p class="contact-title">PerkBook</p>
+        <div class="contact-detail">
+          <div class="row">
+            <span class="key">Operator</span>
+            <span class="val">Josh Shafer (PerkBook)</span>
+          </div>
+          <div class="row">
+            <span class="key">Location</span>
+            <span class="val">Minnesota, United States</span>
+          </div>
+          <div class="row">
+            <span class="key">Email</span>
+            <span class="val"><a href="mailto:privacy@perkbook.app">privacy@perkbook.app</a></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr />
+
+    <footer class="doc-footer">
+      <p class="doc-footer-copy">© 2026 Josh Shafer / PerkBook</p>
+      <ul class="doc-footer-links">
+        <li><a href="./privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="./terms.html">Terms of Service</a></li>
+        <li><a href="./Perkbook-landing.html">Home</a></li>
+      </ul>
+    </footer>
+
+  </main>
+</body>
+</html>

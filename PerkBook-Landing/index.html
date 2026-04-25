@@ -1,0 +1,1886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PerkBook — Know Your Cards. Use Every Perk.</title>
+  <meta name="description" content="PerkBook tracks your credit card benefits so you never leave value on the table. Compare cards, discover hidden perks, and stay on top of every benefit you're paying for." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ─── Design Tokens ─────────────────────────────────────────────────── */
+    :root {
+      /* Brand Colors */
+      --navy-deep:   #0B1929;
+      --navy:        #0D2240;
+      --navy-mid:    #173358;
+      --navy-light:  #1E4272;
+      --navy-alt:    #0D1F33;
+      --surface:     #0F2236;
+      --surface-el:  #142A42;
+      --surface-sub: #1A3350;
+
+      --gold-deep:   #8C5E20;
+      --gold:        #C4893A;
+      --gold-mid:    #D4A057;
+      --gold-light:  #E8C47A;
+      --gold-pale:   #F5E4BC;
+
+      --cream:       #F6F1E8;
+      --cream-light: #FAF7F2;
+      --cream-dark:  #EDE6D9;
+
+      --ink-dark:    #1A1410;
+      --ink-mid:     #5C5046;
+      --ink-light:   #9C8E82;
+
+      /* Dark Theme Semantic */
+      --bg:          #0B1929;
+      --bg-alt:      #0D1F33;
+      --card:        #0F2236;
+      --card-el:     #142A42;
+      --border:      #1C3350;
+      --border-soft: rgba(255, 255, 255, 0.07);
+      --text-1:      #F2EBE0;
+      --text-2:      #A89C8F;
+      --text-3:      #7A6E64;
+      --accent:      #E8C47A;
+      --accent-mid:  #D4A057;
+      --accent-deep: #C4893A;
+      --success:     #3DBF82;
+      --danger:      #E05555;
+
+      /* Typography */
+      --font-display: 'DM Serif Display', Georgia, serif;
+      --font-sans:    'DM Sans', system-ui, sans-serif;
+      --font-word:    'Cormorant Garamond', Georgia, serif;
+
+      /* Spacing */
+      --sp-1:  4px;
+      --sp-2:  8px;
+      --sp-3:  12px;
+      --sp-4:  16px;
+      --sp-5:  20px;
+      --sp-6:  24px;
+      --sp-8:  32px;
+      --sp-10: 40px;
+      --sp-12: 48px;
+      --sp-16: 64px;
+
+      /* Radius */
+      --r-sm:   8px;
+      --r-md:   12px;
+      --r-lg:   16px;
+      --r-xl:   20px;
+      --r-2xl:  24px;
+      --r-3xl:  28px;
+      --r-full: 9999px;
+
+      /* Shadows */
+      --shadow-sm:   0 1px 4px rgba(11,25,41,0.35);
+      --shadow-md:   0 3px 12px rgba(11,25,41,0.45);
+      --shadow-lg:   0 8px 28px rgba(11,25,41,0.55);
+      --shadow-gold: 0 4px 20px rgba(196,137,58,0.25);
+      --shadow-glow: 0 0 40px rgba(232,196,122,0.12);
+    }
+
+    /* ─── Reset & Base ───────────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--bg);
+      color: var(--text-1);
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    img, svg { display: block; }
+    a { color: inherit; text-decoration: none; }
+    button { cursor: pointer; border: none; background: none; font: inherit; }
+    input { font: inherit; }
+
+    /* ─── Utility ────────────────────────────────────────────────────────── */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 var(--sp-6);
+    }
+
+    .sr-only {
+      position: absolute; width: 1px; height: 1px;
+      overflow: hidden; clip: rect(0,0,0,0);
+    }
+
+    /* ─── Navigation ─────────────────────────────────────────────────────── */
+    .nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 0 var(--sp-6);
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(11, 25, 41, 0.8);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-soft);
+      transition: background 0.3s;
+    }
+
+    .nav-wordmark {
+      font-family: var(--font-word);
+      font-weight: 700;
+      font-size: 22px;
+      letter-spacing: 0.5px;
+      color: var(--text-1);
+      display: flex;
+      align-items: center;
+      gap: var(--sp-2);
+    }
+
+    .nav-wordmark .star {
+      width: 20px;
+      height: 20px;
+      background: linear-gradient(135deg, var(--gold-light), var(--accent-deep));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-size: 18px;
+      line-height: 1;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: var(--sp-8);
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-2);
+      letter-spacing: 0.2px;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--text-1); }
+
+    .nav-cta {
+      background: linear-gradient(135deg, var(--gold-mid), var(--accent-deep));
+      color: white !important;
+      padding: 8px 20px;
+      border-radius: var(--r-full);
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 0.3px;
+      transition: opacity 0.2s, transform 0.15s !important;
+      box-shadow: var(--shadow-gold);
+    }
+
+    .nav-cta:hover { opacity: 0.88; transform: translateY(-1px); }
+
+    .nav-mobile-cta {
+      display: none;
+    }
+
+    @media (max-width: 720px) {
+      .nav-links { display: none; }
+      .nav-mobile-cta {
+        display: block;
+        background: linear-gradient(135deg, var(--gold-mid), var(--accent-deep));
+        color: white;
+        padding: 8px 18px;
+        border-radius: var(--r-full);
+        font-weight: 600;
+        font-size: 13px;
+        letter-spacing: 0.3px;
+        box-shadow: var(--shadow-gold);
+      }
+    }
+
+    /* ─── Animations ─────────────────────────────────────────────────────── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px) rotate(-4deg); }
+      50%       { transform: translateY(-10px) rotate(-4deg); }
+    }
+
+    @keyframes floatB {
+      0%, 100% { transform: translateY(0px) rotate(3deg); }
+      50%       { transform: translateY(-14px) rotate(3deg); }
+    }
+
+    @keyframes shimmer {
+      0%   { background-position: -200% center; }
+      100% { background-position: 200% center; }
+    }
+
+    @keyframes pulse-glow {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(232,196,122,0); }
+      50%       { box-shadow: 0 0 32px 4px rgba(232,196,122,0.15); }
+    }
+
+    .fade-up-1 { animation: fadeUp 0.7s cubic-bezier(.22,.68,0,1.2) 0.1s both; }
+    .fade-up-2 { animation: fadeUp 0.7s cubic-bezier(.22,.68,0,1.2) 0.25s both; }
+    .fade-up-3 { animation: fadeUp 0.7s cubic-bezier(.22,.68,0,1.2) 0.4s both; }
+    .fade-up-4 { animation: fadeUp 0.7s cubic-bezier(.22,.68,0,1.2) 0.55s both; }
+    .fade-in   { animation: fadeIn 1s ease 0.2s both; }
+
+    /* ─── Hero ───────────────────────────────────────────────────────────── */
+    .hero {
+      min-height: 100svh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding-top: 64px;
+    }
+
+    /* Atmospheric background */
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 60% 30%, rgba(30,66,114,0.45) 0%, transparent 65%),
+        radial-gradient(ellipse 50% 40% at 15% 75%, rgba(196,137,58,0.08) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    /* Subtle noise texture */
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      opacity: 0.03;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+      background-size: 128px 128px;
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--sp-16);
+      align-items: center;
+      width: 100%;
+      padding: var(--sp-16) var(--sp-6);
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--sp-2);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: var(--sp-5);
+    }
+
+    .hero-eyebrow::before {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 1px;
+      background: var(--accent);
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(40px, 5.5vw, 64px);
+      line-height: 1.1;
+      letter-spacing: -0.5px;
+      color: var(--text-1);
+      margin-bottom: var(--sp-5);
+    }
+
+    .hero-title .accent-line {
+      color: var(--accent);
+      font-style: italic;
+    }
+
+    .hero-sub {
+      font-size: 17px;
+      line-height: 1.7;
+      color: var(--text-2);
+      max-width: 420px;
+      margin-bottom: var(--sp-8);
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: var(--sp-4);
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--sp-2);
+      background: linear-gradient(135deg, var(--gold-mid), var(--accent-deep));
+      color: white;
+      font-weight: 700;
+      font-size: 15px;
+      letter-spacing: 0.3px;
+      padding: 15px 28px;
+      border-radius: var(--r-md);
+      box-shadow: var(--shadow-gold);
+      transition: transform 0.18s, opacity 0.18s, box-shadow 0.18s;
+      animation: pulse-glow 3s ease-in-out 2s infinite;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      opacity: 0.92;
+      box-shadow: 0 6px 28px rgba(196,137,58,0.35);
+    }
+
+    .btn-primary:active { transform: translateY(0px) scale(0.98); }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--sp-2);
+      background: transparent;
+      color: var(--text-2);
+      font-weight: 500;
+      font-size: 14px;
+      padding: 15px 20px;
+      border-radius: var(--r-md);
+      border: 1px solid var(--border);
+      transition: border-color 0.2s, color 0.2s, background 0.2s;
+    }
+
+    .btn-secondary:hover {
+      border-color: rgba(232,196,122,0.3);
+      color: var(--text-1);
+      background: rgba(232,196,122,0.05);
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: var(--sp-8);
+      margin-top: var(--sp-10);
+      padding-top: var(--sp-8);
+      border-top: 1px solid var(--border-soft);
+    }
+
+    .stat-item {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .stat-number {
+      font-family: var(--font-display);
+      font-size: 26px;
+      color: var(--accent);
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 12px;
+      color: var(--text-3);
+      font-weight: 500;
+      letter-spacing: 0.3px;
+    }
+
+    /* ─── Hero Cards Visual ──────────────────────────────────────────────── */
+    .hero-visual {
+      position: relative;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card-stack {
+      position: relative;
+      width: 320px;
+      height: 200px;
+    }
+
+    .cc-card {
+      position: absolute;
+      width: 300px;
+      height: 185px;
+      border-radius: 16px;
+      padding: 20px 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+      transition: transform 0.4s cubic-bezier(.22,.68,0,1.2);
+      overflow: hidden;
+    }
+
+    .cc-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(255,255,255,0.12) 0%, transparent 55%);
+      pointer-events: none;
+    }
+
+    .cc-card-a {
+      background: linear-gradient(135deg, #174A8A, #0C2B52);
+      transform: rotate(-4deg) translateX(-24px) translateY(8px);
+      z-index: 1;
+    }
+
+    .cc-card-b {
+      background: linear-gradient(135deg, #5C6E7A, #2E3E48);
+      transform: rotate(3deg) translateX(24px) translateY(-4px);
+      z-index: 2;
+    }
+
+    .cc-card-c {
+      background: linear-gradient(135deg, #8C6914, #52390A);
+      transform: rotate(-1deg) translateY(-16px);
+      z-index: 3;
+    }
+
+    .card-stack:hover .cc-card-a { transform: rotate(-8deg) translateX(-50px) translateY(12px); }
+    .card-stack:hover .cc-card-b { transform: rotate(6deg) translateX(50px) translateY(-8px); }
+    .card-stack:hover .cc-card-c { transform: rotate(-2deg) translateY(-28px); }
+
+    .cc-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .cc-name {
+      font-size: 11px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.85);
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+    }
+
+    .cc-network {
+      background: rgba(255,255,255,0.2);
+      border-radius: 5px;
+      padding: 3px 8px;
+      font-size: 10px;
+      font-weight: 700;
+      color: white;
+      letter-spacing: 0.5px;
+    }
+
+    .cc-chip {
+      width: 32px;
+      height: 24px;
+      border-radius: 4px;
+      background: linear-gradient(135deg, rgba(255,215,100,0.5), rgba(255,200,60,0.2));
+      border: 1px solid rgba(255,215,100,0.35);
+    }
+
+    .cc-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    .cc-number {
+      font-size: 12px;
+      color: rgba(255,255,255,0.5);
+      letter-spacing: 2px;
+    }
+
+    .cc-perk {
+      font-size: 10px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.65);
+      text-align: right;
+      letter-spacing: 0.3px;
+    }
+
+    /* Floating benefit badges */
+    .benefit-badge {
+      position: absolute;
+      background: var(--card-el);
+      border: 1px solid var(--border);
+      border-radius: var(--r-md);
+      padding: 8px 12px;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      box-shadow: var(--shadow-md);
+      white-space: nowrap;
+      z-index: 10;
+    }
+
+    .benefit-badge .badge-icon {
+      font-size: 16px;
+      line-height: 1;
+    }
+
+    .benefit-badge .badge-text {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-1);
+      line-height: 1.3;
+    }
+
+    .benefit-badge .badge-sub {
+      font-size: 10px;
+      color: var(--success);
+      font-weight: 500;
+      line-height: 1;
+    }
+
+    .badge-1 {
+      top: 20px; right: 0px;
+      animation: float 5s ease-in-out infinite;
+    }
+
+    .badge-2 {
+      bottom: 30px; left: -10px;
+      animation: floatB 6s ease-in-out 1s infinite;
+    }
+
+    .badge-3 {
+      bottom: 80px; right: -20px;
+      animation: float 4.5s ease-in-out 0.5s infinite;
+    }
+
+    @media (max-width: 900px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: var(--sp-12);
+      }
+      .hero-eyebrow { justify-content: center; }
+      .hero-sub { margin: 0 auto var(--sp-8); }
+      .hero-actions { justify-content: center; }
+      .hero-stats { justify-content: center; }
+      .hero-visual { height: 300px; }
+      .card-stack { transform: scale(0.85); }
+      .badge-1 { right: 10px; }
+      .badge-2 { left: 10px; }
+      .badge-3 { right: 0px; }
+    }
+
+    @media (max-width: 480px) {
+      .hero-visual { display: none; }
+    }
+
+    /* ─── Section Base ───────────────────────────────────────────────────── */
+    section {
+      position: relative;
+    }
+
+    .section-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--sp-2);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: var(--sp-4);
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(30px, 4vw, 44px);
+      line-height: 1.15;
+      letter-spacing: -0.3px;
+      color: var(--text-1);
+      margin-bottom: var(--sp-4);
+    }
+
+    .section-sub {
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--text-2);
+      max-width: 540px;
+    }
+
+    /* Scroll-reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.65s cubic-bezier(.22,.68,0,1.1), transform 0.65s cubic-bezier(.22,.68,0,1.1);
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+
+    /* ─── Features ───────────────────────────────────────────────────────── */
+    .features {
+      padding: 100px 0;
+      background: var(--bg-alt);
+    }
+
+    .features::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border), transparent);
+    }
+
+    .features-header {
+      max-width: 520px;
+      margin-bottom: var(--sp-12);
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--sp-6);
+    }
+
+    @media (max-width: 860px) {
+      .features-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
+    }
+
+    .feature-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--r-2xl);
+      padding: var(--sp-8) var(--sp-6);
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+    }
+
+    .feature-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      background: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(232,196,122,0.07) 0%, transparent 70%);
+      transition: opacity 0.3s;
+      pointer-events: none;
+    }
+
+    .feature-card:hover {
+      border-color: rgba(232,196,122,0.25);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .feature-card:hover::before { opacity: 1; }
+
+    .feature-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--r-md);
+      background: linear-gradient(135deg, var(--navy-light), var(--navy-mid));
+      border: 1px solid rgba(232,196,122,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      margin-bottom: var(--sp-5);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .feature-title {
+      font-family: var(--font-display);
+      font-size: 20px;
+      color: var(--text-1);
+      margin-bottom: var(--sp-3);
+      line-height: 1.25;
+    }
+
+    .feature-body {
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--text-2);
+    }
+
+    .feature-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      margin-top: var(--sp-5);
+      background: rgba(232,196,122,0.1);
+      border: 1px solid rgba(232,196,122,0.2);
+      border-radius: var(--r-full);
+      padding: 4px 12px;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--accent);
+      letter-spacing: 0.3px;
+    }
+
+    /* ─── How It Works ───────────────────────────────────────────────────── */
+    .how {
+      padding: 100px 0;
+      overflow: hidden;
+    }
+
+    .how::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 85% 50%, rgba(13,34,64,0.6) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .how-inner {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--sp-16);
+      align-items: center;
+    }
+
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .step {
+      display: flex;
+      gap: var(--sp-5);
+      position: relative;
+    }
+
+    .step-line-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+      flex-shrink: 0;
+    }
+
+    .step-num {
+      width: 40px;
+      height: 40px;
+      border-radius: var(--r-full);
+      background: linear-gradient(135deg, var(--navy-light), var(--navy-mid));
+      border: 1px solid rgba(232,196,122,0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-size: 16px;
+      color: var(--accent);
+      flex-shrink: 0;
+      position: relative;
+      z-index: 1;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .step-connector {
+      width: 1px;
+      flex: 1;
+      min-height: 40px;
+      background: linear-gradient(to bottom, rgba(232,196,122,0.2), transparent);
+      margin: 4px 0;
+    }
+
+    .step:last-child .step-connector { display: none; }
+
+    .step-content {
+      padding-bottom: var(--sp-8);
+      flex: 1;
+    }
+
+    .step:last-child .step-content { padding-bottom: 0; }
+
+    .step-title {
+      font-family: var(--font-display);
+      font-size: 20px;
+      color: var(--text-1);
+      margin-bottom: var(--sp-2);
+      margin-top: 8px;
+      line-height: 1.2;
+    }
+
+    .step-body {
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--text-2);
+    }
+
+    /* Mock app screenshot */
+    .app-mockup {
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+
+    .app-frame {
+      width: 260px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 36px;
+      overflow: hidden;
+      box-shadow: var(--shadow-lg), var(--shadow-glow);
+      position: relative;
+    }
+
+    .app-notch {
+      height: 40px;
+      background: var(--bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid var(--border-soft);
+    }
+
+    .app-notch-pill {
+      width: 80px;
+      height: 6px;
+      background: var(--border);
+      border-radius: var(--r-full);
+    }
+
+    .app-screen {
+      padding: var(--sp-4);
+      background: var(--bg);
+      min-height: 420px;
+    }
+
+    .app-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: var(--sp-4);
+    }
+
+    .app-header-title {
+      font-family: var(--font-word);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text-1);
+    }
+
+    .app-header-badge {
+      background: rgba(232,196,122,0.15);
+      border: 1px solid rgba(232,196,122,0.2);
+      border-radius: var(--r-full);
+      padding: 3px 10px;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    .app-mini-card {
+      border-radius: 12px;
+      padding: 14px;
+      margin-bottom: var(--sp-3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .app-mini-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .app-mini-card-a { background: linear-gradient(135deg, #174A8A, #0C2B52); }
+    .app-mini-card-b { background: linear-gradient(135deg, #8C6914, #52390A); }
+
+    .app-mini-card-name {
+      font-size: 9px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.75);
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .app-mini-card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    .app-mini-card-val {
+      font-size: 13px;
+      font-weight: 700;
+      color: white;
+    }
+
+    .app-mini-card-label {
+      font-size: 9px;
+      color: rgba(255,255,255,0.6);
+      margin-top: 1px;
+    }
+
+    .app-mini-card-progress {
+      margin-top: 8px;
+    }
+
+    .progress-bar {
+      height: 3px;
+      border-radius: 2px;
+      background: rgba(255,255,255,0.2);
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      border-radius: 2px;
+      background: rgba(255,255,255,0.75);
+    }
+
+    .app-benefit-row {
+      display: flex;
+      align-items: center;
+      gap: var(--sp-3);
+      padding: 9px 10px;
+      background: var(--card-el);
+      border-radius: var(--r-sm);
+      margin-bottom: 6px;
+    }
+
+    .benefit-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: var(--r-full);
+      flex-shrink: 0;
+    }
+
+    .benefit-dot-green { background: var(--success); }
+    .benefit-dot-gold  { background: var(--accent); }
+    .benefit-dot-dim   { background: var(--text-3); }
+
+    .app-benefit-name {
+      font-size: 11px;
+      color: var(--text-1);
+      font-weight: 500;
+      flex: 1;
+    }
+
+    .app-benefit-val {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    @media (max-width: 860px) {
+      .how-inner { grid-template-columns: 1fr; }
+      .app-mockup { order: -1; }
+      .app-frame { width: 240px; }
+    }
+
+    /* ─── Waitlist / CTA ─────────────────────────────────────────────────── */
+    .waitlist {
+      padding: 100px 0;
+      background: var(--bg-alt);
+    }
+
+    .waitlist::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border), transparent);
+    }
+
+    .waitlist-card {
+      max-width: 640px;
+      margin: 0 auto;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--r-3xl);
+      padding: 56px var(--sp-12);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .waitlist-card::before {
+      content: '';
+      position: absolute;
+      top: -60px; left: 50%;
+      transform: translateX(-50%);
+      width: 300px;
+      height: 200px;
+      background: radial-gradient(ellipse, rgba(232,196,122,0.1) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .waitlist-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: var(--r-lg);
+      background: linear-gradient(135deg, var(--navy-light), var(--navy-mid));
+      border: 1px solid rgba(232,196,122,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      margin: 0 auto var(--sp-6);
+      box-shadow: var(--shadow-gold);
+    }
+
+    .waitlist-title {
+      font-family: var(--font-display);
+      font-size: clamp(26px, 3.5vw, 36px);
+      color: var(--text-1);
+      margin-bottom: var(--sp-3);
+      line-height: 1.2;
+    }
+
+    .waitlist-sub {
+      font-size: 15px;
+      color: var(--text-2);
+      line-height: 1.65;
+      margin-bottom: var(--sp-8);
+      max-width: 420px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .waitlist-form {
+      display: flex;
+      gap: var(--sp-3);
+      max-width: 420px;
+      margin: 0 auto var(--sp-5);
+    }
+
+    .waitlist-input {
+      flex: 1;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid var(--border);
+      border-radius: var(--r-md);
+      padding: 13px 16px;
+      color: var(--text-1);
+      font-size: 14px;
+      outline: none;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .waitlist-input::placeholder { color: var(--text-3); }
+
+    .waitlist-input:focus {
+      border-color: rgba(232,196,122,0.4);
+      background: rgba(255,255,255,0.08);
+    }
+
+    .waitlist-submit {
+      background: linear-gradient(135deg, var(--gold-mid), var(--accent-deep));
+      color: white;
+      font-weight: 700;
+      font-size: 14px;
+      padding: 13px 22px;
+      border-radius: var(--r-md);
+      border: none;
+      cursor: pointer;
+      white-space: nowrap;
+      box-shadow: var(--shadow-gold);
+      transition: transform 0.18s, opacity 0.18s;
+    }
+
+    .waitlist-submit:hover { transform: translateY(-1px); opacity: 0.9; }
+    .waitlist-submit:active { transform: scale(0.98); }
+
+    .waitlist-disclaimer {
+      font-size: 12px;
+      color: var(--text-3);
+      line-height: 1.5;
+    }
+
+    .waitlist-social-proof {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--sp-3);
+      margin-top: var(--sp-6);
+      padding-top: var(--sp-6);
+      border-top: 1px solid var(--border-soft);
+    }
+
+    .avatar-stack {
+      display: flex;
+    }
+
+    .avatar {
+      width: 28px;
+      height: 28px;
+      border-radius: var(--r-full);
+      border: 2px solid var(--card);
+      margin-left: -8px;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--navy-mid);
+      color: var(--text-2);
+    }
+
+    .avatar:first-child { margin-left: 0; }
+
+    .social-proof-text {
+      font-size: 12px;
+      color: var(--text-2);
+      font-weight: 500;
+    }
+
+    .social-proof-text strong {
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    @media (max-width: 560px) {
+      .waitlist-card { padding: 40px var(--sp-6); }
+      .waitlist-form { flex-direction: column; }
+      .waitlist-submit { width: 100%; padding: 14px; }
+    }
+
+    /* ─── Footer ─────────────────────────────────────────────────────────── */
+    .footer {
+      background: var(--navy-deep);
+      border-top: 1px solid var(--border-soft);
+      padding: 48px 0 32px;
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-direction: column;
+      gap: var(--sp-6);
+    }
+
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: var(--sp-8);
+      flex-wrap: wrap;
+    }
+
+    .footer-brand {
+      max-width: 280px;
+    }
+
+    .footer-wordmark {
+      font-family: var(--font-word);
+      font-weight: 700;
+      font-size: 20px;
+      color: var(--text-1);
+      margin-bottom: var(--sp-3);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .footer-tagline {
+      font-size: 13px;
+      color: var(--text-3);
+      line-height: 1.6;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--sp-4) var(--sp-8);
+      list-style: none;
+      align-items: center;
+    }
+
+    .footer-links a {
+      font-size: 13px;
+      color: var(--text-3);
+      transition: color 0.2s;
+      letter-spacing: 0.2px;
+    }
+
+    .footer-links a:hover { color: var(--accent); }
+
+    .footer-divider {
+      height: 1px;
+      background: var(--border-soft);
+    }
+
+    .footer-disclosure {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--r-md);
+      padding: var(--sp-4) var(--sp-5);
+    }
+
+    .disclosure-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: var(--sp-2);
+    }
+
+    .disclosure-text {
+      font-size: 12px;
+      color: var(--text-3);
+      line-height: 1.65;
+    }
+
+    .disclosure-text a {
+      color: var(--text-2);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .disclosure-text a:hover { color: var(--accent); }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: var(--sp-3);
+    }
+
+    .footer-copy {
+      font-size: 12px;
+      color: var(--text-3);
+    }
+
+    .footer-legal {
+      display: flex;
+      gap: var(--sp-5);
+      list-style: none;
+    }
+
+    .footer-legal a {
+      font-size: 12px;
+      color: var(--text-3);
+      transition: color 0.2s;
+    }
+
+    .footer-legal a:hover { color: var(--text-2); }
+
+    /* ─── Success state for form ─────────────────────────────────────────── */
+    .form-success {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--sp-3);
+      padding: var(--sp-4);
+    }
+
+    .form-success.visible { display: flex; }
+    .waitlist-form.hidden { display: none; }
+
+    .success-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--r-full);
+      background: rgba(61,191,130,0.15);
+      border: 1px solid rgba(61,191,130,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+    }
+
+    .success-text {
+      font-family: var(--font-display);
+      font-size: 18px;
+      color: var(--text-1);
+    }
+
+    .success-sub {
+      font-size: 13px;
+      color: var(--text-2);
+    }
+
+    /* ─── Responsive tweaks ──────────────────────────────────────────────── */
+    @media (max-width: 600px) {
+      .footer-top { flex-direction: column; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+    }
+
+    /* ─── Mobile: reduce vertical breathing room ─────────────────────────── */
+    @media (max-width: 768px) {
+      .features,
+      .how,
+      .waitlist {
+        padding: 72px 0;
+      }
+
+      .hero-inner {
+        padding-top: var(--sp-12);
+        padding-bottom: var(--sp-12);
+      }
+
+      .how-inner {
+        gap: var(--sp-10);
+      }
+
+      .features-header {
+        margin-bottom: var(--sp-8);
+      }
+    }
+
+    /* ─── Mobile: small phones (≤480px) ─────────────────────────────────── */
+    @media (max-width: 480px) {
+      .features,
+      .how,
+      .waitlist {
+        padding: 56px 0;
+      }
+
+      .container {
+        padding: 0 var(--sp-4);
+      }
+
+      .hero-inner {
+        padding-top: var(--sp-10);
+        padding-bottom: var(--sp-10);
+        gap: var(--sp-8);
+      }
+
+      /* Stats row: shrink gap and let it wrap */
+      .hero-stats {
+        gap: var(--sp-6);
+        flex-wrap: wrap;
+        margin-top: var(--sp-8);
+        padding-top: var(--sp-6);
+      }
+
+      .stat-number { font-size: 22px; }
+      .stat-label  { font-size: 11px; }
+
+      /* Buttons: stack vertically */
+      .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .btn-primary,
+      .btn-secondary {
+        justify-content: center;
+        width: 100%;
+      }
+
+      /* Waitlist card */
+      .waitlist-card {
+        padding: 36px var(--sp-5);
+        border-radius: var(--r-2xl);
+      }
+
+      /* Footer legal: allow wrapping */
+      .footer-legal {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: var(--sp-3) var(--sp-4);
+      }
+
+      .footer-brand { max-width: 100%; }
+
+      /* Section titles */
+      .section-title {
+        font-size: clamp(26px, 7vw, 36px);
+      }
+    }
+
+    /* ─── Hero visual: fix badge overflow on mid-mobile (480–900px) ──────── */
+    @media (min-width: 481px) and (max-width: 900px) {
+      .hero-visual {
+        /* clip so badges don't cause horizontal scroll */
+        overflow: hidden;
+        padding: 20px 16px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      /* Re-anchor badges inside the clipped container */
+      .badge-1 { top: 8px;  right: 8px;  }
+      .badge-2 { bottom: 8px; left: 8px; }
+      .badge-3 { display: none; } /* one less badge avoids crowding */
+
+      .card-stack {
+        transform: scale(0.8);
+        transform-origin: center center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" aria-label="Main navigation">
+    <a href="/" class="nav-wordmark" aria-label="PerkBook home">
+      <span class="star" aria-hidden="true">✦</span>
+      PerkBook
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="#features">Features</a></li>
+      <li><a href="#how-it-works">How It Works</a></li>
+      <li><a href="#waitlist" class="nav-cta">Join Waitlist</a></li>
+    </ul>
+    <a href="#waitlist" class="nav-mobile-cta" aria-label="Join the waitlist">Join Waitlist</a>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" aria-labelledby="hero-headline">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <p class="hero-eyebrow fade-up-1" aria-hidden="true">Credit card rewards, simplified</p>
+        <h1 class="hero-title fade-up-2" id="hero-headline">
+          Know your cards.<br/>
+          <span class="accent-line">Use every perk.</span>
+        </h1>
+        <p class="hero-sub fade-up-3">
+          PerkBook tracks the benefits across all your credit cards so you stop losing money on perks you're already paying for.
+        </p>
+        <div class="hero-actions fade-up-4">
+          <a href="#waitlist" class="btn-primary">
+            Join the Waitlist
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a href="#how-it-works" class="btn-secondary">
+            See how it works
+          </a>
+        </div>
+        <div class="hero-stats fade-up-4">
+          <div class="stat-item">
+            <span class="stat-number">$700+</span>
+            <span class="stat-label">Avg. annual value tracked</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">50+</span>
+            <span class="stat-label">Cards supported</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Free to use</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual fade-in" aria-hidden="true">
+        <div class="card-stack">
+          <!-- Credit card visuals -->
+          <div class="cc-card cc-card-a">
+            <div class="cc-top">
+              <span class="cc-name">Sapphire Preferred</span>
+              <span class="cc-network">VISA</span>
+            </div>
+            <div class="cc-chip"></div>
+            <div class="cc-bottom">
+              <span class="cc-number">•••• 4291</span>
+              <div class="cc-perk">3× Dining<br/>2× Travel</div>
+            </div>
+          </div>
+          <div class="cc-card cc-card-b">
+            <div class="cc-top">
+              <span class="cc-name">Platinum Card</span>
+              <span class="cc-network">AMEX</span>
+            </div>
+            <div class="cc-chip"></div>
+            <div class="cc-bottom">
+              <span class="cc-number">•••• 7703</span>
+              <div class="cc-perk">5× Flights<br/>Airport Lounge</div>
+            </div>
+          </div>
+          <div class="cc-card cc-card-c">
+            <div class="cc-top">
+              <span class="cc-name">Gold Card</span>
+              <span class="cc-network">AMEX</span>
+            </div>
+            <div class="cc-chip"></div>
+            <div class="cc-bottom">
+              <span class="cc-number">•••• 1958</span>
+              <div class="cc-perk">4× Restaurants<br/>$120 Dining</div>
+            </div>
+          </div>
+
+          <!-- Floating benefit badges -->
+          <div class="benefit-badge badge-1">
+            <span class="badge-icon">✈️</span>
+            <div>
+              <div class="badge-text">Lounge Access</div>
+              <div class="badge-sub">✓ Used this month</div>
+            </div>
+          </div>
+          <div class="benefit-badge badge-2">
+            <span class="badge-icon">🍽️</span>
+            <div>
+              <div class="badge-text">$120 Dining Credit</div>
+              <div class="badge-sub">$60 remaining</div>
+            </div>
+          </div>
+          <div class="benefit-badge badge-3">
+            <span class="badge-icon">🏨</span>
+            <div>
+              <div class="badge-text">Hotel Credit</div>
+              <div class="badge-sub">Expires Dec 31</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features" id="features" aria-labelledby="features-heading">
+    <div class="container">
+      <div class="features-header reveal">
+        <p class="section-eyebrow">What PerkBook does</p>
+        <h2 class="section-title" id="features-heading">Everything your wallet earns, finally visible</h2>
+        <p class="section-sub">Most people use less than 40% of their credit card benefits. PerkBook makes sure you use the rest.</p>
+      </div>
+
+      <div class="features-grid">
+        <!-- Feature 1 -->
+        <div class="feature-card reveal reveal-delay-1">
+          <div class="feature-icon" aria-hidden="true">⏰</div>
+          <h3 class="feature-title">Never miss a benefit</h3>
+          <p class="feature-body">
+            Get timely reminders before annual credits expire, quarterly bonuses reset, or limited-time perks go unused. Stop leaving money on the table.
+          </p>
+          <span class="feature-tag">
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true">
+              <path d="M5 1v4l2.5 1.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+              <circle cx="5" cy="5" r="4" stroke="currentColor" stroke-width="1.3"/>
+            </svg>
+            Smart reminders
+          </span>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="feature-card reveal reveal-delay-2">
+          <div class="feature-icon" aria-hidden="true">🔍</div>
+          <h3 class="feature-title">Discover hidden perks</h3>
+          <p class="feature-body">
+            Buried in your card's benefits guide are perks most cardholders never find — TSA PreCheck reimbursement, cell phone protection, free streaming. We surface them all.
+          </p>
+          <span class="feature-tag">
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true">
+              <circle cx="4.5" cy="4.5" r="3" stroke="currentColor" stroke-width="1.3"/>
+              <path d="M7 7l1.5 1.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+            </svg>
+            Benefit explorer
+          </span>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="feature-card reveal reveal-delay-3">
+          <div class="feature-icon" aria-hidden="true">⚖️</div>
+          <h3 class="feature-title">Compare cards side-by-side</h3>
+          <p class="feature-body">
+            Thinking about a new card? See exactly how it stacks up against what you already have — net value after annual fees, overlapping benefits, and coverage gaps.
+          </p>
+          <span class="feature-tag">
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true">
+              <rect x="1" y="3" width="3.5" height="6" rx="0.75" stroke="currentColor" stroke-width="1.3"/>
+              <rect x="5.5" y="1" width="3.5" height="8" rx="0.75" stroke="currentColor" stroke-width="1.3"/>
+            </svg>
+            Card comparison
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="how" id="how-it-works" aria-labelledby="how-heading">
+    <div class="container">
+      <div class="how-inner">
+        <div>
+          <div class="reveal">
+            <p class="section-eyebrow">How it works</p>
+            <h2 class="section-title" id="how-heading">Up and running in minutes</h2>
+            <p class="section-sub" style="margin-bottom: var(--sp-10);">No bank connections required. No sensitive data shared. Just your cards and their benefits, organized.</p>
+          </div>
+
+          <div class="steps">
+            <div class="step reveal reveal-delay-1">
+              <div class="step-line-wrap" aria-hidden="true">
+                <div class="step-num">1</div>
+                <div class="step-connector"></div>
+              </div>
+              <div class="step-content">
+                <h3 class="step-title">Add your cards</h3>
+                <p class="step-body">Search from a growing library of 50+ cards. PerkBook already knows every benefit on each card — no manual entry required.</p>
+              </div>
+            </div>
+
+            <div class="step reveal reveal-delay-2">
+              <div class="step-line-wrap" aria-hidden="true">
+                <div class="step-num">2</div>
+                <div class="step-connector"></div>
+              </div>
+              <div class="step-content">
+                <h3 class="step-title">Track your usage</h3>
+                <p class="step-body">Log when you use a benefit with one tap. PerkBook watches your progress toward each credit, quota, and expiration — and alerts you before you miss out.</p>
+              </div>
+            </div>
+
+            <div class="step reveal reveal-delay-3">
+              <div class="step-line-wrap" aria-hidden="true">
+                <div class="step-num">3</div>
+                <div class="step-connector"></div>
+              </div>
+              <div class="step-content">
+                <h3 class="step-title">Maximize every dollar</h3>
+                <p class="step-body">See your total annual value at a glance, discover what you're missing, and get personalized suggestions for when to use which card.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- App frame mockup -->
+        <div class="app-mockup reveal reveal-delay-2" aria-hidden="true">
+          <div class="app-frame" role="img" aria-label="PerkBook app preview">
+            <div class="app-notch">
+              <div class="app-notch-pill"></div>
+            </div>
+            <div class="app-screen">
+              <div class="app-header">
+                <span class="app-header-title">PerkBook</span>
+                <span class="app-header-badge">3 expiring soon</span>
+              </div>
+
+              <!-- Mini card A -->
+              <div class="app-mini-card app-mini-card-a">
+                <div class="app-mini-card-name">Sapphire Preferred</div>
+                <div class="app-mini-card-footer">
+                  <div>
+                    <div class="app-mini-card-val">$250</div>
+                    <div class="app-mini-card-label">annual value left</div>
+                  </div>
+                  <div style="text-align:right;">
+                    <div class="app-mini-card-val">6</div>
+                    <div class="app-mini-card-label">perks active</div>
+                  </div>
+                </div>
+                <div class="app-mini-card-progress">
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width:62%"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Mini card B -->
+              <div class="app-mini-card app-mini-card-b" style="margin-bottom: var(--sp-4);">
+                <div class="app-mini-card-name">Amex Gold</div>
+                <div class="app-mini-card-footer">
+                  <div>
+                    <div class="app-mini-card-val">$120</div>
+                    <div class="app-mini-card-label">dining credit left</div>
+                  </div>
+                  <div style="text-align:right;">
+                    <div class="app-mini-card-val">4</div>
+                    <div class="app-mini-card-label">perks active</div>
+                  </div>
+                </div>
+                <div class="app-mini-card-progress">
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width:40%"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Benefit rows -->
+              <div style="margin-bottom: 8px; font-size: 10px; font-weight: 700; letter-spacing: 1px; color: var(--text-3); text-transform: uppercase;">This month</div>
+              <div class="app-benefit-row">
+                <div class="benefit-dot benefit-dot-green"></div>
+                <span class="app-benefit-name">Lounge Access</span>
+                <span class="app-benefit-val">Used ✓</span>
+              </div>
+              <div class="app-benefit-row">
+                <div class="benefit-dot benefit-dot-gold"></div>
+                <span class="app-benefit-name">$10 Uber Cash</span>
+                <span class="app-benefit-val">$10 left</span>
+              </div>
+              <div class="app-benefit-row">
+                <div class="benefit-dot benefit-dot-dim"></div>
+                <span class="app-benefit-name">Hotel Status</span>
+                <span class="app-benefit-val" style="color: var(--text-3);">Unused</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Waitlist -->
+  <section class="waitlist" id="waitlist" aria-labelledby="waitlist-heading">
+    <div class="container">
+      <div class="waitlist-card reveal">
+        <div class="waitlist-icon" aria-hidden="true">✦</div>
+        <h2 class="waitlist-title" id="waitlist-heading">Be first to know when we launch</h2>
+        <p class="waitlist-sub">
+          PerkBook is coming soon. Join the waitlist and get early access — plus a personal walkthrough to set up your wallet.
+        </p>
+
+        <form class="waitlist-form" id="waitlistForm" novalidate>
+          <label for="email" class="sr-only">Email address</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="waitlist-input"
+            placeholder="your@email.com"
+            autocomplete="email"
+            required
+            aria-required="true"
+          />
+          <button type="submit" class="waitlist-submit">
+            Join Waitlist
+          </button>
+        </form>
+
+        <div class="form-success" id="formSuccess" role="status" aria-live="polite">
+          <div class="success-icon">✓</div>
+          <p class="success-text">You're on the list!</p>
+          <p class="success-sub">We'll reach out with early access details.</p>
+        </div>
+
+        <p class="waitlist-disclaimer">No spam, ever. Unsubscribe anytime.</p>
+
+        <div class="waitlist-social-proof">
+          <div class="avatar-stack" aria-hidden="true">
+            <div class="avatar">J</div>
+            <div class="avatar">M</div>
+            <div class="avatar">A</div>
+            <div class="avatar">K</div>
+          </div>
+          <p class="social-proof-text">Join <strong>400+</strong> people already on the list</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" aria-label="Site footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <div class="footer-wordmark">
+              <span aria-hidden="true">✦</span>
+              PerkBook
+            </div>
+            <p class="footer-tagline">
+              Know your cards. Use every perk. Never leave value on the table again.
+            </p>
+          </div>
+          <ul class="footer-links" role="list">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#waitlist">Join Waitlist</a></li>
+            <li><a href="mailto:hello@perkbook.app">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-divider" role="separator"></div>
+
+        <!-- Affiliate Disclosure -->
+        <div class="footer-disclosure">
+          <p class="disclosure-label">Affiliate Disclosure</p>
+          <p class="disclosure-text">
+            PerkBook may earn a commission when you apply for a credit card through links on this site. This compensation does not influence our card data, benefit accuracy, or recommendations — we only feature cards with information we believe is correct and complete. Card terms and benefits are subject to change; always verify details with the card issuer. PerkBook is not affiliated with or endorsed by any credit card issuer. We are not a financial advisor; nothing on this site constitutes financial advice. For full details, please read our <a href="./affiliate-disclosure.html">Affiliate Disclosure</a> and <a href="./privacy-policy.html">Privacy Policy</a>.
+          </p>
+        </div>
+
+        <div class="footer-divider" role="separator"></div>
+
+        <div class="footer-bottom">
+          <p class="footer-copy">© 2025 PerkBook. All rights reserved.</p>
+          <ul class="footer-legal" role="list">
+            <li><a href="./privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="/terms">Terms of Service</a></li>
+            <li><a href="/affiliate-disclosure">Affiliate Disclosure</a></li>
+            <li><a href="mailto:hello@perkbook.app">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ─── Scroll-reveal ──────────────────────────────────────────────────────
+    const revealEls = document.querySelectorAll('.reveal');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    revealEls.forEach(el => observer.observe(el));
+
+    // ─── Waitlist form ──────────────────────────────────────────────────────
+    const form = document.getElementById('waitlistForm');
+    const successEl = document.getElementById('formSuccess');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const emailInput = form.querySelector('#email');
+      const email = emailInput.value.trim();
+      const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      if (!email || !emailRe.test(email)) {
+        emailInput.style.borderColor = 'rgba(224,85,85,0.5)';
+        emailInput.focus();
+        return;
+      }
+
+      // Reset any error state
+      emailInput.style.borderColor = '';
+
+      // Show success state
+      form.classList.add('hidden');
+      successEl.classList.add('visible');
+
+      // In a real implementation, POST to your waitlist endpoint here
+      // fetch('/api/waitlist', { method: 'POST', body: JSON.stringify({ email }) })
+    });
+
+    // ─── Sticky nav background ──────────────────────────────────────────────
+    const nav = document.querySelector('.nav');
+    window.addEventListener('scroll', () => {
+      nav.style.background = window.scrollY > 20
+        ? 'rgba(11,25,41,0.95)'
+        : 'rgba(11,25,41,0.8)';
+    }, { passive: true });
+  </script>
+</body>
+</html>

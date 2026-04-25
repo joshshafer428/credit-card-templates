@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — PerkBook</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg:        #0B1929;
+      --bg-alt:    #0D1F33;
+      --card:      #0F2236;
+      --border:    #1C3350;
+      --border-soft: rgba(255,255,255,0.07);
+      --text-1:    #F2EBE0;
+      --text-2:    #A89C8F;
+      --text-3:    #7A6E64;
+      --accent:    #E8C47A;
+      --accent-deep: #C4893A;
+      --gold-mid:  #D4A057;
+      --navy-light: #1E4272;
+      --navy-mid:  #173358;
+      --font-display: 'DM Serif Display', Georgia, serif;
+      --font-sans:    'DM Sans', system-ui, sans-serif;
+      --font-word:    'Cormorant Garamond', Georgia, serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--bg);
+      color: var(--text-1);
+      font-size: 16px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
+    a:hover { color: var(--text-1); }
+
+    /* Nav */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      padding: 0 24px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(11,25,41,0.9);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-soft);
+    }
+
+    .nav-wordmark {
+      font-family: var(--font-word);
+      font-weight: 700;
+      font-size: 20px;
+      color: var(--text-1);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav-back {
+      font-size: 13px;
+      color: var(--text-3);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      transition: color 0.2s;
+    }
+
+    .nav-back:hover { color: var(--text-2); }
+
+    /* Layout */
+    .page {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 56px 24px 96px;
+    }
+
+    /* Header */
+    .doc-header {
+      margin-bottom: 48px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid var(--border-soft);
+    }
+
+    .doc-eyebrow {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+
+    .doc-title {
+      font-family: var(--font-display);
+      font-size: clamp(32px, 5vw, 48px);
+      line-height: 1.1;
+      color: var(--text-1);
+      margin-bottom: 16px;
+    }
+
+    .doc-meta {
+      font-size: 13px;
+      color: var(--text-3);
+    }
+
+    .doc-meta span {
+      color: var(--text-2);
+      font-weight: 500;
+    }
+
+    /* Summary box */
+    .summary-box {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin-bottom: 48px;
+    }
+
+    .summary-box p {
+      font-size: 14px;
+      color: var(--text-2);
+      line-height: 1.7;
+    }
+
+    .summary-box strong { color: var(--text-1); }
+
+    /* TOC */
+    .toc {
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin-bottom: 56px;
+    }
+
+    .toc-title {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--text-3);
+      margin-bottom: 12px;
+    }
+
+    .toc ol {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      counter-reset: toc;
+      padding: 0;
+    }
+
+    .toc li { counter-increment: toc; }
+
+    .toc a {
+      font-size: 14px;
+      color: var(--text-2);
+      text-decoration: none;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      transition: color 0.2s;
+    }
+
+    .toc a::before {
+      content: counter(toc, decimal-leading-zero);
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--accent);
+      letter-spacing: 0.5px;
+      flex-shrink: 0;
+    }
+
+    .toc a:hover { color: var(--text-1); text-decoration: none; }
+
+    /* Sections */
+    .section {
+      margin-bottom: 52px;
+      scroll-margin-top: 80px;
+    }
+
+    .section-heading {
+      font-family: var(--font-display);
+      font-size: 22px;
+      color: var(--text-1);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+    }
+
+    .section-heading .num {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--accent);
+      letter-spacing: 0.5px;
+      flex-shrink: 0;
+      font-family: var(--font-sans);
+    }
+
+    p { margin-bottom: 14px; color: var(--text-2); font-size: 15px; }
+    p:last-child { margin-bottom: 0; }
+
+    /* Lists */
+    ul, ol {
+      margin: 0 0 14px 0;
+      padding-left: 0;
+      list-style: none;
+    }
+
+    li {
+      font-size: 15px;
+      color: var(--text-2);
+      padding: 5px 0 5px 20px;
+      position: relative;
+      line-height: 1.65;
+    }
+
+    ul li::before {
+      content: '–';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    ol { counter-reset: ol-counter; }
+    ol li { counter-increment: ol-counter; }
+    ol li::before {
+      content: counter(ol-counter) '.';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    strong { color: var(--text-1); font-weight: 600; }
+
+    /* Info cards */
+    .info-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin: 16px 0;
+      font-size: 14px;
+      color: var(--text-2);
+      line-height: 1.65;
+    }
+
+    .info-card .label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+
+    /* Note / callout */
+    .callout {
+      background: rgba(232,196,122,0.06);
+      border: 1px solid rgba(232,196,122,0.2);
+      border-radius: 10px;
+      padding: 14px 18px;
+      margin: 16px 0;
+      font-size: 14px;
+      color: var(--text-2);
+      line-height: 1.65;
+    }
+
+    .callout strong { color: var(--accent); }
+
+    /* Divider */
+    hr {
+      border: none;
+      border-top: 1px solid var(--border-soft);
+      margin: 48px 0;
+    }
+
+    /* Contact block */
+    .contact-block {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px 28px;
+    }
+
+    .contact-block .contact-title {
+      font-family: var(--font-display);
+      font-size: 20px;
+      color: var(--text-1);
+      margin-bottom: 8px;
+    }
+
+    .contact-block p { font-size: 14px; }
+
+    .contact-detail {
+      margin-top: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .contact-detail .row {
+      display: flex;
+      gap: 10px;
+      font-size: 14px;
+    }
+
+    .contact-detail .row .key {
+      color: var(--text-3);
+      font-weight: 500;
+      min-width: 80px;
+      flex-shrink: 0;
+    }
+
+    .contact-detail .row .val {
+      color: var(--text-1);
+    }
+
+    /* Footer */
+    .doc-footer {
+      margin-top: 72px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border-soft);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .doc-footer-copy {
+      font-size: 12px;
+      color: var(--text-3);
+    }
+
+    .doc-footer-links {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+    }
+
+    .doc-footer-links a {
+      font-size: 12px;
+      color: var(--text-3);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .doc-footer-links a:hover { color: var(--accent); text-decoration: none; }
+
+    @media (max-width: 480px) {
+      .page { padding: 40px 16px 72px; }
+      .doc-footer { flex-direction: column; align-items: flex-start; }
+    }
+
+    /* TODO callout — remove before publishing */
+    .todo {
+      background: rgba(224,85,85,0.08);
+      border: 1px solid rgba(224,85,85,0.25);
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-size: 13px;
+      color: #E89090;
+      margin: 12px 0;
+    }
+    .todo::before { content: '⚠ TODO: '; font-weight: 700; }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="./Perkbook-landing.html" class="nav-wordmark">✦ PerkBook</a>
+    <a href="./Perkbook-landing.html" class="nav-back">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+        <path d="M9 2L4 7l5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Back to home
+    </a>
+  </nav>
+
+  <main class="page">
+
+    <header class="doc-header">
+      <p class="doc-eyebrow">Legal</p>
+      <h1 class="doc-title">Privacy Policy</h1>
+      <p class="doc-meta">
+        Effective date: <span>March 30, 2026</span> &nbsp;·&nbsp; Last updated: <span>March 30, 2026</span>
+      </p>
+    </header>
+
+    <div class="summary-box">
+      <p>
+        <strong>Plain-language summary:</strong> PerkBook only collects your email address when you join the waitlist. We don't connect to your bank, we don't collect financial account numbers, and we don't sell your data. We use Firebase to understand how people use the app. You can ask us to delete your email at any time.
+      </p>
+    </div>
+
+    <nav class="toc" aria-label="Table of contents">
+      <p class="toc-title">Contents</p>
+      <ol>
+        <li><a href="#who-we-are">Who We Are</a></li>
+        <li><a href="#what-we-collect">Information We Collect</a></li>
+        <li><a href="#how-we-use">How We Use Your Information</a></li>
+        <li><a href="#sharing">How We Share Your Information</a></li>
+        <li><a href="#analytics">Analytics &amp; Third-Party Services</a></li>
+        <li><a href="#retention">Data Retention</a></li>
+        <li><a href="#your-rights">Your Rights &amp; Choices</a></li>
+        <li><a href="#children">Children's Privacy</a></li>
+        <li><a href="#security">Security</a></li>
+        <li><a href="#changes">Changes to This Policy</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ol>
+    </nav>
+
+    <!-- 1 -->
+    <section class="section" id="who-we-are">
+      <h2 class="section-heading"><span class="num">01</span> Who We Are</h2>
+      <p>
+        PerkBook is operated by <strong>Josh Shafer</strong>, a sole proprietor based in <strong>Minnesota, United States</strong>. When this policy says "PerkBook," "we," "us," or "our," it means Josh Shafer doing business as PerkBook.
+      </p>
+      <p>
+        PerkBook is a credit card benefits tracking application that helps users understand and maximize the perks included with their credit cards. Users enter their card information manually — PerkBook does not connect to any bank or financial institution.
+      </p>
+      <div class="info-card">
+        <div class="label">Contact</div>
+        <p style="margin:0;">For privacy-related questions: <a href="mailto:privacy@perkbook.app">privacy@perkbook.app</a></p>
+        <div class="todo">Replace privacy@perkbook.app with your actual email address before publishing.</div>
+      </div>
+    </section>
+
+    <!-- 2 -->
+    <section class="section" id="what-we-collect">
+      <h2 class="section-heading"><span class="num">02</span> Information We Collect</h2>
+
+      <p><strong>Information you give us directly:</strong></p>
+      <ul>
+        <li><strong>Email address</strong> — when you join our waitlist on the PerkBook website. This is the only personally identifiable information we request at this stage.</li>
+        <li><strong>Card information you enter in the app</strong> — card nicknames, card type, and benefit usage you log. This information is stored on your device and/or in your personal app account. We do not collect full card numbers, CVV codes, bank account numbers, PINs, or transaction history.</li>
+      </ul>
+
+      <p><strong>Information collected automatically:</strong></p>
+      <ul>
+        <li><strong>Usage data</strong> — via Firebase Analytics (see Section 5), we collect anonymized information about how the app is used: screens visited, features tapped, session length, and crash reports. This data does not include your name, email, or card details.</li>
+        <li><strong>Device information</strong> — device type, operating system version, and app version, collected automatically by Firebase for crash diagnostics.</li>
+      </ul>
+
+      <div class="callout">
+        <strong>What we do not collect:</strong> We do not collect full credit card numbers, bank account numbers, Social Security numbers, transaction history, income information, or any other sensitive financial data.
+      </div>
+    </section>
+
+    <!-- 3 -->
+    <section class="section" id="how-we-use">
+      <h2 class="section-heading"><span class="num">03</span> How We Use Your Information</h2>
+      <p>We use the information we collect for the following purposes:</p>
+      <ul>
+        <li><strong>To operate the waitlist</strong> — your email address is used to notify you when PerkBook launches and to send you early access information. We will not send unrelated marketing emails without your separate consent.</li>
+        <li><strong>To improve the app</strong> — anonymized usage analytics help us understand which features are useful and where the app can be improved.</li>
+        <li><strong>To diagnose and fix problems</strong> — crash reports help us identify and resolve technical issues.</li>
+        <li><strong>To comply with legal obligations</strong> — we may process or retain data as required by applicable law.</li>
+      </ul>
+      <p>We do not use your data for automated profiling, targeted advertising, or any purpose beyond those listed above.</p>
+    </section>
+
+    <!-- 4 -->
+    <section class="section" id="sharing">
+      <h2 class="section-heading"><span class="num">04</span> How We Share Your Information</h2>
+      <p>We do not sell your personal information. We do not share it with advertisers or data brokers. We may share information in the following limited circumstances:</p>
+      <ul>
+        <li>
+          <strong>Waitlist email provider</strong> — your email address is stored with the third-party service we use to manage the waitlist.
+          <div class="todo">Insert the name of your email/waitlist provider here (e.g., "Resend," "Mailchimp," "ConvertKit") and link to their privacy policy once you've chosen one.</div>
+        </li>
+        <li><strong>Firebase (Google)</strong> — anonymized usage and crash data is processed by Firebase, a Google service. See Section 5 for more detail.</li>
+        <li><strong>Affiliate partners</strong> — if you click a credit card link on our website, the card issuer or affiliate network may receive information that you clicked a link from PerkBook. We do not share your name or email with affiliate partners. See our <a href="/affiliate-disclosure">Affiliate Disclosure</a> for full details.</li>
+        <li><strong>Legal requirements</strong> — we may disclose information if required by law, court order, or to protect the rights, property, or safety of PerkBook, its users, or the public.</li>
+        <li><strong>Business transfer</strong> — if PerkBook is acquired or merged with another business, your information may be transferred as part of that transaction. We will notify you before your information is subject to a different privacy policy.</li>
+      </ul>
+    </section>
+
+    <!-- 5 -->
+    <section class="section" id="analytics">
+      <h2 class="section-heading"><span class="num">05</span> Analytics &amp; Third-Party Services</h2>
+      <p>
+        PerkBook uses <strong>Firebase</strong>, a platform provided by Google LLC, for analytics and crash reporting. Firebase collects anonymized usage data and device information as described in Section 2. Firebase may transfer data to Google's servers in the United States.
+      </p>
+      <p>
+        Google's use of this data is governed by the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>. You can learn more about how Firebase handles data at <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">firebase.google.com/support/privacy</a>.
+      </p>
+      <p>
+        We have configured Firebase to minimize data collection. Analytics data is anonymized and is not linked back to your email address or any other personal identifier.
+      </p>
+      <div class="callout">
+        <strong>Note:</strong> If you would prefer not to be included in Firebase analytics, you can opt out through your device's advertising settings (iOS: Settings → Privacy → Tracking; Android: Settings → Google → Ads → Opt out of Ads Personalization).
+      </div>
+    </section>
+
+    <!-- 6 -->
+    <section class="section" id="retention">
+      <h2 class="section-heading"><span class="num">06</span> Data Retention</h2>
+      <p>
+        <strong>Waitlist email addresses</strong> are retained until: (a) you request deletion, (b) you unsubscribe from all communications, or (c) PerkBook is discontinued. We do not retain waitlist data longer than necessary for its stated purpose.
+      </p>
+      <p>
+        <strong>Firebase analytics data</strong> is retained for up to 14 months per Firebase's default settings, after which it is automatically deleted.
+      </p>
+      <p>
+        <strong>In-app data</strong> (card nicknames, benefit logs) is stored on your device and/or in your app account. Deleting the app removes locally stored data. If we introduce cloud sync in a future version, we will update this policy accordingly.
+      </p>
+    </section>
+
+    <!-- 7 -->
+    <section class="section" id="your-rights">
+      <h2 class="section-heading"><span class="num">07</span> Your Rights &amp; Choices</h2>
+      <p>You have the following rights regarding your personal information:</p>
+      <ul>
+        <li><strong>Access</strong> — you may request a copy of the personal information we hold about you.</li>
+        <li><strong>Correction</strong> — you may ask us to correct inaccurate information.</li>
+        <li><strong>Deletion</strong> — you may request that we delete your email address from our waitlist at any time. To do so, email us at <a href="mailto:privacy@perkbook.app">privacy@perkbook.app</a> or use the unsubscribe link in any email we send you.</li>
+        <li><strong>Opt-out of communications</strong> — every email we send includes an unsubscribe link. You may also email us directly to be removed.</li>
+      </ul>
+      <p>
+        We will respond to all requests within <strong>30 days</strong>. We may ask you to verify your identity before processing a request.
+      </p>
+      <div class="callout">
+        <strong>Minnesota residents:</strong> Minnesota does not currently have a comprehensive consumer data privacy statute in effect. Your rights above are provided voluntarily and reflect our commitment to responsible data handling.
+      </div>
+      <div class="callout">
+        <strong>California residents:</strong> If you are a California resident, you may have additional rights under the California Consumer Privacy Act (CCPA), including the right to know, delete, and opt out of the sale of personal information. We do not sell personal information. To exercise your rights, contact us at <a href="mailto:privacy@perkbook.app">privacy@perkbook.app</a>.
+      </div>
+    </section>
+
+    <!-- 8 -->
+    <section class="section" id="children">
+      <h2 class="section-heading"><span class="num">08</span> Children's Privacy</h2>
+      <p>
+        PerkBook is not directed at children under the age of <strong>13</strong> and we do not knowingly collect personal information from children under 13. The waitlist and app are intended for general audiences, but if we learn that we have collected personal information from a child under 13, we will delete that information promptly.
+      </p>
+      <p>
+        If you are a parent or guardian and believe your child under 13 has provided us with their email address, please contact us at <a href="mailto:privacy@perkbook.app">privacy@perkbook.app</a> and we will remove it.
+      </p>
+    </section>
+
+    <!-- 9 -->
+    <section class="section" id="security">
+      <h2 class="section-heading"><span class="num">09</span> Security</h2>
+      <p>
+        We take reasonable technical and organizational measures to protect your information from unauthorized access, disclosure, alteration, or destruction. These include using reputable third-party services with their own security programs and limiting the amount of personal data we collect in the first place.
+      </p>
+      <p>
+        However, no method of transmission over the internet or electronic storage is 100% secure. We cannot guarantee absolute security. If you have reason to believe your information has been compromised, please contact us immediately at <a href="mailto:privacy@perkbook.app">privacy@perkbook.app</a>.
+      </p>
+    </section>
+
+    <!-- 10 -->
+    <section class="section" id="changes">
+      <h2 class="section-heading"><span class="num">10</span> Changes to This Policy</h2>
+      <p>
+        We may update this Privacy Policy from time to time. When we do, we will update the "Last updated" date at the top of this page. If the changes are material, we will notify waitlist subscribers by email before the changes take effect.
+      </p>
+      <p>
+        Your continued use of PerkBook after any changes constitutes your acceptance of the updated policy.
+      </p>
+    </section>
+
+    <!-- 11 -->
+    <section class="section" id="contact">
+      <h2 class="section-heading"><span class="num">11</span> Contact Us</h2>
+      <p>If you have any questions, concerns, or requests related to this Privacy Policy, please contact us:</p>
+      <div class="contact-block">
+        <p class="contact-title">PerkBook Privacy</p>
+        <p>We aim to respond to all privacy inquiries within 30 days.</p>
+        <div class="contact-detail">
+          <div class="row">
+            <span class="key">Operator</span>
+            <span class="val">Josh Shafer (PerkBook)</span>
+          </div>
+          <div class="row">
+            <span class="key">Location</span>
+            <span class="val">Minnesota, United States</span>
+          </div>
+          <div class="row">
+            <span class="key">Email</span>
+            <span class="val"><a href="mailto:privacy@perkbook.app">privacy@perkbook.app</a></span>
+          </div>
+        </div>
+        <div class="todo">Replace privacy@perkbook.app with your actual email address before publishing.</div>
+      </div>
+    </section>
+
+    <hr />
+
+    <div class="callout" style="font-size:13px;">
+      <strong>Legal disclaimer:</strong> This privacy policy was drafted to reflect current practices and applicable law to the best of our knowledge, but it does not constitute legal advice. As PerkBook grows — particularly if you add cloud account sync, expand to EU users, or generate revenue from affiliates — you should have a licensed attorney review this document.
+    </div>
+
+    <footer class="doc-footer">
+      <p class="doc-footer-copy">© 2026 Josh Shafer / PerkBook</p>
+      <ul class="doc-footer-links">
+        <li><a href="./terms.html">Terms of Service</a></li>
+        <li><a href="./affiliate-disclosure.html">Affiliate Disclosure</a></li>
+        <li><a href="./Perkbook-landing.html">Home</a></li>
+      </ul>
+    </footer>
+
+  </main>
+</body>
+</html>
