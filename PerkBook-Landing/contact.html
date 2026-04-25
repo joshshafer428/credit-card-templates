@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — PerkBook</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg:          #0B1929;
+      --bg-alt:      #0D1F33;
+      --card:        #0F2236;
+      --border:      #1C3350;
+      --border-soft: rgba(255,255,255,0.07);
+      --text-1:      #F2EBE0;
+      --text-2:      #A89C8F;
+      --text-3:      #7A6E64;
+      --accent:      #E8C47A;
+      --accent-deep: #C4893A;
+      --gold-mid:    #D4A057;
+      --navy-light:  #1E4272;
+      --navy-mid:    #173358;
+      --font-display: 'DM Serif Display', Georgia, serif;
+      --font-sans:    'DM Sans', system-ui, sans-serif;
+      --font-word:    'Cormorant Garamond', Georgia, serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--bg);
+      color: var(--text-1);
+      font-size: 16px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
+    a:hover { color: var(--text-1); }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      padding: 0 24px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(11,25,41,0.9);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-soft);
+    }
+
+    .nav-wordmark {
+      font-family: var(--font-word);
+      font-weight: 700;
+      font-size: 20px;
+      color: var(--text-1);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav-back {
+      font-size: 13px;
+      color: var(--text-3);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      transition: color 0.2s;
+    }
+
+    .nav-back:hover { color: var(--text-2); }
+
+    .page {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 72px 24px 96px;
+    }
+
+    .doc-eyebrow {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+
+    .doc-title {
+      font-family: var(--font-display);
+      font-size: clamp(32px, 5vw, 48px);
+      line-height: 1.1;
+      color: var(--text-1);
+      margin-bottom: 20px;
+    }
+
+    .doc-sub {
+      font-size: 16px;
+      color: var(--text-2);
+      line-height: 1.7;
+      margin-bottom: 48px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid var(--border-soft);
+    }
+
+    .contact-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .contact-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--navy-light), var(--navy-mid));
+      border: 1px solid rgba(232,196,122,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      flex-shrink: 0;
+    }
+
+    .contact-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--text-3);
+      margin-bottom: 4px;
+    }
+
+    .contact-email {
+      font-size: 17px;
+      font-weight: 500;
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .contact-email:hover { color: var(--text-1); }
+  </style>
+</head>
+<body>
+
+  <nav class="nav" aria-label="Main navigation">
+    <a href="./index.html" class="nav-wordmark" aria-label="PerkBook home">
+      <span aria-hidden="true">✦</span>
+      PerkBook
+    </a>
+  </nav>
+
+  <main class="page">
+    <p class="doc-eyebrow">Get in touch</p>
+    <h1 class="doc-title">Contact Us</h1>
+    <p class="doc-sub">
+      Have a question, feedback, or need support? We'd love to hear from you. Reach out anytime and we'll get back to you as soon as possible.
+    </p>
+
+    <div class="contact-card">
+      <div class="contact-icon" aria-hidden="true">✉️</div>
+      <div>
+        <p class="contact-label">Email</p>
+        <a href="mailto:hello@perkbook.app" class="contact-email">hello@perkbook.app</a>
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>

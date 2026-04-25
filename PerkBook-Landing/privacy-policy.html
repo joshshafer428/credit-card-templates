@@ -189,6 +189,7 @@
     }
 
     .toc a:hover { color: var(--text-1); text-decoration: none; }
+    .toc ol li::before { display: none; }
 
     /* Sections */
     .section {
@@ -391,12 +392,6 @@
 
   <nav class="nav">
     <a href="./index.html" class="nav-wordmark">✦ PerkBook</a>
-    <a href="./index.html" class="nav-back">
-      <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-        <path d="M9 2L4 7l5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-      Back to home
-    </a>
   </nav>
 
   <main class="page">
@@ -405,13 +400,13 @@
       <p class="doc-eyebrow">Legal</p>
       <h1 class="doc-title">Privacy Policy</h1>
       <p class="doc-meta">
-        Effective date: <span>March 30, 2026</span> &nbsp;·&nbsp; Last updated: <span>March 30, 2026</span>
+        Effective date: <span>March 30, 2026</span> &nbsp;·&nbsp; Last updated: <span>April 24, 2026</span>
       </p>
     </header>
 
     <div class="summary-box">
       <p>
-        <strong>Plain-language summary:</strong> PerkBook only collects your email address when you join the waitlist. We don't connect to your bank, we don't collect financial account numbers, and we don't sell your data. We use Firebase to understand how people use the app. You can ask us to delete your email at any time.
+        <strong>Plain-language summary:</strong> PerkBook only collects your email address when you join the waitlist. That email is processed by Formspree, the service that powers our waitlist form. We don't connect to your bank, we don't collect financial account numbers, and we don't sell your data. We use Firebase to understand how people use the app. You can ask us to delete your email at any time.
       </p>
     </div>
 
@@ -436,7 +431,7 @@
     <section class="section" id="who-we-are">
       <h2 class="section-heading"><span class="num">01</span> Who We Are</h2>
       <p>
-        PerkBook is operated by <strong>Josh Shafer</strong>, a sole proprietor based in <strong>Minnesota, United States</strong>. When this policy says "PerkBook," "we," "us," or "our," it means Josh Shafer doing business as PerkBook.
+        PerkBook is operated by <strong>PerkBook</strong>, a sole proprietor based in <strong>Minnesota, United States</strong>. When this policy says "PerkBook," "we," "us," or "our," it means PerkBook doing business as PerkBook.
       </p>
       <p>
         PerkBook is a credit card benefits tracking application that helps users understand and maximize the perks included with their credit cards. Users enter their card information manually — PerkBook does not connect to any bank or financial institution.
@@ -488,8 +483,7 @@
       <p>We do not sell your personal information. We do not share it with advertisers or data brokers. We may share information in the following limited circumstances:</p>
       <ul>
         <li>
-          <strong>Waitlist email provider</strong> — your email address is stored with the third-party service we use to manage the waitlist.
-          <div class="todo">Insert the name of your email/waitlist provider here (e.g., "Resend," "Mailchimp," "ConvertKit") and link to their privacy policy once you've chosen one.</div>
+          <strong>Formspree</strong> — our waitlist form is powered by Formspree, Inc. When you submit your email address, it is transmitted to and stored on Formspree's servers. Formspree's use of your data is governed by the <a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noopener">Formspree Privacy Policy</a>.
         </li>
         <li><strong>Firebase (Google)</strong> — anonymized usage and crash data is processed by Firebase, a Google service. See Section 5 for more detail.</li>
         <li><strong>Affiliate partners</strong> — if you click a credit card link on our website, the card issuer or affiliate network may receive information that you clicked a link from PerkBook. We do not share your name or email with affiliate partners. See our <a href="/affiliate-disclosure">Affiliate Disclosure</a> for full details.</li>
@@ -501,6 +495,9 @@
     <!-- 5 -->
     <section class="section" id="analytics">
       <h2 class="section-heading"><span class="num">05</span> Analytics &amp; Third-Party Services</h2>
+      <p>
+        PerkBook uses <strong>Formspree</strong> to process waitlist form submissions. When you enter your email address and submit the form, that data is sent directly to Formspree's servers. Formspree is operated by Formspree, Inc. and their privacy policy is available at <a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noopener">formspree.io/legal/privacy-policy</a>.
+      </p>
       <p>
         PerkBook uses <strong>Firebase</strong>, a platform provided by Google LLC, for analytics and crash reporting. Firebase collects anonymized usage data and device information as described in Section 2. Firebase may transfer data to Google's servers in the United States.
       </p>
@@ -593,7 +590,7 @@
         <div class="contact-detail">
           <div class="row">
             <span class="key">Operator</span>
-            <span class="val">Josh Shafer (PerkBook)</span>
+            <span class="val">PerkBook (PerkBook)</span>
           </div>
           <div class="row">
             <span class="key">Location</span>
@@ -615,7 +612,7 @@
     </div>
 
     <footer class="doc-footer">
-      <p class="doc-footer-copy">© 2026 Josh Shafer / PerkBook</p>
+      <p class="doc-footer-copy">© 2026 PerkBook / PerkBook</p>
       <ul class="doc-footer-links">
         <li><a href="./terms.html">Terms of Service</a></li>
         <li><a href="./affiliate-disclosure.html">Affiliate Disclosure</a></li>

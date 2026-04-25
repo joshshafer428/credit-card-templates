@@ -842,36 +842,64 @@
       justify-content: center;
     }
 
+    .iphone-shell {
+      position: relative;
+      width: 260px;
+    }
+
+    /* Side buttons */
+    .iphone-shell::before {
+      content: '';
+      position: absolute;
+      left: -3px;
+      top: 88px;
+      width: 3px;
+      height: 34px;
+      background: #0a0a0a;
+      border-radius: 2px 0 0 2px;
+      box-shadow: 0 44px 0 #0a0a0a, 0 88px 0 #0a0a0a;
+    }
+
+    .iphone-shell::after {
+      content: '';
+      position: absolute;
+      right: -3px;
+      top: 110px;
+      width: 3px;
+      height: 64px;
+      background: #0a0a0a;
+      border-radius: 0 2px 2px 0;
+    }
+
     .app-frame {
       width: 260px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 36px;
+      background: #000;
+      border: 8px solid #0a0a0a;
+      border-radius: 44px;
       overflow: hidden;
-      box-shadow: var(--shadow-lg), var(--shadow-glow);
+      box-shadow:
+        0 0 0 1px #111,
+        var(--shadow-lg),
+        var(--shadow-glow),
+        inset 0 0 0 1px rgba(255,255,255,0.04);
       position: relative;
     }
 
-    .app-notch {
-      height: 40px;
-      background: var(--bg);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-bottom: 1px solid var(--border-soft);
+    .app-screen-wrap {
+      position: relative;
+      overflow: hidden;
     }
 
-    .app-notch-pill {
-      width: 80px;
-      height: 6px;
-      background: var(--border);
-      border-radius: var(--r-full);
-    }
-
-    .app-screen {
-      padding: var(--sp-4);
-      background: var(--bg);
-      min-height: 420px;
+    .app-dynamic-island {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 72px;
+      height: 20px;
+      background: #000;
+      border-radius: 20px;
+      z-index: 10;
     }
 
     .app-header {
@@ -998,7 +1026,7 @@
     @media (max-width: 860px) {
       .how-inner { grid-template-columns: 1fr; }
       .app-mockup { order: -1; }
-      .app-frame { width: 240px; }
+      .iphone-shell, .app-frame { width: 220px; }
     }
 
     /* ─── Waitlist / CTA ─────────────────────────────────────────────────── */
@@ -1479,7 +1507,7 @@
             <span class="stat-label">Avg. annual value tracked</span>
           </div>
           <div class="stat-item">
-            <span class="stat-number">50+</span>
+            <span class="stat-number">25+</span>
             <span class="stat-label">Cards supported</span>
           </div>
           <div class="stat-item">
@@ -1633,7 +1661,7 @@
               </div>
               <div class="step-content">
                 <h3 class="step-title">Add your cards</h3>
-                <p class="step-body">Search from a growing library of 50+ cards. PerkBook already knows every benefit on each card — no manual entry required.</p>
+                <p class="step-body">Search from a growing library of 25+ cards. PerkBook already knows every benefit on each card — no manual entry required.</p>
               </div>
             </div>
 
@@ -1661,74 +1689,13 @@
           </div>
         </div>
 
-        <!-- App frame mockup -->
+        <!-- App screenshot -->
         <div class="app-mockup reveal reveal-delay-2" aria-hidden="true">
-          <div class="app-frame" role="img" aria-label="PerkBook app preview">
-            <div class="app-notch">
-              <div class="app-notch-pill"></div>
-            </div>
-            <div class="app-screen">
-              <div class="app-header">
-                <span class="app-header-title">PerkBook</span>
-                <span class="app-header-badge">3 expiring soon</span>
-              </div>
-
-              <!-- Mini card A -->
-              <div class="app-mini-card app-mini-card-a">
-                <div class="app-mini-card-name">Sapphire Preferred</div>
-                <div class="app-mini-card-footer">
-                  <div>
-                    <div class="app-mini-card-val">$250</div>
-                    <div class="app-mini-card-label">annual value left</div>
-                  </div>
-                  <div style="text-align:right;">
-                    <div class="app-mini-card-val">6</div>
-                    <div class="app-mini-card-label">perks active</div>
-                  </div>
-                </div>
-                <div class="app-mini-card-progress">
-                  <div class="progress-bar">
-                    <div class="progress-fill" style="width:62%"></div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Mini card B -->
-              <div class="app-mini-card app-mini-card-b" style="margin-bottom: var(--sp-4);">
-                <div class="app-mini-card-name">Amex Gold</div>
-                <div class="app-mini-card-footer">
-                  <div>
-                    <div class="app-mini-card-val">$120</div>
-                    <div class="app-mini-card-label">dining credit left</div>
-                  </div>
-                  <div style="text-align:right;">
-                    <div class="app-mini-card-val">4</div>
-                    <div class="app-mini-card-label">perks active</div>
-                  </div>
-                </div>
-                <div class="app-mini-card-progress">
-                  <div class="progress-bar">
-                    <div class="progress-fill" style="width:40%"></div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Benefit rows -->
-              <div style="margin-bottom: 8px; font-size: 10px; font-weight: 700; letter-spacing: 1px; color: var(--text-3); text-transform: uppercase;">This month</div>
-              <div class="app-benefit-row">
-                <div class="benefit-dot benefit-dot-green"></div>
-                <span class="app-benefit-name">Lounge Access</span>
-                <span class="app-benefit-val">Used ✓</span>
-              </div>
-              <div class="app-benefit-row">
-                <div class="benefit-dot benefit-dot-gold"></div>
-                <span class="app-benefit-name">$10 Uber Cash</span>
-                <span class="app-benefit-val">$10 left</span>
-              </div>
-              <div class="app-benefit-row">
-                <div class="benefit-dot benefit-dot-dim"></div>
-                <span class="app-benefit-name">Hotel Status</span>
-                <span class="app-benefit-val" style="color: var(--text-3);">Unused</span>
+          <div class="iphone-shell">
+            <div class="app-frame" role="img" aria-label="PerkBook app preview">
+              <div class="app-screen-wrap">
+                <div class="app-dynamic-island"></div>
+                <img src="Images/IMG_6806.PNG.png" alt="PerkBook app screenshot" style="width:100%; display:block;" />
               </div>
             </div>
           </div>
@@ -1741,13 +1708,12 @@
   <section class="waitlist" id="waitlist" aria-labelledby="waitlist-heading">
     <div class="container">
       <div class="waitlist-card reveal">
-        <div class="waitlist-icon" aria-hidden="true">✦</div>
         <h2 class="waitlist-title" id="waitlist-heading">Be first to know when we launch</h2>
         <p class="waitlist-sub">
           PerkBook is coming soon. Join the waitlist and get early access — plus a personal walkthrough to set up your wallet.
         </p>
 
-        <form class="waitlist-form" id="waitlistForm" novalidate>
+        <form class="waitlist-form" id="waitlistForm" action="https://formspree.io/f/mbdqwwoz" method="POST" novalidate>
           <label for="email" class="sr-only">Email address</label>
           <input
             type="email"
@@ -1789,26 +1755,6 @@
   <footer class="footer" aria-label="Site footer">
     <div class="container">
       <div class="footer-inner">
-        <div class="footer-top">
-          <div class="footer-brand">
-            <div class="footer-wordmark">
-              <span aria-hidden="true">✦</span>
-              PerkBook
-            </div>
-            <p class="footer-tagline">
-              Know your cards. Use every perk. Never leave value on the table again.
-            </p>
-          </div>
-          <ul class="footer-links" role="list">
-            <li><a href="#features">Features</a></li>
-            <li><a href="#how-it-works">How It Works</a></li>
-            <li><a href="#waitlist">Join Waitlist</a></li>
-            <li><a href="mailto:hello@perkbook.app">Contact</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-divider" role="separator"></div>
-
         <!-- Affiliate Disclosure -->
         <div class="footer-disclosure">
           <p class="disclosure-label">Affiliate Disclosure</p>
@@ -1820,12 +1766,12 @@
         <div class="footer-divider" role="separator"></div>
 
         <div class="footer-bottom">
-          <p class="footer-copy">© 2025 PerkBook. All rights reserved.</p>
+          <p class="footer-copy">© 2026 PerkBook. All rights reserved.</p>
           <ul class="footer-legal" role="list">
             <li><a href="./privacy-policy.html">Privacy Policy</a></li>
             <li><a href="/terms">Terms of Service</a></li>
             <li><a href="/affiliate-disclosure">Affiliate Disclosure</a></li>
-            <li><a href="mailto:hello@perkbook.app">Contact</a></li>
+            <li><a href="./contact.html">Contact</a></li>
           </ul>
         </div>
       </div>
@@ -1851,7 +1797,7 @@
     const form = document.getElementById('waitlistForm');
     const successEl = document.getElementById('formSuccess');
 
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
       const emailInput = form.querySelector('#email');
       const email = emailInput.value.trim();
@@ -1863,15 +1809,21 @@
         return;
       }
 
-      // Reset any error state
       emailInput.style.borderColor = '';
 
-      // Show success state
-      form.classList.add('hidden');
-      successEl.classList.add('visible');
+      const res = await fetch(form.action, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(form)
+      });
 
-      // In a real implementation, POST to your waitlist endpoint here
-      // fetch('/api/waitlist', { method: 'POST', body: JSON.stringify({ email }) })
+      if (res.ok) {
+        form.classList.add('hidden');
+        successEl.classList.add('visible');
+      } else {
+        emailInput.style.borderColor = 'rgba(224,85,85,0.5)';
+        emailInput.placeholder = 'Something went wrong — try again';
+      }
     });
 
     // ─── Sticky nav background ──────────────────────────────────────────────
