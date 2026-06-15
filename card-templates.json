@@ -35,7 +35,7 @@
       },
       {
         "id": "american-express-gold-card-dining-credit-grubhub-cheesecake-factory-goldbelly-wine-com-five-guys",
-        "name": "Dining credit (Grubhub / Cheesecake Factory / Goldbelly / Wine.com / Five Guys)",
+        "name": "Dining credit (Grubhub / Cheesecake Factory / Buffalo Wild Wings / Wonder / Five Guys)",
         "category": "Dining",
         "benefitType": "credit",
         "dollarValue": 10,
@@ -80,6 +80,16 @@
         "resetPeriod": "ongoing",
         "resetAnchor": "ongoing",
         "quizTag": "hotel_frequent"
+      },
+      {
+        "id": "american-express-green-card-clear-plus-credit",
+        "name": "CLEAR Plus credit",
+        "category": "Travel",
+        "benefitType": "credit",
+        "dollarValue": 209,
+        "resetPeriod": "annual",
+        "resetAnchor": "calendar_year",
+        "quizTag": "global_entry"
       }
     ]
   },
@@ -136,7 +146,7 @@
         "benefitType": "credit",
         "dollarValue": 100,
         "resetPeriod": "quarterly",
-        "resetAnchor": "calendar_semi_annual",
+        "resetAnchor": "calendar_quarter",
         "quizTag": "dining"
       },
       {
@@ -329,7 +339,7 @@
       },
       {
         "id": "atmos-rewards-ascent-first-checked-bag-free-primary-cardholder-1-companion",
-        "name": "First checked bag free (primary cardholder + 1 companion)",
+        "name": "First checked bag free (primary cardholder + up to 6 companions)",
         "category": "Travel",
         "benefitType": "access",
         "dollarValue": 0,
@@ -610,7 +620,7 @@
         "name": "Hotel credit via Chase Travel",
         "category": "Hotel",
         "benefitType": "credit",
-        "dollarValue": 50,
+        "dollarValue": 100,
         "resetPeriod": "annual",
         "resetAnchor": "anniversary",
         "quizTag": "hotel_frequent"
@@ -634,6 +644,26 @@
         "resetPeriod": "annual",
         "resetAnchor": "calendar_year",
         "quizTag": "dining"
+      },
+      {
+        "id": "chase-sapphire-preferred-global-entry-or-tsa-precheck-credit",
+        "name": "Global Entry or TSA PreCheck credit",
+        "category": "Travel",
+        "benefitType": "credit",
+        "dollarValue": 120,
+        "resetPeriod": "every-4-years",
+        "resetAnchor": "every_4_years",
+        "quizTag": "global_entry"
+      },
+      {
+        "id": "chase-sapphire-preferred-apple-tv-credit",
+        "name": "Apple TV+ subscription",
+        "category": "Entertainment",
+        "benefitType": "credit",
+        "dollarValue": 120,
+        "resetPeriod": "annual",
+        "resetAnchor": "calendar_year",
+        "quizTag": "streaming"
       }
     ]
   },
@@ -927,6 +957,16 @@
         "resetPeriod": "per-flight",
         "resetAnchor": "per_flight",
         "quizTag": "travel_credit_user"
+      },
+      {
+        "id": "delta-skymiles-gold-amex-rideshare-credit",
+        "name": "Rideshare credit",
+        "category": "Transportation",
+        "benefitType": "credit",
+        "dollarValue": 10,
+        "resetPeriod": "monthly",
+        "resetAnchor": "calendar_month",
+        "quizTag": "rideshare"
       }
     ]
   },
@@ -1001,6 +1041,26 @@
       {
         "id": "delta-skymiles-platinum-amex-priority-boarding-zone-5",
         "name": "Priority boarding (Zone 5)",
+        "category": "Travel",
+        "benefitType": "access",
+        "dollarValue": 0,
+        "resetPeriod": "per-flight",
+        "resetAnchor": "per_flight",
+        "quizTag": "travel_credit_user"
+      },
+      {
+        "id": "delta-skymiles-platinum-amex-rideshare-credit",
+        "name": "Rideshare credit",
+        "category": "Transportation",
+        "benefitType": "credit",
+        "dollarValue": 10,
+        "resetPeriod": "monthly",
+        "resetAnchor": "calendar_month",
+        "quizTag": "rideshare"
+      },
+      {
+        "id": "delta-skymiles-platinum-amex-second-checked-bag-free-domestic",
+        "name": "Second checked bag free (domestic flights)",
         "category": "Travel",
         "benefitType": "access",
         "dollarValue": 0,
@@ -1117,6 +1177,16 @@
         "resetPeriod": "per-flight",
         "resetAnchor": "per_flight",
         "quizTag": "travel_credit_user"
+      },
+      {
+        "id": "delta-skymiles-reserve-amex-second-checked-bag-free-domestic",
+        "name": "Second checked bag free (domestic flights)",
+        "category": "Travel",
+        "benefitType": "access",
+        "dollarValue": 0,
+        "resetPeriod": "per-flight",
+        "resetAnchor": "per_flight",
+        "quizTag": "travel_credit_user"
       }
     ]
   },
@@ -1194,6 +1264,16 @@
         "resetPeriod": "ongoing",
         "resetAnchor": "ongoing",
         "quizTag": "lounge_access"
+      },
+      {
+        "id": "hilton-honors-aspire-flight-credit",
+        "name": "Annual flight credit ($50 per quarter)",
+        "category": "Travel",
+        "benefitType": "credit",
+        "dollarValue": 50,
+        "resetPeriod": "quarterly",
+        "resetAnchor": "calendar_quarter",
+        "quizTag": "travel_credit_user"
       }
     ]
   },
@@ -1222,6 +1302,16 @@
         "resetPeriod": "annual",
         "resetAnchor": "calendar_year",
         "uncapped": true,
+        "quizTag": "hotel_frequent"
+      },
+      {
+        "id": "hilton-honors-surpass-hilton-property-credit",
+        "name": "Hilton property credit ($50 per quarter)",
+        "category": "Hotel",
+        "benefitType": "credit",
+        "dollarValue": 50,
+        "resetPeriod": "quarterly",
+        "resetAnchor": "calendar_quarter",
         "quizTag": "hotel_frequent"
       }
     ]
@@ -1336,7 +1426,7 @@
     "id": "southwest-rapid-rewards-priority",
     "name": "Southwest Rapid Rewards Priority",
     "network": "Other",
-    "annualFee": 149,
+    "annualFee": 229,
     "benefits": [
       {
         "id": "southwest-rapid-rewards-priority-southwest-annual-travel-credit",
@@ -1416,6 +1506,16 @@
         "resetPeriod": "annual",
         "resetAnchor": "anniversary",
         "quizTag": "lounge_access"
+      },
+      {
+        "id": "united-quest-card-jsx-credit",
+        "name": "JSX flight credit",
+        "category": "Travel",
+        "benefitType": "credit",
+        "dollarValue": 150,
+        "resetPeriod": "annual",
+        "resetAnchor": "anniversary",
+        "quizTag": "travel_credit_user"
       }
     ]
   },
