@@ -15,6 +15,10 @@
         "resetAnchor": "calendar_month",
         "quizTag": "streaming"
       }
+    ],
+    "gradient": [
+      "#1565A8",
+      "#3E9BD2"
     ]
   },
   {
@@ -63,6 +67,10 @@
         "resetAnchor": "calendar_month",
         "quizTag": "rideshare"
       }
+    ],
+    "gradient": [
+      "#B8912F",
+      "#E4C873"
     ]
   },
   {
@@ -91,6 +99,10 @@
         "resetAnchor": "calendar_year",
         "quizTag": "global_entry"
       }
+    ],
+    "gradient": [
+      "#1C5A45",
+      "#3C8A66"
     ]
   },
   {
@@ -319,6 +331,10 @@
         "resetAnchor": "ongoing",
         "quizTag": "primary_rental_car"
       }
+    ],
+    "gradient": [
+      "#8A8E94",
+      "#C7CBCF"
     ]
   },
   {
@@ -368,6 +384,10 @@
         "uncapped": true,
         "quizTag": "travel_credit_user"
       }
+    ],
+    "gradient": [
+      "#2060A6",
+      "#8A4E92"
     ]
   },
   {
@@ -437,6 +457,52 @@
         "uncapped": true,
         "quizTag": "travel_credit_user"
       }
+    ],
+    "gradient": [
+      "#16386E",
+      "#6E3C7E"
+    ]
+  },
+  {
+    "id": "bank-of-america-travel-rewards",
+    "name": "Bank of America Travel Rewards",
+    "network": "Visa",
+    "annualFee": 0,
+    "benefits": [
+      {
+        "id": "bank-of-america-travel-rewards-no-credits",
+        "name": "No annual credits",
+        "category": "Other",
+        "benefitType": "access",
+        "dollarValue": 0,
+        "resetPeriod": "annual",
+        "resetAnchor": "calendar_year"
+      }
+    ],
+    "gradient": [
+      "#A01B2E",
+      "#D43B50"
+    ]
+  },
+  {
+    "id": "bilt-blue",
+    "name": "Bilt Blue",
+    "network": "Mastercard",
+    "annualFee": 0,
+    "benefits": [
+      {
+        "id": "bilt-blue-no-credits",
+        "name": "No annual credits",
+        "category": "Other",
+        "benefitType": "access",
+        "dollarValue": 0,
+        "resetPeriod": "annual",
+        "resetAnchor": "calendar_year"
+      }
+    ],
+    "gradient": [
+      "#1B3A7A",
+      "#2E5CB0"
     ]
   },
   {
@@ -464,6 +530,10 @@
         "resetAnchor": "calendar_semi_annual",
         "quizTag": "hotel_frequent"
       }
+    ],
+    "gradient": [
+      "#141519",
+      "#33363D"
     ]
   },
   {
@@ -501,6 +571,31 @@
         "resetAnchor": "ongoing",
         "quizTag": "lounge_access"
       }
+    ],
+    "gradient": [
+      "#9DA0A5",
+      "#C8CBCE"
+    ]
+  },
+  {
+    "id": "capital-one-savorone",
+    "name": "Capital One SavorOne",
+    "network": "Mastercard",
+    "annualFee": 0,
+    "benefits": [
+      {
+        "id": "capital-one-savorone-no-credits",
+        "name": "No annual credits",
+        "category": "Other",
+        "benefitType": "access",
+        "dollarValue": 0,
+        "resetPeriod": "annual",
+        "resetAnchor": "calendar_year"
+      }
+    ],
+    "gradient": [
+      "#8A4B2A",
+      "#C8743A"
     ]
   },
   {
@@ -519,6 +614,10 @@
         "resetAnchor": "every_4_years",
         "quizTag": "global_entry"
       }
+    ],
+    "gradient": [
+      "#C4C7CC",
+      "#98A0A8"
     ]
   },
   {
@@ -607,6 +706,73 @@
         "resetAnchor": "ongoing",
         "quizTag": "primary_rental_car"
       }
+    ],
+    "gradient": [
+      "#20303F",
+      "#46586B"
+    ]
+  },
+  {
+    "id": "capital-one-ventureone",
+    "name": "Capital One VentureOne",
+    "network": "Mastercard",
+    "annualFee": 0,
+    "benefits": [
+      {
+        "id": "capital-one-ventureone-no-credits",
+        "name": "No annual credits",
+        "category": "Other",
+        "benefitType": "access",
+        "dollarValue": 0,
+        "resetPeriod": "annual",
+        "resetAnchor": "calendar_year"
+      }
+    ],
+    "gradient": [
+      "#BFC4CB",
+      "#93A0AD"
+    ]
+  },
+  {
+    "id": "chase-freedom-flex",
+    "name": "Chase Freedom Flex",
+    "network": "Visa",
+    "annualFee": 0,
+    "benefits": [
+      {
+        "id": "chase-freedom-flex-no-credits",
+        "name": "No annual credits",
+        "category": "Other",
+        "benefitType": "access",
+        "dollarValue": 0,
+        "resetPeriod": "annual",
+        "resetAnchor": "calendar_year"
+      }
+    ],
+    "gradient": [
+      "#15457E",
+      "#2F6FB5"
+    ]
+  },
+  {
+    "id": "chase-freedom-unlimited",
+    "name": "Chase Freedom Unlimited",
+    "network": "Visa",
+    "annualFee": 0,
+    "benefits": [
+      {
+        "id": "chase-freedom-unlimited-no-credits",
+        "name": "No annual credits",
+        "category": "Other",
+        "benefitType": "access",
+        "dollarValue": 0,
+        "resetPeriod": "annual",
+        "resetAnchor": "calendar_year"
+      }
+    ],
+    "gradient": [
+      "#14628E",
+      "#2E9CC2"
     ]
   },
   {
@@ -665,6 +831,10 @@
         "resetAnchor": "calendar_year",
         "quizTag": "streaming"
       }
+    ],
+    "gradient": [
+      "#14366E",
+      "#2E6FB7"
     ]
   },
   {
@@ -803,6 +973,52 @@
         "resetAnchor": "ongoing",
         "quizTag": "lounge_access"
       }
+    ],
+    "gradient": [
+      "#0A1A2F",
+      "#1E4E86"
+    ]
+  },
+  {
+    "id": "citi-double-cash",
+    "name": "Citi Double Cash",
+    "network": "Mastercard",
+    "annualFee": 0,
+    "benefits": [
+      {
+        "id": "citi-double-cash-no-credits",
+        "name": "No annual credits",
+        "category": "Other",
+        "benefitType": "access",
+        "dollarValue": 0,
+        "resetPeriod": "annual",
+        "resetAnchor": "calendar_year"
+      }
+    ],
+    "gradient": [
+      "#23262C",
+      "#4C5159"
+    ]
+  },
+  {
+    "id": "citi-strata",
+    "name": "Citi Strata",
+    "network": "Mastercard",
+    "annualFee": 0,
+    "benefits": [
+      {
+        "id": "citi-strata-no-credits",
+        "name": "No annual credits",
+        "category": "Other",
+        "benefitType": "access",
+        "dollarValue": 0,
+        "resetPeriod": "annual",
+        "resetAnchor": "calendar_year"
+      }
+    ],
+    "gradient": [
+      "#17324A",
+      "#2C5E7C"
     ]
   },
   {
@@ -871,6 +1087,10 @@
         "resetAnchor": "every_4_years",
         "quizTag": "global_entry"
       }
+    ],
+    "gradient": [
+      "#15171F",
+      "#3A4250"
     ]
   },
   {
@@ -889,6 +1109,10 @@
         "resetAnchor": "calendar_year",
         "quizTag": "hotel_frequent"
       }
+    ],
+    "gradient": [
+      "#14233A",
+      "#29506E"
     ]
   },
   {
@@ -978,6 +1202,10 @@
         "resetAnchor": "per_flight",
         "quizTag": "travel_credit_user"
       }
+    ],
+    "gradient": [
+      "#C0A040",
+      "#E8D49A"
     ]
   },
   {
@@ -1078,6 +1306,10 @@
         "resetAnchor": "per_flight",
         "quizTag": "travel_credit_user"
       }
+    ],
+    "gradient": [
+      "#243A6E",
+      "#6E4B8E"
     ]
   },
   {
@@ -1198,6 +1430,10 @@
         "resetAnchor": "per_flight",
         "quizTag": "travel_credit_user"
       }
+    ],
+    "gradient": [
+      "#2B2F36",
+      "#4A4F57"
     ]
   },
   {
@@ -1216,6 +1452,10 @@
         "resetAnchor": "ongoing",
         "quizTag": "hotel_frequent"
       }
+    ],
+    "gradient": [
+      "#16467A",
+      "#2E78B8"
     ]
   },
   {
@@ -1295,6 +1535,10 @@
         "resetAnchor": "calendar_year",
         "quizTag": "global_entry"
       }
+    ],
+    "gradient": [
+      "#141619",
+      "#2A3340"
     ]
   },
   {
@@ -1334,6 +1578,10 @@
         "resetAnchor": "calendar_quarter",
         "quizTag": "hotel_frequent"
       }
+    ],
+    "gradient": [
+      "#0E3A66",
+      "#1E6BA0"
     ]
   },
   {
@@ -1382,6 +1630,10 @@
         "resetAnchor": "ongoing",
         "quizTag": "hotel_frequent"
       }
+    ],
+    "gradient": [
+      "#1A2B4A",
+      "#2E4D85"
     ]
   },
   {
@@ -1440,6 +1692,10 @@
         "resetAnchor": "ongoing",
         "quizTag": "hotel_frequent"
       }
+    ],
+    "gradient": [
+      "#1C1C1E",
+      "#36322E"
     ]
   },
   {
@@ -1489,6 +1745,10 @@
         "uncapped": true,
         "quizTag": "travel_credit_user"
       }
+    ],
+    "gradient": [
+      "#1B3B6B",
+      "#2F5FA0"
     ]
   },
   {
@@ -1537,6 +1797,31 @@
         "resetAnchor": "anniversary",
         "quizTag": "travel_credit_user"
       }
+    ],
+    "gradient": [
+      "#16243F",
+      "#2A5C8A"
+    ]
+  },
+  {
+    "id": "wells-fargo-autograph",
+    "name": "Wells Fargo Autograph",
+    "network": "Other",
+    "annualFee": 0,
+    "benefits": [
+      {
+        "id": "wells-fargo-autograph-no-credits",
+        "name": "No annual credits",
+        "category": "Other",
+        "benefitType": "access",
+        "dollarValue": 0,
+        "resetPeriod": "annual",
+        "resetAnchor": "calendar_year"
+      }
+    ],
+    "gradient": [
+      "#4A1A7A",
+      "#C01A1A"
     ]
   },
   {
@@ -1576,6 +1861,10 @@
         "resetAnchor": "calendar_year",
         "quizTag": "hotel_frequent"
       }
+    ],
+    "gradient": [
+      "#11284E",
+      "#24508C"
     ]
   }
 ]

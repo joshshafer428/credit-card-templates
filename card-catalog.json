@@ -58,7 +58,7 @@
     "cppOverride": 1.4,
     "earnRates": {
       "flights": 3,
-      "rental_cars": 3,
+      "rental_cars": 1,
       "hotels": 1,
       "dining": 1,
       "gas": 2,
@@ -85,7 +85,7 @@
     "cppOverride": 1.4,
     "earnRates": {
       "flights": 3,
-      "rental_cars": 3,
+      "rental_cars": 1,
       "hotels": 1,
       "dining": 3,
       "gas": 1,
@@ -284,7 +284,7 @@
       "rental_cars": 5,
       "hotels": 5,
       "dining": 3,
-      "gas": 1,
+      "gas": 3,
       "groceries": 3,
       "streaming": 3,
       "rent": 0,
@@ -295,7 +295,7 @@
       "Chase Sapphire Preferred"
     ],
     "welcomeBonus": {
-      "points": 75000,
+      "points": 100000,
       "spendRequirement": 5000,
       "timeframeMonths": 3
     }
@@ -372,8 +372,8 @@
       "Citi Strata Elite"
     ],
     "welcomeBonus": {
-      "points": 80000,
-      "spendRequirement": 4000,
+      "points": 75000,
+      "spendRequirement": 6000,
       "timeframeMonths": 3
     }
   },
@@ -424,9 +424,10 @@
       "Amex Delta Gold"
     ],
     "welcomeBonus": {
-      "points": 80000,
-      "spendRequirement": 2000,
-      "timeframeMonths": 6
+      "points": 90000,
+      "spendRequirement": 3000,
+      "timeframeMonths": 6,
+      "expires": "7/15/26"
     }
   },
   {
@@ -450,9 +451,10 @@
       "Amex Delta Platinum"
     ],
     "welcomeBonus": {
-      "points": 90000,
-      "spendRequirement": 3000,
-      "timeframeMonths": 6
+      "points": 100000,
+      "spendRequirement": 4000,
+      "timeframeMonths": 6,
+      "expires": "7/15/26"
     }
   },
   {
@@ -476,9 +478,10 @@
       "Amex Delta Reserve"
     ],
     "welcomeBonus": {
-      "points": 100000,
-      "spendRequirement": 5000,
-      "timeframeMonths": 6
+      "points": 125000,
+      "spendRequirement": 6000,
+      "timeframeMonths": 6,
+      "expires": "7/15/26"
     }
   },
   {
@@ -502,7 +505,7 @@
       "Hilton Honors Card"
     ],
     "welcomeBonus": {
-      "points": 70000,
+      "points": 100000,
       "spendRequirement": 2000,
       "timeframeMonths": 6,
       "expires": "7/29/26"
@@ -585,10 +588,9 @@
       "IHG One Rewards Premier"
     ],
     "welcomeBonus": {
-      "points": 185000,
+      "points": 140000,
       "spendRequirement": 3000,
-      "timeframeMonths": 3,
-      "expires": "6/24/26"
+      "timeframeMonths": 3
     }
   },
   {
@@ -620,10 +622,10 @@
   {
     "id": "united-quest-card",
     "pointsCurrency": "united_miles",
-    "affiliateUrl": "https://creditcards.chase.com/travel-credit-cards/united/quest",
+    "affiliateUrl": "https://creditcards.chase.com/travel-credit-cards/united/united-quest",
     "cppOverride": 1.35,
     "earnRates": {
-      "flights": 3,
+      "flights": 10,
       "rental_cars": 2,
       "hotels": 2,
       "dining": 2,
@@ -637,7 +639,7 @@
       "United Quest"
     ],
     "welcomeBonus": {
-      "points": 80000,
+      "points": 100000,
       "spendRequirement": 4000,
       "timeframeMonths": 3
     }
@@ -663,8 +665,8 @@
       "WF Autograph"
     ],
     "welcomeBonus": {
-      "points": 30000,
-      "spendRequirement": 1500,
+      "points": 20000,
+      "spendRequirement": 1000,
       "timeframeMonths": 3
     }
   },
@@ -690,7 +692,7 @@
       "American Express Blue Cash Preferred"
     ],
     "welcomeBonus": {
-      "points": 25000,
+      "points": 30000,
       "spendRequirement": 3000,
       "timeframeMonths": 6
     }
@@ -724,7 +726,7 @@
   {
     "id": "capital-one-savorone",
     "pointsCurrency": "capital_one_miles",
-    "affiliateUrl": "https://www.capitalone.com/credit-cards/savor-one-shopping/",
+    "affiliateUrl": "https://www.capitalone.com/credit-cards/savor/",
     "cppOverride": 1.85,
     "earnRates": {
       "flights": 1,
@@ -738,11 +740,13 @@
       "other": 1
     },
     "nameAliases": [
+      "Savor",
       "SavorOne",
+      "Capital One Savor",
       "Capital One SavorOne"
     ],
     "welcomeBonus": {
-      "points": 20000,
+      "points": 25000,
       "spendRequirement": 500,
       "timeframeMonths": 3
     }
@@ -768,7 +772,7 @@
       "Chase Freedom Flex"
     ],
     "welcomeBonus": {
-      "points": 25000,
+      "points": 20000,
       "spendRequirement": 500,
       "timeframeMonths": 3
     }
@@ -783,9 +787,9 @@
       "rental_cars": 1.5,
       "hotels": 5,
       "dining": 3,
-      "gas": 1,
-      "groceries": 1,
-      "streaming": 1,
+      "gas": 1.5,
+      "groceries": 1.5,
+      "streaming": 1.5,
       "rent": 0,
       "other": 1.5
     },
@@ -795,7 +799,7 @@
       "Chase Freedom Unlimited"
     ],
     "welcomeBonus": {
-      "points": 25000,
+      "points": 20000,
       "spendRequirement": 500,
       "timeframeMonths": 3
     }
@@ -848,19 +852,20 @@
       "Rapid Rewards Priority"
     ],
     "welcomeBonus": {
-      "points": 40000,
-      "spendRequirement": 5000,
-      "timeframeMonths": 3
+      "points": 90000,
+      "spendRequirement": 3000,
+      "timeframeMonths": 3,
+      "expires": "7/2/26"
     }
   },
   {
     "id": "world-of-hyatt",
     "pointsCurrency": "hyatt_points",
-    "affiliateUrl": "https://creditcards.chase.com/hotels-credit-cards/world-of-hyatt",
+    "affiliateUrl": "https://creditcards.chase.com/travel-credit-cards/world-of-hyatt-credit-card",
     "cppOverride": 1.65,
     "earnRates": {
       "flights": 2,
-      "rental_cars": 2,
+      "rental_cars": 1,
       "hotels": 4,
       "dining": 2,
       "gas": 1,
