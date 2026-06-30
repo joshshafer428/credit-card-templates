@@ -967,6 +967,16 @@
         "resetPeriod": "monthly",
         "resetAnchor": "calendar_month",
         "quizTag": "rideshare"
+      },
+      {
+        "id": "delta-skymiles-gold-amex-second-checked-bag-free-domestic",
+        "name": "Second checked bag free (domestic flights)",
+        "category": "Travel",
+        "benefitType": "access",
+        "dollarValue": 0,
+        "resetPeriod": "per-flight",
+        "resetAnchor": "per_flight",
+        "quizTag": "travel_credit_user"
       }
     ]
   },
@@ -1274,6 +1284,16 @@
         "resetPeriod": "quarterly",
         "resetAnchor": "calendar_quarter",
         "quizTag": "travel_credit_user"
+      },
+      {
+        "id": "hilton-honors-aspire-clear-plus-credit",
+        "name": "CLEAR Plus credit",
+        "category": "Travel",
+        "benefitType": "credit",
+        "dollarValue": 209,
+        "resetPeriod": "annual",
+        "resetAnchor": "calendar_year",
+        "quizTag": "global_entry"
       }
     ]
   },
@@ -1475,7 +1495,7 @@
     "id": "united-quest-card",
     "name": "United Quest Card",
     "network": "Visa",
-    "annualFee": 250,
+    "annualFee": 350,
     "benefits": [
       {
         "id": "united-quest-card-united-travel-credit",
