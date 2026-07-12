@@ -1141,6 +1141,17 @@
     .waitlist-submit:hover { transform: translateY(-1px); opacity: 0.9; }
     .waitlist-submit:active { transform: scale(0.98); }
 
+    .app-store-badge {
+      display: inline-flex;
+      margin: 0 auto var(--sp-5);
+      transition: transform 0.18s, opacity 0.18s;
+    }
+
+    .app-store-badge img { display: block; height: 53px; width: auto; }
+
+    .app-store-badge:hover { transform: translateY(-1px); opacity: 0.9; }
+    .app-store-badge:active { transform: scale(0.98); }
+
     .waitlist-disclaimer {
       font-size: 12px;
       color: var(--text-3);
@@ -1473,9 +1484,9 @@
     <ul class="nav-links" role="list">
       <li><a href="#features">Features</a></li>
       <li><a href="#how-it-works">How It Works</a></li>
-      <li><a href="#waitlist" class="nav-cta">Join Waitlist</a></li>
+      <li><a href="https://apps.apple.com/us/app/perkbook/id6772521647" class="nav-cta" target="_blank" rel="noopener">Get the App</a></li>
     </ul>
-    <a href="#waitlist" class="nav-mobile-cta" aria-label="Join the waitlist">Join Waitlist</a>
+    <a href="https://apps.apple.com/us/app/perkbook/id6772521647" class="nav-mobile-cta" aria-label="Download PerkBook on the App Store" target="_blank" rel="noopener">Get the App</a>
   </nav>
 
   <!-- Hero -->
@@ -1491,8 +1502,8 @@
           PerkBook tracks the benefits across all your credit cards so you stop losing money on perks you're already paying for.
         </p>
         <div class="hero-actions fade-up-4">
-          <a href="#waitlist" class="btn-primary">
-            Join the Waitlist
+          <a href="https://apps.apple.com/us/app/perkbook/id6772521647" class="btn-primary" target="_blank" rel="noopener">
+            Download on the App Store
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
               <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
@@ -1507,7 +1518,7 @@
             <span class="stat-label">Avg. annual value tracked</span>
           </div>
           <div class="stat-item">
-            <span class="stat-number">25+</span>
+            <span class="stat-number">35+</span>
             <span class="stat-label">Cards supported</span>
           </div>
           <div class="stat-item">
@@ -1661,7 +1672,7 @@
               </div>
               <div class="step-content">
                 <h3 class="step-title">Add your cards</h3>
-                <p class="step-body">Search from a growing library of 25+ cards. PerkBook already knows every benefit on each card — no manual entry required.</p>
+                <p class="step-body">Search from a growing library of 35+ cards. PerkBook already knows every benefit on each card — no manual entry required.</p>
               </div>
             </div>
 
@@ -1704,49 +1715,26 @@
     </div>
   </section>
 
-  <!-- Waitlist -->
-  <section class="waitlist" id="waitlist" aria-labelledby="waitlist-heading">
+  <!-- Download -->
+  <section class="waitlist" id="download" aria-labelledby="download-heading">
     <div class="container">
       <div class="waitlist-card reveal">
-        <h2 class="waitlist-title" id="waitlist-heading">Be first to know when we launch</h2>
+        <h2 class="waitlist-title" id="download-heading">PerkBook is available now</h2>
         <p class="waitlist-sub">
-          PerkBook is coming soon. Join the waitlist and get early access — plus a personal walkthrough to set up your wallet.
+          Download PerkBook on the App Store and start tracking every perk across all your cards — free.
         </p>
 
-        <form class="waitlist-form" id="waitlistForm" action="https://formspree.io/f/mbdqwwoz" method="POST" novalidate>
-          <label for="email" class="sr-only">Email address</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            class="waitlist-input"
-            placeholder="your@email.com"
-            autocomplete="email"
-            required
-            aria-required="true"
-          />
-          <button type="submit" class="waitlist-submit">
-            Join Waitlist
-          </button>
-        </form>
+        <a
+          href="https://apps.apple.com/us/app/perkbook/id6772521647"
+          class="app-store-badge"
+          target="_blank"
+          rel="noopener"
+          aria-label="Download PerkBook on the App Store"
+        >
+          <img src="./Images/appstore-badge.svg" alt="Download on the App Store" width="160" height="53" />
+        </a>
 
-        <div class="form-success" id="formSuccess" role="status" aria-live="polite">
-          <div class="success-icon">✓</div>
-          <p class="success-text">You're on the list!</p>
-          <p class="success-sub">We'll reach out with early access details.</p>
-        </div>
-
-        <p class="waitlist-disclaimer">No spam, ever. Unsubscribe anytime.</p>
-
-        <div class="waitlist-social-proof">
-          <div class="avatar-stack" aria-hidden="true">
-            <div class="avatar">J</div>
-            <div class="avatar">M</div>
-            <div class="avatar">A</div>
-            <div class="avatar">K</div>
-          </div>
-          <p class="social-proof-text">Join <strong>400+</strong> people already on the list</p>
-        </div>
+        <p class="waitlist-disclaimer">Free to download. Available on iPhone.</p>
       </div>
     </div>
   </section>
@@ -1792,39 +1780,6 @@
     }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
     revealEls.forEach(el => observer.observe(el));
-
-    // ─── Waitlist form ──────────────────────────────────────────────────────
-    const form = document.getElementById('waitlistForm');
-    const successEl = document.getElementById('formSuccess');
-
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const emailInput = form.querySelector('#email');
-      const email = emailInput.value.trim();
-      const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-      if (!email || !emailRe.test(email)) {
-        emailInput.style.borderColor = 'rgba(224,85,85,0.5)';
-        emailInput.focus();
-        return;
-      }
-
-      emailInput.style.borderColor = '';
-
-      const res = await fetch(form.action, {
-        method: 'POST',
-        headers: { 'Accept': 'application/json' },
-        body: new FormData(form)
-      });
-
-      if (res.ok) {
-        form.classList.add('hidden');
-        successEl.classList.add('visible');
-      } else {
-        emailInput.style.borderColor = 'rgba(224,85,85,0.5)';
-        emailInput.placeholder = 'Something went wrong — try again';
-      }
-    });
 
     // ─── Sticky nav background ──────────────────────────────────────────────
     const nav = document.querySelector('.nav');
